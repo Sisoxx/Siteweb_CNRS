@@ -1,7 +1,7 @@
 /*************************BODY***********************/
 body
 {
-	font-family: "Times New Roman", sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -36,7 +36,7 @@ html
 	  scroll-behavior: smooth;
 }
 
-/************************** NAVBAR*****************/
+/************************** NAVBAR *****************/
 
 header li
 {
@@ -59,15 +59,34 @@ header
 	justify-content: space-around;
 	align-content: baseline;
 	overflow: hidden;
-	background-color: #D5DBDB;
-	position: fixed;
+	background-color: #FFFFFF;
+	/*position: fixed;*/
 	width: 100%;
-	opacity: 0.9;
+	opacity: 1;
+	box-shadow: 3px 4px 4px 1px #E6E6E6;
+
+}
+#traitHaut
+{
+	content: "";
+	display: block;
+  width: 100%;
+  height: 6px;
+  background: #961e64;
+  /*left: 85px;*/
+  top: 0%;
+  position: absolute;
+	/*height: 4px;
+	width: 100%;
+	background-color: #961e64;
+	margin: auto;*/
+/*	margin-top: 5vh;
+	margin-bottom: 3vh;*/
 }
 #logo
 {
 	border-radius: 10px;
-	box-shadow: 3px 4px 5px 4px black;
+	/*box-shadow: 3px 4px 5px 4px black;*/
 }
 
 #logo:hover
@@ -81,7 +100,7 @@ header
 
 #présentation
 {
-	background-color: #FFFAE1;
+	background-color: ##FFFFFF;
 	padding: 130px 0px 200px 0px;
 }
 #txtexplication
@@ -98,7 +117,7 @@ header
 
 #calculateur
 {
-	background-color: #EDBB99 ;
+	background-color: #FFFFFF ;
 	text-align: center;
 	padding: 9vh 0 5vh 0;
 }
@@ -110,7 +129,7 @@ header
 /******************* FOOTER *********************/
 footer
 {
-	background-color: #524A3A;
+	background-color: #E6E6E6;
 	padding: 10px 0px 10px 0px;
 	text-align: center;
 }
@@ -119,7 +138,7 @@ footer h2
 {
 	text-align: center;
 	padding-bottom: 20px;
-	color: #FFFAE1
+	color: #961e64
 }
 
 form
@@ -135,7 +154,7 @@ input, button,textarea
 	padding: 15px 10px;
 	margin: 1px;
 	font-size: 1.2em;
-	font-family: 'Times New Roman', sans-serif;
+	font-family: "Noto Sans", sans-serif;
 	border-radius: 8px;
 }
 
@@ -151,12 +170,12 @@ input, button,textarea
 button
 {
 	font-size: 1.5em;
-	background-color: #FFFAE1;
+	background-color: ##E6E6E6;
 }
 button:hover
 {
-	background-color: #e55039;
-	color: #FFFAE1;
+	background-color: white;
+	color: #961E64 ;
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
 }
@@ -164,9 +183,9 @@ button:hover
 {
 	height: 1px;
 	width: 75%;
-	background-color: #FFFAE1;
+	background-color: #961e64;
 	margin: auto;
-	box-shadow: 1px 3px 2px black;
+	/*box-shadow: 1px 3px 2px black;*/
 	margin-top: 5vh;
 	margin-bottom: 3vh;
 }
@@ -181,7 +200,7 @@ button:hover
 	padding-left: 13%;
 	width: 50%;
 	text-align: left;
-	color: #FFFAE1;
+	color: #961e64;
 }
 #icones
 {
@@ -220,7 +239,7 @@ button:hover
 }
 #maptitre
 {
-	color: #FFFAE1;
+	color: #961e64;
 	margin: auto;
 	font-size: 1.5em;
 }
