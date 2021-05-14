@@ -37,13 +37,13 @@ public function contact($donnee){
   //Recipients
   $mail->CharSet = "utf-8";
   $mail->Subject = 'Demande de contact';
-  $mail->setFrom('sisoxx93@hotmail.fr', 'Nouvelle demande de contact');
+  $mail->setFrom('yanishverif@gmail.com', 'Nouvelle demande de contact');
   $mail->addAddress($donnee->getemail(), 'Contact');     // Add a recipient //Recipients
    $mail->Body    =   "Votre message a été trasmit une personne viendra vers vous des que possible.";
   if(!$mail->Send()) {// Si l'envoie de mail ne s'execute pas alors on redirige vers une page //
-    header("location: ../View/contact.php?msg=2'");
+    header("location: ../index.html");
   } else {
-    header("location: ../View/contact.php?msg=1'");
+    header("location: ../index.html");
   }// Sinon l'envoie de mail s'execute alors on redirige vers une page//
 
 
