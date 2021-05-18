@@ -26,7 +26,6 @@ class helloHandler(BaseHTTPRequestHandler):
         #self.end_headers()
         #self.wfile.write('Hello Octopus'.encode())
         self.wfile.write(bytes(file_to_open, 'utf-8'))
-        print("salut")
 
 
 
