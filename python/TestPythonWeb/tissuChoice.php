@@ -38,8 +38,11 @@ echo $input_choice;
 #exec('unset DYLD_LIBRARY_PATH ;');
 #putenv('DYLD_LIBRARY_PATH');
 #putenv('DYLD_LIBRARY_PATH=/usr/bin');
-$py_output = exec(escapeshellcmd("usr/github/Siteweb_CNRS2/python/TestPythonWeb/choiceOfTissu.py $choice"));
-var_dump($py_output);
+#shell_exec("cd github/Siteweb_CNRS2/python/TestPythonWeb");
+$py_output = shell_exec("python colecole.py $input_choice");
+#var_dump($py_output);
+
+echo $py_output;
 
 #if ( $input_choice != "")
   #echo $py_output;

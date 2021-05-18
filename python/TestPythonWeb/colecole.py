@@ -1,7 +1,10 @@
 import math
 import cmath
+import sys
 
-choix0="blood"
+input_choice = sys.argv[1]
+
+choix0="Blood"
 choix1="brain1"
 somme=0
 j=cmath.sqrt(-1)
@@ -11,7 +14,7 @@ M=[]
 N=[]
 w=2*math.pi
 
-print (a)
+#print (a)
 
 
 ef=[4, 4, 4, 2.5, 2.5, 4, 4, 4, 4, 4, 2.5]
@@ -44,7 +47,7 @@ def frequence(i):
         return f
 
 def colecole(choix):
-    if (choix=="blood"):
+    if (choix=="Blood"):
         for i in range (1,12):
             somme=ef[0]+delta1[0]/(1+(-j*w*frequence(i)*to1[0])**(1-alpha1[0]))
             somme=somme+delta2[0]/(1+(-j*w*frequence(i)*to2[0])**(1-alpha2[0]))
@@ -56,6 +59,7 @@ def colecole(choix):
             sigblood=somme.imag*w*frequence(i)*epsilon0
             N.append(sigblood)
         return (M,N)
+    else:
+        return "\n Erreur, choisissez Blood svp"
 
-
-print (colecole("blood"))
+print (colecole(input_choice))

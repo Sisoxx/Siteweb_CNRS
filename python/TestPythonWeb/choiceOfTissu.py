@@ -10,7 +10,7 @@ import sys
 input_choice = sys.argv[1]
 
 def choiceOfTissu ( choice ):
-    return ('Hello, you chose' + str(choice))
+    return ('Hello, you chose ' + str(choice))
 
 #input_choice = str(query_dict['choice'])[2:-2] #Not sure about that -> [2:-2]
 
@@ -19,5 +19,5 @@ def choiceOfTissu ( choice ):
 
 
 #print("Content-Type: text/html\n")
+print("\n\n")
 print(str(choiceOfTissu(input_choice)))
-print("hello")
