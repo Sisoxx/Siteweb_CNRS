@@ -126,6 +126,8 @@ header
 {
 	text-align: center;
 }
+
+
 /******************* FOOTER *********************/
 footer
 {
@@ -156,6 +158,7 @@ input, button,textarea
 	font-size: 1.2em;
 	font-family: "Noto Sans", sans-serif;
 	border-radius: 8px;
+	border-width: 2px;
 }
 
 #contact
@@ -224,19 +227,11 @@ button:hover
 #enbas
 {
 	display: flex;
-	align-items:stretch;
-	justify-content: center;
+	align-content: space-between;
+	justify-content: space-between;
 	height: 500px;
 }
-#localisation
-{
-	margin-right: 30vh;
-}
-#formulaire . #localisation
-{
-	margin: auto;
-	width: 55%;
-}
+
 #maptitre
 {
 	color: #961e64;
