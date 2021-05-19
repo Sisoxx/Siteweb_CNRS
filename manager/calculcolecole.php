@@ -5,7 +5,7 @@ $a=$_POST['debutfrequence'];
 $b=$_POST['finfrequence'];
 
 
-$code = exec("../python/TestPythonColeCole/colecole.py $choix,$a,$b");
+$code = exec("../python/TestPythonWeb/colecole.py $choix,$a,$b");
 
 echo $code;
 
