@@ -1,6 +1,9 @@
 import math
 import cmath
+<<<<<<< HEAD
 import sys
+=======
+>>>>>>> 63d988520fcfd0bb3f74200325086e34389686bc
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -70,5 +73,12 @@ plt.plot(x,y)
 
 plt.show()
 
+
+x=np.arange(a,b+1,1)
+y=array(M)
+
+plt.plot(x,y)
+
+plt.show()
 
 print (colecole(input_choice, a, b))
