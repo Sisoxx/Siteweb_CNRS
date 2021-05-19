@@ -1,6 +1,7 @@
 import math
 import cmath
-import sys
+import numpy as np
+import matplotlib.pyplot as plt
 
 input_choice = sys.argv[1]
 a = int(sys.argv[2])
@@ -61,5 +62,12 @@ def colecole(choix,a,b):
         N.append(sigblood)
     return (M,N)
 
+
+x=np.arange(a,b+1,1)
+y=array(M)
+
+plt.plot(x,y)
+
+plt.show()
 
 print (colecole(input_choice, a, b))
