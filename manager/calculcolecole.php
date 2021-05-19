@@ -6,7 +6,7 @@ $b = (array_key_exists('finfrequence', $_POST)) ? $_POST['finfrequence'] : "";
 
 #shell_exec("cd ../python/TestPythonWeb ");
 $py_output = shell_exec("python colecole.py $input_choice $a $b");
-#var_dump($py_output)
+#var_dump($py_output);
 
 echo $py_output;
 ?>

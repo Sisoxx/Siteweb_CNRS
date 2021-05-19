@@ -5,8 +5,6 @@ import sys
 input_choice = sys.argv[1]
 a = int(sys.argv[2])
 b = int(sys.argv[3])
-choix0="Blood"
-choix1="brain1"
 somme=0
 j=cmath.sqrt(-1)
 delta=0.5*10**9

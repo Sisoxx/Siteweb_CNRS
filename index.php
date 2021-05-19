@@ -44,6 +44,7 @@
 				<option value="Choice" disabled selected>Choose one in the list</option>
 				<option value="Aorta">Aorta</option>
 				<option value="Bladder">Bladder</option>
+				<option value="Blood">Blood</option>
 				<option value="Bone (Cancellous)">Bone Cancellous</option>
 				<option value="Bone (Cortical)">Bone Cortical</option>
 				<option value="Bone Marrow (Infiltrated)">Bone Marrow Infiltrated</option>
@@ -73,7 +74,7 @@
 				<option value="Muscle">Muscle</option>
 				<option value="Nerve">Nerve</option>
 				<option value="Ovary">Ovary</option>
-				<option value="Skin (Dry)">S</option>
+				<option value="Skin (Dry)">Skin Dry</option>
 				<option value="Skin (Wet)">Skin Wet</option>
 				<option value="Small Intestine">Small Intestine</option>
 				<option value="Spleen">Spleen</option>
