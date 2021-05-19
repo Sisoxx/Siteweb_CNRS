@@ -51,7 +51,7 @@ def frequence(i):
 
 def colecole(choix,low_range,high_range):
     n=index_tissu
-    for i in range (low_range,high_range):
+    for i in range (low_range,high_range+1):
         somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
         somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
@@ -63,11 +63,12 @@ def colecole(choix,low_range,high_range):
         N.append(sigblood)
     return (M,N)
 
-
+M = colecole(input_choice, a, b)[0]
+print(M)
 x=np.arange(a,b+1,1)
-y=array(M)
+print(x)
 
-plt.plot(x,y)
+plt.plot(x,M)
 
 plt.show()
 
