@@ -42,11 +42,49 @@
 			<p>Que voulez-vous imiter ?</p>
 			<select id="tissu_selection" name="choice">
 				<option value="Choice" disabled selected>Choose one in the list</option>
+				<option value="Aorta">Aorta</option>
+				<option value="Bladder">Bladder</option>
+				<option value="Bone (Cancellous)">Bone Cancellous</option>
+				<option value="Bone (Cortical)">Bone Cortical</option>
+				<option value="Bone Marrow (Infiltrated)">Bone Marrow Infiltrated</option>
+				<option value="Bone Marrow (Not Infiltrated)">Bone Marrow Not Infiltrated</option>
+				<option value="Brain (Grey Matter)">Brain Grey Matter</option>
+				<option value="Brain (White Matter)">Brain White Matter</option>
+				<option value="Breast fat">Breast Fat</option>
+				<option value="Cartilage">Cartilage</option>
+				<option value="Cerebellum">Cerebellum</option>
+				<option value="Cerebro Spinal Fluid">Cerebro Spinal Fluid</option>
+				<option value="Cervix">Cervix</option>
+				<option value="Colon">Colon</option>
+				<option value="Cornea">Cornea</option>
+				<option value="Dura">Dura</option>
+				<option value="Eye Tissues (Sclera)">Eye Tissues</option>
+				<option value="Fat (Average Infiltrated)">Fat Infiltrated</option>
+				<option value="Fat (Not Infiltrated)">Fat Not Infiltrated</option>
+				<option value="Gall Bladder">Gall Blader</option>
+				<option value="Gall Bladdr Bile">Gall Bladder Bile</option>
+				<option value="Heart">Heart</option>
+				<option value="Kidney">Kidney</option>
+				<option value="Lens Cortex">Lens Cortex</option>
+				<option value="Lens Nucleus">Lens Nucleus</option>
 				<option value="Liver">Liver</option>
-				<option value="Blood">Blood</option>
-				<option value="Fat">Fat</option>
-				<option value="Brain">Brain</option>
+				<option value="Lung (Deflated)">Lung Deflated</option>
+				<option value="Lung (Inflated)">Lung Inflated</option>
+				<option value="Muscle">Muscle</option>
+				<option value="Nerve">Nerve</option>
+				<option value="Ovary">Ovary</option>
+				<option value="Skin (Dry)">S</option>
+				<option value="Skin (Wet)">Skin Wet</option>
+				<option value="Small Intestine">Small Intestine</option>
+				<option value="Spleen">Spleen</option>
+				<option value="Stomach">Stomach</option>
+				<option value="Tendon">Tendon</option>
+				<option value="Testis">Testis</option>
+				<option value="Thyroid">Thyroid</option>
 				<option value="Tongue">Tongue</option>
+				<option value="Trachea">Trachea</option>
+				<option value="Uterus">Uterus</option>
+				<option value="Vitreous Humor">Vitres Humor</option>
 			</select>
 			<p>Quelle est votre plage de fréquence ?</p>
 			<input class="case" type="text" name="debutfrequence"  placeholder="0 Ghz">
