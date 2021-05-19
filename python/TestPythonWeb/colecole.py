@@ -43,37 +43,15 @@ to4=[e*10**(-3) for e in to4]
 alpha4=[0, 0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
-<<<<<<< HEAD
-
-noms_tissu = [nom1 , nom2, ...]
-index_tissu = noms_tissu.index(input_choice)
-=======
 noms_tissu=[Aorta, Bladder, Blood, Bone (Cancellous), Bone (Cortical), Bone Marrow (Infiltrated), Bone Marrow (Not Infiltrated), Brain (Grey Matter), Brain (White Matter), Breast fat, Cartilage, Cerebellum, Cerebro Spinal Fluid, Cervix, Colon, Cornea, Dura, Eye Tissues (Sclera), Fat (Average Infiltrated), Fat (Not Infiltrated), Gall Bladder, Gall Bladder Bile, Heart, Kidney, Lens Cortex, Lens Nucleus, Liver, Lung (Deflated), Lung (Inflated), Muscle, Nerve, Ovary, Skin (Dry), Skin (Wet), Small Intestine, Spleen, Stomach, Tendon, Testis, Thyroid, Tongue, Trachea, Uterus, Vitreous Humor]
 index_tissu=noms_tissu.index(input_choice)
->>>>>>> 334b40f50ffb5c921197e04ecf20b7348b524c05
+
 
 def frequence(i):
         f=i*delta
         return f
 
 def colecole(choix,a,b):
-<<<<<<< HEAD
-
-
-    n = index_tissu
-    for i in range (a,b):
-        somme=ef[0]+delta1[0]/(1+(-j*w*frequence(i)*to1[0])**(1-alpha1[0]))
-        somme=somme+delta2[0]/(1+(-j*w*frequence(i)*to2[0])**(1-alpha2[0]))
-        somme=somme+delta3[0]/(1+(-j*w*frequence(i)*to3[0])**(1-alpha3[0]))
-        somme=somme+delta4[0]/(1+(-j*w*frequence(i)*to4[0])**(1-alpha4[0]))
-        somme=somme+((sig[0]*j)/(w*frequence(i)*epsilon0))
-        epsiblood=somme.real
-        M.append(epsiblood)
-        sigblood=somme.imag*w*frequence(i)*epsilon0
-        N.append(sigblood)
-    return (M,N)
-
-=======
     if :
         n=index_tissu
         for i in range (a,b):
@@ -89,7 +67,6 @@ def colecole(choix,a,b):
         return (M,N)
     else:
         return "\n Erreur, choisissez Blood svp"
->>>>>>> 334b40f50ffb5c921197e04ecf20b7348b524c05
 
 print (colecole(input_choice, a, b))
-print (len(sig),len(delta3),len(to3),len(alpha3),len(delta4),len(to4),len(alpha4))
+print (len(sig),len(delta3),len(to3),len(alpha3),len(delta4),len(to4),len(alpha4)) #Corriger to4
