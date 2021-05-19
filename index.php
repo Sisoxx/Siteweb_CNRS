@@ -37,7 +37,6 @@
 	<section id="calculateur">
 		<h2 id="titre2">Calculateur</h2>
 
-		<p>SUPPOSONS QUE LE CALCULATEUR SOIT LA. UTILISATION DE PHP.</p>
 		<form action="" method="post" id="formulaire2">
 			<p>Que voulez-vous imiter ?</p>
 			<select id="tissu_selection" name="choice">

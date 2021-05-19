@@ -1,6 +1,8 @@
 import math
 import cmath
 import sys
+import numpy as np
+import matplotlib.pyplot as plt
 
 input_choice = sys.argv[1]
 a = int(sys.argv[2])
@@ -47,9 +49,9 @@ def frequence(i):
         f=i*delta
         return f
 
-def colecole(choix,a,b):
+def colecole(choix,low_range,high_range):
     n=index_tissu
-    for i in range (a,b):
+    for i in range (low_range,high_range):
         somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
         somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
@@ -60,6 +62,13 @@ def colecole(choix,a,b):
         sigblood=somme.imag*w*frequence(i)*epsilon0
         N.append(sigblood)
     return (M,N)
+
+x=np.arange(a,b+1,1)
+y=array(M)
+
+plt.plot(x,y)
+
+plt.show()
 
 
 print (colecole(input_choice, a, b))
