@@ -68,4 +68,3 @@ def colecole(choix,a,b):
 
 
 print (colecole(input_choice, a, b))
-print (len(sig),len(delta3),len(to3),len(alpha3),len(delta4),len(to4),len(alpha4)) #Corriger to4
