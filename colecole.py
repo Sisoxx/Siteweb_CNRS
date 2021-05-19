@@ -1,9 +1,6 @@
 import math
 import cmath
-<<<<<<< HEAD
 import sys
-=======
->>>>>>> 63d988520fcfd0bb3f74200325086e34389686bc
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -65,13 +62,6 @@ def colecole(choix,low_range,high_range):
         sigblood=somme.imag*w*frequence(i)*epsilon0
         N.append(sigblood)
     return (M,N)
-
-x=np.arange(a,b+1,1)
-y=array(M)
-
-plt.plot(x,y)
-
-plt.show()
 
 
 x=np.arange(a,b+1,1)
