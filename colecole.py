@@ -38,12 +38,12 @@ alpha3=[0.200, 0.200, 0.200, 0.200, 0.200, 0.100, 0.100, 0.220, 0.300, 0.100, 0.
 
 delta4=[1, 1, 0, 2, 0.01, 0.2, 0.2, 4.5, 3.5, 2, 4, 4.5, 0, 4, 4, 0.1, 0.5, 1, 1, 0.004, 0, 2.5, 3, 4, 0.0005, 3, 1, 4, 2.5, 4, 4, 0, 0.003, 4, 5, 4, 2, 4, 4, 4, 4, 0.1, 3.5, 0]
 delta4=[e*10**7 for e in delta4]
-to4=[1.592, 15.915, 15.915, 15.915, 15.915, 15.915, 15.915, 5.305, 7.958, 13.260, 15.915, 1.952, 1.952, 15.915, 15.915, 15.915, 15.915, 7.958, 15.915, 15.915, 4.547, 4.547,  15.915, 15.915, 15.915, 15.915, 7.958, 2.274,  15.915, 15.915, 15.915, 1.592, 15.915, 6.366, 15.915, 1.326, 15.915, 15.915, 15.915, 15.915, 1.061, 15.915]
+to4=[1.592, 15.915, 15.915, 15.915, 15.915, 15.915, 15.915, 5.305, 7.958, 13.260, 15.915, 5.305, 15.915, 1.592, 1.592, 15.915, 15.915, 15.915, 15.915, 7.958, 15.915, 15.915, 4.547, 4.547,  15.915, 15.915, 15.915, 15.915, 7.958, 2.274,  15.915, 15.915, 15.915, 1.592, 15.915, 6.366, 15.915, 1.326, 15.915, 15.915, 15.915, 15.915, 1.061, 15.915]
 to4=[e*10**(-3) for e in to4]
 alpha4=[0, 0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
-noms_tissu=[Aorta, Bladder, Blood, Bone (Cancellous), Bone (Cortical), Bone Marrow (Infiltrated), Bone Marrow (Not Infiltrated), Brain (Grey Matter), Brain (White Matter), Breast fat, Cartilage, Cerebellum, Cerebro Spinal Fluid, Cervix, Colon, Cornea, Dura, Eye Tissues (Sclera), Fat (Average Infiltrated), Fat (Not Infiltrated), Gall Bladder, Gall Bladder Bile, Heart, Kidney, Lens Cortex, Lens Nucleus, Liver, Lung (Deflated), Lung (Inflated), Muscle, Nerve, Ovary, Skin (Dry), Skin (Wet), Small Intestine, Spleen, Stomach, Tendon, Testis, Thyroid, Tongue, Trachea, Uterus, Vitreous Humor]
+noms_tissu=["Aorta", "Bladder", "Blood", "Bone (Cancellous)", "Bone (Cortical)", "Bone Marrow (Infiltrated)", "Bone Marrow (Not Infiltrated)", "Brain (Grey Matter)", "Brain (White Matter)", "Breast fat", "Cartilage", "Cerebellum", "Cerebro Spinal Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye Tissues (Sclera)", "Fat (Average Infiltrated)", "Fat (Not Infiltrated)", "Gall Bladder", "Gall Bladder Bile", "Heart", "Kidney", "Lens Cortex", "Lens Nucleus", "Liver", "Lung (Deflated)", "Lung (Inflated)", "Muscle", "Nerve", "Ovary", "Skin (Dry)", "Skin (Wet)", "Small Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous Humor"]
 index_tissu=noms_tissu.index(input_choice)
 
 
@@ -52,21 +52,20 @@ def frequence(i):
         return f
 
 def colecole(choix,a,b):
-    if :
-        n=index_tissu
-        for i in range (a,b):
-            somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
-            somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
-            somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
-            somme=somme+delta4[n]/(1+(-j*w*frequence(i)*to4[n])**(1-alpha4[n]))
-            somme=somme+((sig[n]*j)/(w*frequence(i)*epsilon0))
-            epsiblood=somme.real
-            M.append(epsiblood)
-            sigblood=somme.imag*w*frequence(i)*epsilon0
-            N.append(sigblood)
-        return (M,N)
-    else:
-        return "\n Erreur, choisissez Blood svp"
+
+    n=index_tissu
+    for i in range (a,b):
+        somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
+        somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
+        somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
+        somme=somme+delta4[n]/(1+(-j*w*frequence(i)*to4[n])**(1-alpha4[n]))
+        somme=somme+((sig[n]*j)/(w*frequence(i)*epsilon0))
+        epsiblood=somme.real
+        M.append(epsiblood)
+        sigblood=somme.imag*w*frequence(i)*epsilon0
+        N.append(sigblood)
+    return (M,N)
+
 
 print (colecole(input_choice, a, b))
 print (len(sig),len(delta3),len(to3),len(alpha3),len(delta4),len(to4),len(alpha4)) #Corriger to4
