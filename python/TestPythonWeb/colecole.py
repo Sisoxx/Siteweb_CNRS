@@ -40,29 +40,33 @@ delta4=[1, 1, 0, 2, 0.01, 0.2, 0.2, 4.5, 3.5, 2, 4, 4.5, 0, 4, 4, 0.1, 0.5, 1, 1
 delta4=[e*10**7 for e in delta4]
 to4=[1.592, 15.915, 15.915, 15.915, 15.915, 15.915, 15.915, 5.305, 7.958, 13.260, 15.915, 1.952, 1.952, 15.915, 15.915, 15.915, 15.915, 7.958, 15.915, 15.915, 4.547, 4.547,  15.915, 15.915, 15.915, 15.915, 7.958, 2.274,  15.915, 15.915, 15.915, 1.592, 15.915, 6.366, 15.915, 1.326, 15.915, 15.915, 15.915, 15.915, 1.061, 15.915]
 to4=[e*10**(-3) for e in to4]
-alpha4=[0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+alpha4=[0, 0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
 
+noms_tissu = [nom1 , nom2, ...]
+index_tissu = noms_tissu.index(input_choice)
 
 def frequence(i):
         f=i*delta
         return f
 
 def colecole(choix,a,b):
-    if (choix=="Blood"):
-        for i in range (a,b):
-            somme=ef[0]+delta1[0]/(1+(-j*w*frequence(i)*to1[0])**(1-alpha1[0]))
-            somme=somme+delta2[0]/(1+(-j*w*frequence(i)*to2[0])**(1-alpha2[0]))
-            somme=somme+delta3[0]/(1+(-j*w*frequence(i)*to3[0])**(1-alpha3[0]))
-            somme=somme+delta4[0]/(1+(-j*w*frequence(i)*to4[0])**(1-alpha4[0]))
-            somme=somme+((sig[0]*j)/(w*frequence(i)*epsilon0))
-            epsiblood=somme.real
-            M.append(epsiblood)
-            sigblood=somme.imag*w*frequence(i)*epsilon0
-            N.append(sigblood)
-        return (M,N)
-    else:
-        return "\n Erreur, choisissez Blood svp"
+
+
+    n = index_tissu
+    for i in range (a,b):
+        somme=ef[0]+delta1[0]/(1+(-j*w*frequence(i)*to1[0])**(1-alpha1[0]))
+        somme=somme+delta2[0]/(1+(-j*w*frequence(i)*to2[0])**(1-alpha2[0]))
+        somme=somme+delta3[0]/(1+(-j*w*frequence(i)*to3[0])**(1-alpha3[0]))
+        somme=somme+delta4[0]/(1+(-j*w*frequence(i)*to4[0])**(1-alpha4[0]))
+        somme=somme+((sig[0]*j)/(w*frequence(i)*epsilon0))
+        epsiblood=somme.real
+        M.append(epsiblood)
+        sigblood=somme.imag*w*frequence(i)*epsilon0
+        N.append(sigblood)
+    return (M,N)
+
 
 print (colecole(input_choice, a, b))
+print (len(sig),len(delta3),len(to3),len(alpha3),len(delta4),len(to4),len(alpha4))
