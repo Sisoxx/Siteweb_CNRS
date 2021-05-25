@@ -50,7 +50,7 @@
 				<option value="Bone Marrow (Not Infiltrated)">Bone Marrow Not Infiltrated</option>
 				<option value="Brain (Grey Matter)">Brain Grey Matter</option>
 				<option value="Brain (White Matter)">Brain White Matter</option>
-				<option value="Breast fat">Breast Fat</option>
+				<option value="Breast Fat">Breast Fat</option>
 				<option value="Cartilage">Cartilage</option>
 				<option value="Cerebellum">Cerebellum</option>
 				<option value="Cerebro Spinal Fluid">Cerebro Spinal Fluid</option>
@@ -62,7 +62,7 @@
 				<option value="Fat (Average Infiltrated)">Fat Infiltrated</option>
 				<option value="Fat (Not Infiltrated)">Fat Not Infiltrated</option>
 				<option value="Gall Bladder">Gall Blader</option>
-				<option value="Gall Bladdr Bile">Gall Bladder Bile</option>
+				<option value="Gall Bladder Bile">Gall Bladder Bile</option>
 				<option value="Heart">Heart</option>
 				<option value="Kidney">Kidney</option>
 				<option value="Lens Cortex">Lens Cortex</option>
@@ -108,26 +108,26 @@
 				<button>Envoyer</button>
 			</form>
 
-			<table style="height: 50px; width: 333px;" border="0" cellspacing="5" align="center">
-<tbody>
-<tr>
-<td align="left" valign="middle">
-<p>
-<a href="https://www.centralesupelec.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/centralesupelec.svg" alt="CentraleSupélec nouvelle fenêtre" width="170" height="120"></a>
-</p>
-<p>
-<a href="https://www.cnrs.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/cnrs.svg" alt="CNRS nouvelle fenêtre" width="125" height="80"></a>
-</p>
-<p>
-<a href="https://www.sorbonne-universite.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/sorbonne-universite.svg" alt="Sorbonne Université nouvelle fenêtre" width="125" height="80"></a>
-</p>
-<p>
-<a href="https://www.universite-paris-saclay.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/paris-saclay.svg" alt="Paris-Saclay nouvelle fenêtre" width="125" height="80"></a>
-</p>
-</td>
-</tr>
-</tbody>
-</table>
+			<table style="height: 50px; width: 333px;" border="2" cellspacing="5" align="center">
+				<tbody>
+				<tr>
+				<td align="left" valign="middle">
+				<p>
+				<a href="https://www.centralesupelec.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/centralesupelec.svg" alt="CentraleSupélec nouvelle fenêtre" width="170" height="120"></a>
+				</p>
+				<p>
+				<a href="https://www.cnrs.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/cnrs.svg" alt="CNRS nouvelle fenêtre" width="125" height="80"></a>
+				</p>
+				<p>
+				<a href="https://www.sorbonne-universite.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/sorbonne-universite.svg" alt="Sorbonne Université nouvelle fenêtre" width="125" height="80"></a>
+				</p>
+				<p>
+				<a href="https://www.universite-paris-saclay.fr/fr" target="_blank" rel="noopener"><img style="display: block; margin-left: auto; margin-right: auto;" src="image/paris-saclay.svg" alt="Paris-Saclay nouvelle fenêtre" width="125" height="80"></a>
+				</p>
+				</td>
+				</tr>
+				</tbody>
+			</table>
 			<div id="localisation">
 				<h3 id="maptitre">Localisation</h3>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10531.174204445835!2d2.1685345!3d48.7094268!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x663cfcfd7d8efd5e!2sLaboratoire%20de%20g%C3%A9nie%20%C3%A9lectrique%20de%20Paris!5e0!3m2!1sfr!2sfr!4v1620139192389!5m2!1sfr!2sfr" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

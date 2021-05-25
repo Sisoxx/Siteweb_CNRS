@@ -41,7 +41,7 @@ to4=[e*10**(-3) for e in to4]
 alpha4=[0, 0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 
-noms_tissu=["Aorta", "Bladder", "Blood", "Bone (Cancellous)", "Bone (Cortical)", "Bone Marrow (Infiltrated)", "Bone Marrow (Not Infiltrated)", "Brain (Grey Matter)", "Brain (White Matter)", "Breast fat", "Cartilage", "Cerebellum", "Cerebro Spinal Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye Tissues (Sclera)", "Fat (Average Infiltrated)", "Fat (Not Infiltrated)", "Gall Bladder", "Gall Bladder Bile", "Heart", "Kidney", "Lens Cortex", "Lens Nucleus", "Liver", "Lung (Deflated)", "Lung (Inflated)", "Muscle", "Nerve", "Ovary", "Skin (Dry)", "Skin (Wet)", "Small Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous Humor"]
+noms_tissu=["Aorta", "Bladder", "Blood", "Bone (Cancellous)", "Bone (Cortical)", "Bone Marrow (Infiltrated)", "Bone Marrow (Not Infiltrated)", "Brain (Grey Matter)", "Brain (White Matter)", "Breast Fat", "Cartilage", "Cerebellum", "Cerebro Spinal Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye Tissues (Sclera)", "Fat (Average Infiltrated)", "Fat (Not Infiltrated)", "Gall Bladder", "Gall Bladder Bile", "Heart", "Kidney", "Lens Cortex", "Lens Nucleus", "Liver", "Lung (Deflated)", "Lung (Inflated)", "Muscle", "Nerve", "Ovary", "Skin (Dry)", "Skin (Wet)", "Small Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous Humor"]
 index_tissu=noms_tissu.index(input_choice)
 
 
@@ -57,19 +57,19 @@ def colecole(choix,low_range,high_range):
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
         somme=somme+delta4[n]/(1+(-j*w*frequence(i)*to4[n])**(1-alpha4[n]))
         somme=somme+((sig[n]*j)/(w*frequence(i)*epsilon0))
-        epsiblood=somme.real
-        M.append(epsiblood)
+        epsi=somme.real
+        M.append(epsi)
         sigblood=somme.imag*w*frequence(i)*epsilon0
         N.append(sigblood)
     return (M,N)
 
 M = colecole(input_choice, a, b)[0]
-print(M)
+#print(M)
 x=np.arange(a,b+1,1)
-print(x)
+#print(x)
 
-plt.plot(x,M)
+#plt.plot(x,M)
 
-plt.show()
+#plt.show()
 
 print (colecole(input_choice, a, b))
