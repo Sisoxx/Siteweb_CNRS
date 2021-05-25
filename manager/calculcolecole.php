@@ -23,9 +23,24 @@ $epsi_output = str_replace("]", "", $epsi_output);
 $epsi_output = trim($epsi_output);
 $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 
-# $espi_array = ();
-$number_of_comas = count_chars($epsi_output, ",");
+$number_of_comas = substr_count($epsi_output,",");
 var_dump($number_of_comas);
+echo nl2br("\n");
+
+$epsi_array = (array) null;
+
+
+for ($i = 0; $i <= $number_of_comas; $i++)
+{
+  $pos = strpos($epsi_output, ",");
+  $next_epsi = substr($epsi_output, 0, $pos);
+  #var_dump($next_epsi);
+  array_push($epsi_array, $next_epsi);
+  #var_dump($epsi_array);
+  $epsi_output = substr($epsi_output, $pos+2, strlen($epsi_output));
+}
+
+var_dump($epsi_array);
 
 echo nl2br("\n");
 echo nl2br("\n");
@@ -35,6 +50,20 @@ $sig_output = substr($py_output,$end_list_epsi, strlen($py_output));
 $sig_output = str_replace("[", "", $sig_output);
 $sig_output = str_replace("]", "", $sig_output);
 $sig_output = trim($sig_output);
+
+$sig_array = (array) null;
+
+
+for ($i = 0; $i <= $number_of_comas; $i++)
+{
+  $pos = strpos($sig_output, ",");
+  $next_sig = substr($sig_output, 0, $pos);
+  #var_dump($next_epsi);
+  array_push($sig_array, $next_sig);
+  #var_dump($epsi_array);
+  $sig_output = substr($sig_output, $pos+2, strlen($sig_output));
+}
+var_dump($sig_array);
 
 
 #settype($py_output, "array");
