@@ -1,36 +1,40 @@
+
 <?php
 
+#On récupère la liste (epsi[],sigma[]) du programme colecole.py, la liste est un string
 $input_choice = (array_key_exists('choice', $_POST)) ? $_POST['choice'] : "";
-$a = (array_key_exists('debutfrequence', $_POST)) ? $_POST['debutfrequence'] : "";
-$b = (array_key_exists('finfrequence', $_POST)) ? $_POST['finfrequence'] : "";
+$debut_frequence = (array_key_exists('debutfrequence', $_POST)) ? $_POST['debutfrequence'] : "";
+$fin_frequence = (array_key_exists('finfrequence', $_POST)) ? $_POST['finfrequence'] : "";
 
-#shell_exec("cd ../python/TestPythonWeb ");
-$py_output = shell_exec("python colecole.py $input_choice $a $b");
-var_dump($py_output);
+$py_output = shell_exec("python colecole.py $input_choice $debut_frequence $fin_frequence");
+#var_dump($py_output);
 
 $py_output = str_replace("(", "", $py_output);
 $py_output = str_replace(")", "", $py_output);
 #var_dump($py_output);
 
-echo nl2br("\n");
-echo nl2br("\n");
+saut2lignes();
+
+
 $py_output = substr($py_output, 1, strlen($py_output));
 
-$end_list_epsi = strpos($py_output, "[");
 
+#------Liste des epsilon------
+
+$end_list_epsi = strpos($py_output, "[");
 $epsi_output = substr($py_output, 0, $end_list_epsi);
 $epsi_output = str_replace("]", "", $epsi_output);
 $epsi_output = trim($epsi_output);
 $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 
 $number_of_comas = substr_count($epsi_output,",");
-var_dump($number_of_comas);
-echo nl2br("\n");
+#var_dump($number_of_comas);
+saut2lignes();
 
 $epsi_array = (array) null;
 
 
-for ($i = 0; $i <= $number_of_comas; $i++)
+for ($i = 1; $i <= $number_of_comas; $i++)
 {
   $pos = strpos($epsi_output, ",");
   $next_epsi = substr($epsi_output, 0, $pos);
@@ -40,11 +44,22 @@ for ($i = 0; $i <= $number_of_comas; $i++)
   $epsi_output = substr($epsi_output, $pos+2, strlen($epsi_output));
 }
 
-var_dump($epsi_array);
+array_push($epsi_array, $epsi_output);
 
-echo nl2br("\n");
-echo nl2br("\n");
+#var_dump($epsi_array);
 
+foreach ($epsi_array as  &$value) {
+  $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
+}
+
+saut2lignes();
+
+#var_dump($epsi_array);
+
+saut2lignes();
+
+
+#------Liste des sigma------
 
 $sig_output = substr($py_output,$end_list_epsi, strlen($py_output));
 $sig_output = str_replace("[", "", $sig_output);
@@ -54,7 +69,7 @@ $sig_output = trim($sig_output);
 $sig_array = (array) null;
 
 
-for ($i = 0; $i <= $number_of_comas; $i++)
+for ($i = 1; $i <= $number_of_comas; $i++)
 {
   $pos = strpos($sig_output, ",");
   $next_sig = substr($sig_output, 0, $pos);
@@ -63,17 +78,68 @@ for ($i = 0; $i <= $number_of_comas; $i++)
   #var_dump($epsi_array);
   $sig_output = substr($sig_output, $pos+2, strlen($sig_output));
 }
-var_dump($sig_array);
+
+array_push($sig_array, $sig_output);
+
+#var_dump($sig_array);
+
+foreach ($sig_array as  &$value) {
+  $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
+}
+
+saut2lignes();
 
 
-#settype($py_output, "array");
+#var_dump($sig_array);
 
-var_dump($epsi_output);
-echo nl2br("\n");
-echo nl2br("\n");
+#------ Tableau ------
+$a = sizeof($epsi_array)/2;
+$b = sizeof($sig_array)/2;
 
-var_dump($sig_output);
+$epsi_array = array_slice($epsi_array, 0, $a);
+$sig_array = array_slice($sig_array, 0, $b);
+
+$tableau_output = array (
+  'epsilon' => $epsi_array,
+  'sigma' => $sig_array
+);
+#var_dump($tableau_output);
+/*
+$tableau_final = '<!DOCTYPE html>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Espilon</th>
+      <th>Sigma</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($tableau_output as $tableau) ?>
+    <tr>
+      <td><?= $tableau['epsilon'] ?></td>
+      <td><?= $tableau['sigma'] ?></td>
+    </tr>
+    <? php endforeach ?>
+  </tbody>
+</table>';
+
+echo $tableau_final;*/
+#------ var dumps ------
+saut2lignes();
+
+#var_dump($epsi_output);
+#saut2lignes();
+
+#var_dump($sig_output);
 #var_dump($py_output);
 
 # echo $py_output;
+
+#------ Functions ------
+
+function saut2lignes(){
+  echo nl2br("\n");
+  echo nl2br("\n");
+}
 ?>

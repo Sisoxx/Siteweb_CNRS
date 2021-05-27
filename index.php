@@ -5,6 +5,7 @@
 	<title>Calculateur en ligne</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 
 <body>
@@ -89,11 +90,38 @@
 			<p>Quelle est votre plage de fréquence ?</p>
 			<input class="case" type="text" name="debutfrequence"  placeholder="0 Ghz">
 			<input class="case" type="text" name="finfrequence"  placeholder="0 Ghz">
-			<input type="submit" value="Choose">
+			<input type="submit" value="Choose" name="boutonColeCole" <?php if (empty($_POST['tissu_selection'])): ?> disabled="disabled"  <?php endif ?>>
 			<br><br>
 		</form>
 
 	<?php include("manager/calculcolecole.php"); ?>
+
+<?php if(isset($_POST["boutonColeCole"])): ?>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Espilon</th>
+			<th>Sigma</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach($tableau_output as $tableau): ?>
+			<?php foreach($tableau_output as $sigma): ?>
+			<?php endforeach ?>
+			<?php $i = 0; ?>
+			<?php foreach($tableau as $espilon): ?>
+			<tr>
+					<td><?= $espilon; ?></td>
+					<td><?= $sigma[$i]; ?></td>
+					<?php $i++; ?>
+			</tr>
+			<?php endforeach ?>
+			<?php break; ?>
+		<?php endforeach ?>
+	</tbody>
+</table>
+
+<?php endif ?>
 
 	<footer id="contact">
 		<h2>Contactez-nous</h2>
@@ -108,7 +136,7 @@
 				<button>Envoyer</button>
 			</form>
 
-			<table style="height: 50px; width: 333px;" border="2" cellspacing="5" align="center">
+			<table style="height: 50px; width: 333px;" border="0" cellspacing="5" align="center">
 				<tbody>
 				<tr>
 				<td align="left" valign="middle">
