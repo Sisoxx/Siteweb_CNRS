@@ -6,21 +6,29 @@ from numpy.linalg import inv
 
 
 
-def optim (T,ST,V1):
+def optim (T,ST,V1): #salinité en g/L et V1 appartient entre 0 et 1. Température en °C
 
+    #Triton X100 Lazebnik
+    DELTA = 1.6
+    TAU = 13.56 * 1e-12
+    EPSINF = 3.14
+    SIG0 = 0.036
+
+    F1 = 1e10
+    N = 0
     #Depuis programme colecole on suppose deux listes epsilon et sigma des tissus.
-    EPS_Tissu = []
-    SIG_Tissu = []
+    EPS_Tissu = [6]
+    SIG_Tissu = [0.01]
     NFRE = len(EPS_Tissu)
 
     #Calcul différentes constantes - Initialisation
     V2 = (1 - V1)
     S = ST/V2
     EPFACT = 1e-9/(36*math.pi)
-    N = 0
+
     X1 = 0
     X2  = V2
-    F1 = 1e10
+
     NCOND1 = 0
     NCOND2 = 0
     F01 = 0
@@ -35,11 +43,8 @@ def optim (T,ST,V1):
     EPSOL = []
     SIGSOL = []
 
-    #Triton X100 Lazebnik
-    DELTA = 1.6
-    TAU = 13.56 * 1e-12
-    EPSINF = 3.14
-    SIG0 = 0.036
+while F01<= F:
+    pass
 
     #Création de l'epsilon total du tissu
     for i in range (1,NFRE):
@@ -104,3 +109,5 @@ def optim (T,ST,V1):
         N = N + 1
        #F02 = F01/SOMEPS
         FO3 = math.sqrt(F02)
+
+        return (S,V2)
