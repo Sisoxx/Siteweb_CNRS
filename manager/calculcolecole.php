@@ -13,7 +13,6 @@ $py_output = str_replace("(", "", $py_output);
 $py_output = str_replace(")", "", $py_output);
 #var_dump($py_output);
 
-saut2lignes();
 
 
 $py_output = substr($py_output, 1, strlen($py_output));
@@ -29,7 +28,6 @@ $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 
 $number_of_comas = substr_count($epsi_output,",");
 #var_dump($number_of_comas);
-saut2lignes();
 
 $epsi_array = (array) null;
 
@@ -52,11 +50,9 @@ foreach ($epsi_array as  &$value) {
   $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
 }
 
-saut2lignes();
 
 #var_dump($epsi_array);
 
-saut2lignes();
 
 
 #------Liste des sigma------
@@ -87,7 +83,6 @@ foreach ($sig_array as  &$value) {
   $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
 }
 
-saut2lignes();
 
 
 #var_dump($sig_array);
@@ -126,7 +121,6 @@ $tableau_final = '<!DOCTYPE html>
 
 echo $tableau_final;*/
 #------ var dumps ------
-saut2lignes();
 
 #var_dump($epsi_output);
 #saut2lignes();

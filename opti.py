@@ -9,8 +9,8 @@ from numpy.linalg import inv
 def optim (T,ST,V1):
 
     #Depuis programme colecole on suppose deux listes epsilon et sigma des tissus.
-    EPS_Tissu = []
-    SIG_Tissu = []
+    EPS_Tissu = [6]
+    SIG_Tissu = [0.1]
     NFRE = len(EPS_Tissu)
 
     #Calcul différentes constantes - Initialisation
@@ -104,3 +104,5 @@ def optim (T,ST,V1):
         N = N + 1
        #F02 = F01/SOMEPS
         FO3 = math.sqrt(F02)
+
+        return (S,V2)

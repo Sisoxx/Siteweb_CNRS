@@ -90,7 +90,7 @@
 			<p>Quelle est votre plage de fréquence ?</p>
 			<input class="case" type="text" name="debutfrequence"  placeholder="0 Ghz">
 			<input class="case" type="text" name="finfrequence"  placeholder="0 Ghz">
-			<input type="submit" value="Choose" name="boutonColeCole" <?php if (empty($_POST['tissu_selection'])): ?> disabled="disabled"  <?php endif ?>>
+			<input type="submit" value="Choose" name="boutonColeCole" >
 			<br><br>
 		</form>
 
