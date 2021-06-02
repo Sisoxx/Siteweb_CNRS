@@ -1,13 +1,37 @@
 
+
+
 <?php
 
 #On récupère la liste (epsi[],sigma[]) du programme colecole.py, la liste est un string
 $input_choice = (array_key_exists('choice', $_POST)) ? $_POST['choice'] : "";
+
 $debut_frequence = (array_key_exists('debutfrequence', $_POST)) ? $_POST['debutfrequence'] : "";
+
 $fin_frequence = (array_key_exists('finfrequence', $_POST)) ? $_POST['finfrequence'] : "";
 
-$py_output = shell_exec("python colecole.py $input_choice $debut_frequence $fin_frequence");
-#var_dump($py_output);
+$number_points = (array_key_exists('numberPoints', $_POST)) ? $_POST['numberPoints'] : "";
+
+$step = ($fin_frequence - $debut_frequence)/$number_points;
+#var_dump($step);
+
+$round_step = number_format($step, 4, ".", " ");
+#var_dump($round_step);
+
+
+if ($round_step>$step) {
+  $round_step = $round_step - 0.0001;
+}
+
+$frequence_array = range($debut_frequence,$fin_frequence, $round_step);  #We could add the step
+var_dump($frequence_array);
+saut2lignes();
+
+
+$py_output = shell_exec("python colecole.py $input_choice $debut_frequence $fin_frequence $round_step");
+var_dump($py_output);
+
+saut2lignes();
 
 $py_output = str_replace("(", "", $py_output);
 $py_output = str_replace(")", "", $py_output);
@@ -27,7 +51,9 @@ $epsi_output = trim($epsi_output);
 $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 
 $number_of_comas = substr_count($epsi_output,",");
-#var_dump($number_of_comas);
+var_dump($number_of_comas);
+
+saut2lignes();
 
 $epsi_array = (array) null;
 
@@ -76,50 +102,22 @@ for ($i = 1; $i <= $number_of_comas; $i++)
 }
 
 array_push($sig_array, $sig_output);
-
 #var_dump($sig_array);
 
 foreach ($sig_array as  &$value) {
   $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
 }
 
-
-
 #var_dump($sig_array);
 
 #------ Tableau ------
-$a = sizeof($epsi_array)/2;
-$b = sizeof($sig_array)/2;
-
-$epsi_array = array_slice($epsi_array, 0, $a);
-$sig_array = array_slice($sig_array, 0, $b);
 
 $tableau_output = array (
   'epsilon' => $epsi_array,
   'sigma' => $sig_array
 );
-#var_dump($tableau_output);
-/*
-$tableau_final = '<!DOCTYPE html>
+var_dump($tableau_output);
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Espilon</th>
-      <th>Sigma</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach($tableau_output as $tableau) ?>
-    <tr>
-      <td><?= $tableau['epsilon'] ?></td>
-      <td><?= $tableau['sigma'] ?></td>
-    </tr>
-    <? php endforeach ?>
-  </tbody>
-</table>';
-
-echo $tableau_final;*/
 #------ var dumps ------
 
 #var_dump($epsi_output);
@@ -136,4 +134,5 @@ function saut2lignes(){
   echo nl2br("\n");
   echo nl2br("\n");
 }
+
 ?>

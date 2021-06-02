@@ -18,11 +18,7 @@ def optim (T,ST,V1): #salinité en g/L et V1 appartient entre 0 et 1. Températu
     N = 0
     #Depuis programme colecole on suppose deux listes epsilon et sigma des tissus.
     EPS_Tissu = [6]
-<<<<<<< HEAD
-    SIG_Tissu = [0.1]
-=======
     SIG_Tissu = [0.01]
->>>>>>> 2256cac8516270a5ac16a34aae7ecdc31830cc85
     NFRE = len(EPS_Tissu)
 
     #Calcul différentes constantes - Initialisation

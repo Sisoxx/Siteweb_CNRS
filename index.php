@@ -90,38 +90,44 @@
 			<p>Quelle est votre plage de fréquence ?</p>
 			<input class="case" type="text" name="debutfrequence"  placeholder="0 Ghz">
 			<input class="case" type="text" name="finfrequence"  placeholder="0 Ghz">
+			<input class="case" type="text" name="numberPoints"  placeholder="Number of points">
 			<input type="submit" value="Choose" name="boutonColeCole" >
 			<br><br>
 		</form>
-
+<!-- <?php echo "error"; ?> -->
 	<?php include("manager/calculcolecole.php"); ?>
 
-<?php if(isset($_POST["boutonColeCole"])): ?>
-<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Espilon</th>
-			<th>Sigma</th>
-		</tr>
-	</thead>
-	<tbody>
-		<?php foreach($tableau_output as $tableau): ?>
-			<?php foreach($tableau_output as $sigma): ?>
-			<?php endforeach ?>
-			<?php $i = 0; ?>
-			<?php foreach($tableau as $espilon): ?>
-			<tr>
-					<td><?= $espilon; ?></td>
-					<td><?= $sigma[$i]; ?></td>
-					<?php $i++; ?>
-			</tr>
-			<?php endforeach ?>
-			<?php break; ?>
-		<?php endforeach ?>
-	</tbody>
-</table>
 
-<?php endif ?>
+<div id="ColecoleTable" >
+	<?php if(isset($_POST["boutonColeCole"])): ?>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Frequence (Hz)</th>
+					<th>Espilon</th>
+					<th>Sigma (unit)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach($tableau_output as $tableau): ?>
+					<?php foreach($tableau_output as $sigma): ?>
+					<?php endforeach ?>
+					<?php $i = 0; ?>
+					<?php foreach($tableau as $espilon): ?>
+					<tr>
+							<td><?= $frequence_array[$i]; ?></td>
+							<td><?= $espilon; ?></td>
+							<td><?= $sigma[$i]; ?></td>
+							<?php $i++; ?>
+					</tr>
+					<?php endforeach ?>
+					<?php break; ?>
+				<?php endforeach ?>
+			</tbody>
+		</table>
+	<?php endif ?>
+</div>
+
 
 	<footer id="contact">
 		<h2>Contactez-nous</h2>

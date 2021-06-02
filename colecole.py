@@ -5,8 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 input_choice = sys.argv[1]
-a = int(sys.argv[2])
-b = int(sys.argv[3])
+low_range_input = int(sys.argv[2])
+high_range_input = int(sys.argv[3])
+round_step_input = float(sys.argv[4])
 somme=0
 j=cmath.sqrt(-1)
 delta=0.5*10**9
@@ -49,9 +50,9 @@ def frequence(i):
         f=i*delta
         return f
 
-def colecole(choix,low_range,high_range):
+def colecole(choix,low_range,high_range, round_step):
     n=index_tissu
-    for i in range (low_range,high_range+1):
+    for i in np.arange(low_range,high_range, round_step):
         somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
         somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
@@ -63,13 +64,12 @@ def colecole(choix,low_range,high_range):
         N.append(sigblood)
     return (M,N)
 
-M = colecole(input_choice, a, b)[0]
+#M = colecole(input_choice, low_range_input, high_range_input)[0]
 #print(M)
-x=np.arange(a,b+1,1)
+#x=np.arange(low_range_input,high_range_input+1,1)
 #print(x)
 
 #plt.plot(x,M)
 
 #plt.show()
-
-print (colecole(input_choice, a, b))
+print (colecole(input_choice, low_range_input, high_range_input,round_step_input))
