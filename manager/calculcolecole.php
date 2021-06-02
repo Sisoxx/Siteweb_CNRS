@@ -2,6 +2,15 @@
 
 
 <?php
+#------ Functions ------
+
+function saut2lignes(){
+  echo nl2br("\n");
+  echo nl2br("\n");
+}
+
+#_______________________
+
 
 #On récupère la liste (epsi[],sigma[]) du programme colecole.py, la liste est un string
 $input_choice = (array_key_exists('choice', $_POST)) ? $_POST['choice'] : "";
@@ -24,14 +33,14 @@ if ($round_step>$step) {
 }
 
 $frequence_array = range($debut_frequence,$fin_frequence, $round_step);  #We could add the step
-var_dump($frequence_array);
-saut2lignes();
+#var_dump($frequence_array);
+#saut2lignes();
 
 
 $py_output = shell_exec("python colecole.py $input_choice $debut_frequence $fin_frequence $round_step");
-var_dump($py_output);
+#var_dump($py_output);
 
-saut2lignes();
+#saut2lignes();
 
 $py_output = str_replace("(", "", $py_output);
 $py_output = str_replace(")", "", $py_output);
@@ -51,9 +60,9 @@ $epsi_output = trim($epsi_output);
 $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 
 $number_of_comas = substr_count($epsi_output,",");
-var_dump($number_of_comas);
+#var_dump($number_of_comas);
 
-saut2lignes();
+#saut2lignes();
 
 $epsi_array = (array) null;
 
@@ -116,7 +125,7 @@ $tableau_output = array (
   'epsilon' => $epsi_array,
   'sigma' => $sig_array
 );
-var_dump($tableau_output);
+#var_dump($tableau_output);
 
 #------ var dumps ------
 
@@ -128,11 +137,6 @@ var_dump($tableau_output);
 
 # echo $py_output;
 
-#------ Functions ------
 
-function saut2lignes(){
-  echo nl2br("\n");
-  echo nl2br("\n");
-}
 
 ?>

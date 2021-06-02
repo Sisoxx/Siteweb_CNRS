@@ -1,11 +1,23 @@
 import math
 import cmath
+import sys
 from epsieau import EPSSIG
+from colecole.py import colecole, frequence
+
+input_T = float(sys.argv[1])
+input_ST = int(sys.argv[2])
+input_V1 = float(sys.argv[3])
+input_RLOI = bool(sys.argv[4])
+input_choice = sys.argv[5]
+low_range_input = int(sys.argv[6])
+high_range_input = int(sys.argv[7])
+round_step_input = float(sys.argv[8])
+
 
 def optim (T,ST,V1,RLOI): # Température, Salinité, V1 entre 0 et 1, RLOI TRUE ==> Bottcher FALSE ==> Kra
     #Depuis programme colecole on suppose deux listes epsilon et sigma des tissus.
-    EPS_Tissu = [12.946, 12.606, 12.363, 12.162, 11.981, 11.813, 11.654, 11.5, 11.352, 11.207, 11.066]
-    SIG_Tissu = [0.100, 0.126, 0.155, 0.189, 0.226, 0.267, 0.310, 0.356, 0.404, 0.454, 0.506]
+    EPS_Tissu, SIG_Tissu = colecole(input_choice, low_range_input, high_range_input,round_step_input)
+    return EPS_Tissu, SIG_Tissu
     NFRE = len(EPS_Tissu) - 1
     #Triton X100 Lazebnik
     DELTA = 1.6
@@ -148,4 +160,4 @@ def optim (T,ST,V1,RLOI): # Température, Salinité, V1 entre 0 et 1, RLOI TRUE 
 
     return(N,ST,V1,F01)
 
-print (optim(25, 0, 0.5,True))
+print (optim(input_T, input_ST, input_V1, input_RLOI))
