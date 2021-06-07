@@ -28,9 +28,29 @@
 	<section id="présentation">
 		<div id="txtexplication">
 			<h2 id="titre1">Présentation</h2>
-
 			<p>
-				blabla
+				This topic will serve you to imitate some human being tissues. In our website you will find alot of different tisses, and our programm based on Cole-cole method will give you the information that you need for your experience.
+				<br>
+				<h3>Experimental protocol</h3>
+				<br>
+				In this part we will explain, how to prepare the different fluid that you will need for your experiments. <br>
+				<h4>Materials</h4>
+				<ul>
+					<li>Water</li>
+					<li>Salt</li>
+					<li>TritonX100</li>
+					<li>A beaker</li>
+					<li>Balance</li>
+					<li>Magnetic stirrer with heating and his magnetic bar</li>
+				</ul><br>
+				<h4>Protocol</h4><br>
+				After that you have obtained the different proportions to use, here are the different steps to perform for the fluid.
+				<ul>
+					<li>Insert in the beaker the amount of water that is needed for your fluid.</li>
+					<li>Insert the amount of salt that is needed for your fluid, dissolve it before add TritonX100.</li>
+					<li>Insert the amound of TritonX100 that is needed for your fluid, it is better to keep it warm so TritonX100 won't fix on the sides of the beaker.</li>
+					<li>Mix your mixture on the magnetic stirrer until that you get a fluid without any gas bubble in the fluid.</li>
+				</ul>
 			</p>
 		</div>
 	</section>
