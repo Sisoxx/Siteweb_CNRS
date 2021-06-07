@@ -14,12 +14,13 @@ function saut2lignes(){
 
 #On récupère la liste (epsi[],sigma[]) du programme colecole.py, la liste est un string
 $input_choice = (array_key_exists('choice', $_POST)) ? $_POST['choice'] : "";
-
 $debut_frequence = (array_key_exists('debutfrequence', $_POST)) ? $_POST['debutfrequence'] : "";
-
+$debut_frequence = floatval($debut_frequence);
 $fin_frequence = (array_key_exists('finfrequence', $_POST)) ? $_POST['finfrequence'] : "";
-
+$fin_frequence = floatval($fin_frequence);
 $number_points = (array_key_exists('numberPoints', $_POST)) ? $_POST['numberPoints'] : "";
+$number_points = intval($number_points);
+$number_points = floatval($number_points);
 
 $step = ($fin_frequence - $debut_frequence)/$number_points;
 #var_dump($step);
@@ -121,10 +122,7 @@ foreach ($sig_array as  &$value) {
 
 #------ Tableau ------
 
-$tableau_output = array (
-  'epsilon' => $epsi_array,
-  'sigma' => $sig_array
-);
+
 #var_dump($tableau_output);
 
 #------ var dumps ------

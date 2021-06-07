@@ -58,4 +58,4 @@ def EPSSIG(T,F,S): #T en °C, F en Hz, S en g/L
 
     return (EPSR, EPSI, EPSPRI)
 
-print (EPSSIG(25, 25e9, 0))
+#print (EPSSIG(25, 25e9, 0))

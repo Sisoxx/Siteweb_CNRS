@@ -111,7 +111,7 @@
 			<input class="case" type="text" name="debutfrequence"  placeholder="0 Ghz">
 			<input class="case" type="text" name="finfrequence"  placeholder="0 Ghz">
 			<input class="case" type="text" name="numberPoints"  placeholder="Number of points">
-			<input class="case" type="text" name="temprature"  placeholder="Temperature in °C">
+			<input class="case" type="text" name="temperature"  placeholder="Temperature in °C">
 			<input class="case" type="text" name="salinity"  placeholder="Salinity">
 			<input class="case" type="text" name="volume1"  placeholder=" 0<V1<1">
 			<input type="radio" value="bottcher" name="law" checked>
@@ -127,6 +127,10 @@
 
 <?php include("manager/optimInput.php"); ?>
 
+<?php $tableau_output = array (
+  'epsilon' => $epsi_array,
+  'sigma' => $sig_array
+); ?>
 
 <div id="ColecoleTable" >
 	<?php if(isset($_POST["boutonColeCole"])): ?>

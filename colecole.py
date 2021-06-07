@@ -72,4 +72,4 @@ def colecole(choix,low_range,high_range, round_step):
 #plt.plot(x,M)
 
 #plt.show()
-print (colecole(input_choice, low_range_input, high_range_input,round_step_input))
+print (colecole(input_choice,low_range_input,high_range_input,round_step_input))
