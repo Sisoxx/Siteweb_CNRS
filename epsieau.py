@@ -1,3 +1,4 @@
+import cmath
 import math
 
 def EPSSIG(T,F,S): #T en °C, F en Hz, S en g/L
@@ -19,7 +20,6 @@ def EPSSIG(T,F,S): #T en °C, F en Hz, S en g/L
     D2 = D**2
 
     #Détermination propriétés de l'eau
-
     ET = 87.79*math.exp(-0.00455*T)
     TT = 1.1109e-10 - 3.824e-12*T + 6.938e-14*T2 - 5.096e-16*T3
 
@@ -58,4 +58,4 @@ def EPSSIG(T,F,S): #T en °C, F en Hz, S en g/L
 
     return (EPSR, EPSI, EPSPRI)
 
-#print (EPSSIG(25, 25e9, 0))
+#print (EPSSIG(25, 2.5e9, 0))
