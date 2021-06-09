@@ -83,7 +83,7 @@ array_push($epsi_array, $epsi_output);
 #var_dump($epsi_array);
 
 foreach ($epsi_array as  &$value) {
-  $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
+  $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
 }
 
 
@@ -115,14 +115,36 @@ array_push($sig_array, $sig_output);
 #var_dump($sig_array);
 
 foreach ($sig_array as  &$value) {
-  $value = number_format($value, 4, ",", " "); # formatage des valeur à 4 decimales
+  $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
 }
 
 #var_dump($sig_array);
 
 #------ Tableau ------
 
+$tableau_output = array (
+  'epsilon' => $epsi_array,
+  'sigma' => $sig_array
+);
 
+$input_sigma = $tableau_output['sigma'];
+
+for ($i=0; $i < count($input_sigma) ; $i++) {
+  $input_sigma[$i] = floatval($input_sigma[$i]);
+	var_dump($input_sigma);
+	echo nl2br("\n");
+}
+
+$input_epsi = $tableau_output['epsilon'];
+#var_dump($input_epsi);
+
+for ($i=0; $i < count($input_epsi) ; $i++) {
+  $input_epsi[$i] = floatval($input_epsi[$i]);
+	var_dump($input_epsi);
+	echo nl2br("\n");
+}
+
+var_dump($input_sigma,$input_epsi);
 #var_dump($tableau_output);
 
 #------ var dumps ------

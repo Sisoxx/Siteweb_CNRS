@@ -10,30 +10,14 @@
 
 
 <body>
-	<header>
-		<div id="traitHaut"></div>
-		<div>
-			<p>
-				<a href="#présentation"><img id="logo" src="image/image_geeps.png"  width="249" height="100" alt="logo du geeps"></a>
-			</p>
-		</div>
 
-		<nav>
-			<ul>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="#calculateur">Calculateur</a></li>
-				<li><a href="#présentation">Présentation</a></li>
-			</ul>
-		</nav>
-	</header>
-
-
+<?php include("layout/header.html"); ?>
 
 	<section id="présentation">
 		<div id="txtexplication">
 			<h2 id="titre1">Présentation</h2>
 			<p>
-				This topic will serve you to imitate some human being tissues. In our website you will find alot of different tisses, and our programm based on Cole-cole method will give you the information that you need for your experience.
+				This topic will serve you to mimic some human being tissues. In our website you will find alot of different tissues, and our programm based on Cole-cole method will give you the information that you need for your experience.
 				<br>
 				<h3>Experimental protocol</h3>
 				<br>
@@ -131,10 +115,6 @@
 
 <?php include("manager/optimInput.php"); ?>
 
-<?php $tableau_output = array (
-  'epsilon' => $epsi_array,
-  'sigma' => $sig_array
-); ?>
 
 <div id="ColecoleTable" >
 	<?php if(isset($_POST["boutonColeCole"])): ?>
@@ -165,6 +145,7 @@
 		</table>
 	<?php endif ?>
 </div>
+
 
 <?php include("layout/footer.html"); ?>
 

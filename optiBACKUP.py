@@ -1,12 +1,17 @@
 import math
 import cmath
-from colecole import *
-from epsieau import EPSSIG
+#import sys
+#import numpy as np
+#from epsieau import EPSSIG
+#from colecole import *
 
 
-def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
-    EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
+def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input): # Température, Salinité, V1 entre 0 et 1, RLOI TRUE ==> Bottcher FALSE ==> Kra
+    #Depuis programme colecole on suppose deux listes epsilon et sigma des tissus.
+    #EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
+    EPS_Tissu, SIG_Tissu = [65,60], [1,1.5]
     NFRE = len(EPS_Tissu) - 1
+    #Triton X100 Lazebnik
     DELTA = 1.6
     TAU = 13.56 * 1e-12
     EPSINF = 3.14
@@ -14,6 +19,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     FREQMI = 1e9
     PASFRE = 0.25e9
 
+    #Calcul différentes constantes - Initialisation
     V2 = 1 - V1
     S = ST/V2
     EPFACT = 1e-9/(36*math.pi)
@@ -24,6 +30,9 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     X1 = S
     X2 = V2
 
+    #RLOI = TRUE OR FALSE
+
+    #Création de l'epsilon total du tissu
     for i in range (0,NFRE):
         FREQ = FREQMI + i*PASFRE
         OMEGA = 2 * math.pi * FREQ
@@ -35,6 +44,8 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         GRAD1 = 0
         GRAD2 = 0
 
+        #HES = np.array([[0,0],
+                  #     [0,0]], dtype=float)
         HES00 = 0
         HES01 = 0
         HES10 = 0
@@ -45,30 +56,42 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         HESINV10 = 0
         HESINV11 = 0
 
+        #HESINV = np.array([[0,0],
+                           #[0,0]], dtype=float)
         EPSOL = []
         SIGSOL = []
 
+        #Calcul propriétés diélectriques des tissus
         for i in range (0,NFRE):
             FREQ = FREQMI+ i*PASFRE
             OMEGA = 2 * math.pi * FREQ
 
+            #Calcul propriétés diélectriques du TX100
             YTX = OMEGA * TAU
             EPSITX = YTX * DELTA / (1 + YTX**2) + SIG0 / (OMEGA * EPFACT)
             EPSRTX = EPSINF + DELTA / (1 + YTX**2)
-            a,b,c = EPSSIG(T,FREQ,S)
+            #print ("epsitx", EPSITX)
+            #print ("epsrtx", EPSRTX)
+
+            #Calcul propriétés diélectriques de l'eau et de ses dérivé en fonction de sa salinité
+            #a,b,c = EPSSIG(T, FREQ, S)
+            a,b,c = 77.18390390304403, 9.172783049064778, (-0.33526342922213487+1.231082219371065j)
             EPSEAU = complex(a,b)
             EPS2 = EPSEAU
             EPSTX = complex(EPSRTX,EPSITX)
             EPS1 = EPSTX
+
+            #Calcul par Bottcher
             if RLOI:
                 A = 2
                 B = EPS2 - 2 * EPS1 - 3 * V2 * (EPS2 - EPS1)
                 C = -1 * EPS2 * EPS1
                 DET = cmath.sqrt(B**2 - 4 * A * C)
                 LOGEPS = (-1 * B + DET) / (2 * A)
-                DFDV = 3 / (4 * (EPS2 - EPS1) * (1 - B / DET))
+                DFDV = 3 / 4 * (EPS2 - EPS1) * (1 - B / DET)
                 DEMDE2 = (3 * V2 - 1) / 4 + ((1 - 3 * V2) * B + 4 * EPS1) / (4 * DET)
 
+            #Calcul par Kraszweski
             else :
                 R1 = cmath.sqrt(EPS1)
                 R2 = cmath.sqrt(EPS2)
@@ -78,6 +101,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
                 DFDV = 2 * (A - EPS1 + V2 * (EPS1 + EPS2 - 2 * A))
                 DEMDE2 = V2 * B + (1-B) * V2**2
 
+            #Récupération des résultats
             EPSRM = LOGEPS.real
             SIGRM = LOGEPS.imag * OMEGA * EPFACT
             EPSOL.append(EPSRM)
@@ -94,6 +118,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
             HES10 = HES10 + 2 * W * (DFDV * DFDS.conjugate()).real
             HES11 = HES11 + 2 * W * abs(DFDV)**2
 
+        #Inversion Matrice
         DETHES = (HES00 * HES11) - (HES01 * HES10)
         HESINV00 = HES11 / DETHES
         HESINV11 = HES00 / DETHES
@@ -108,3 +133,5 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         N = N + 1
 
     return(N,ST,V1,F01)
+
+#print(input_T,input_ST,input_V1,input_RLOI,input_choice,low_range_input,high_range_input,round_step_input)
