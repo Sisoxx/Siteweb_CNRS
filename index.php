@@ -119,7 +119,7 @@
 
 <div id="ColecoleTable" >
 	<?php if(isset($_POST["boutonColeCole"])): ?>
-		<table class="table table-striped">
+		<table class="table">
 			<thead>
 				<tr>
 					<th>Frequence (Hz)</th>
