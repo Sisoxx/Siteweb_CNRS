@@ -3,7 +3,7 @@ import math
 import cmath
 from colecole import *
 import numpy as np
-from opti import optiFonction
+from optiBACKUP2 import optim
 from epsieau import EPSSIG
 
 
