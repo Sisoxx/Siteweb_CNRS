@@ -106,6 +106,7 @@
 			<label for="bottcher">Bottcher's Law</label>
 			<input type="radio" value="kraszweski" name="law" >
 			<label for="kraszweski">Kraszweski's law</label>
+			<input class ="case" type="text" name="volumebecher" placeholder="Volume of your beaker in mL ONLY">
 			<input type="submit" value="Choose" name="boutonColeCole" >
 			<br><br>
 		</form>
