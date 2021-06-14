@@ -1,4 +1,9 @@
+from opti imort optiFonction
+
+
+
 def calculmasse (ST,VTX,VTOT): #Salinité en g/L, VTX sortie du programme Vtot en mL
+    #ST,VTX = optiFonction()
     roNACL = 2.16
     roeau = 1
     rotx = 1.061
