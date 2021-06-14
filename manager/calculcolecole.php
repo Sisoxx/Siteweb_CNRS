@@ -131,7 +131,7 @@ $input_sigma = $tableau_output['sigma'];
 
 for ($i=0; $i < count($input_sigma) ; $i++) {
   $input_sigma[$i] = floatval($input_sigma[$i]);
-	var_dump($input_sigma);
+	#var_dump($input_sigma);
 	echo nl2br("\n");
 }
 
@@ -140,7 +140,7 @@ $input_epsi = $tableau_output['epsilon'];
 
 for ($i=0; $i < count($input_epsi) ; $i++) {
   $input_epsi[$i] = floatval($input_epsi[$i]);
-	var_dump($input_epsi);
+#	var_dump($input_epsi);
 	echo nl2br("\n");
 }
 

@@ -6,7 +6,6 @@ import numpy as np
 from opti import optiFonction
 from epsieau import EPSSIG
 
-print("hello")
 
 try:
     input_T = float(sys.argv[1])
@@ -43,5 +42,3 @@ except:
 
 
 print (optiFonction(input_T, input_ST, input_V1, input_RLOI, input_choice, low_range_input, high_range_input,round_step_input))
-
-print("hello")
