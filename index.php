@@ -116,6 +116,8 @@
 
 <?php include("manager/optimInput.php"); ?>
 
+<?php include("manager/masse.php"); ?>
+
 
 <div id="ColecoleTable" >
 	<?php if(isset($_POST["boutonColeCole"])): ?>

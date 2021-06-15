@@ -2,7 +2,8 @@ from opti import optiFonction
 
 
 
-def calculmasse (ST,VTX,VTOT):  
+def calculmasse (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input,VTOT):
+    ST,VTX, inutile = optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input)
     roNACL = 2.16
     roeau = 1
     rotx = 1.061

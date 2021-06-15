@@ -77,7 +77,6 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
                 LOGEPS = (R1+V2*(R2-R1))**2
                 A = cmath.sqrt(EPS1 * EPS2)
                 B = cmath.sqrt(EPS1 / EPS2)
-                print("else")
                 DFDV = 2 * (A - EPS1 + V2 * (EPS1 + EPS2 - 2 * A))
                 DEMDE2 = V2 * B + (1-B) * V2**2
 
@@ -110,4 +109,4 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         ST = S * V2
         N = N + 1
 
-    return(N,ST,V1,F01)
+    return(ST,V1,F01)
