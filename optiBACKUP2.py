@@ -4,6 +4,7 @@ from colecole import *
 from epsieau import EPSSIG
 
 
+
 def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu) - 1
@@ -11,8 +12,8 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
     TAU = 13.56 * 1e-12
     EPSINF = 3.14
     SIG0 = 0.036
-    FREQMI = 1e9
-    PASFRE = 0.25e9
+    FREQMI = low_range_input * 1e9
+    PASFRE = round_step_input * 1e9
 
     V2 = 1 - V1
     S = ST/V2
@@ -31,6 +32,7 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
         SOMEPS = SOMEPS + abs(EPSTISSU[i])**2
 
     while  (N <20):
+        print("N : ", N)
         F01 = 0
         GRAD1 = 0
         GRAD2 = 0
@@ -49,7 +51,6 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
         SIGSOL = []
 
         for i in range (0,NFRE):
-
 
             FREQ = FREQMI+ i*PASFRE
             OMEGA = 2 * math.pi * FREQ
@@ -72,7 +73,6 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
                 LOGEPS = (-1 * B + DET) / (2 * A)
                 DFDV = 3 / 4 * (EPS2 - EPS1) * (1 - B / DET)
                 DEMDE2 = (3 * V2 - 1) / 4 + ((1 - 3 * V2) * B + 4 * EPS1) / (4 * DET)
-                print(3 / (4 * (EPS2 - EPS1) * (1 - B / DET)))
 
 
             else :
@@ -99,7 +99,7 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
             HES01 = HES01 + 2 * W  * (DFDS * DFDV.conjugate()).real
             HES10 = HES10 + 2 * W * (DFDV * DFDS.conjugate()).real
             HES11 = HES11 + 2 * W * abs(DFDV)**2
-            print(DFDV * FI.conjugate()).real)
+
         DETHES = (HES00 * HES11) - (HES01 * HES10)
         HESINV00 = HES11 / DETHES
         HESINV11 = HES00 / DETHES

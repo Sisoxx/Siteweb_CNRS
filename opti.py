@@ -11,8 +11,8 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     TAU = 13.56 * 1e-12
     EPSINF = 3.14
     SIG0 = 0.036
-    FREQMI = 1e9
-    PASFRE = 0.25e9
+    FREQMI = low_range_input * 1e9
+    PASFRE = round_step_input * 1e9
 
     V2 = 1 - V1
     S = ST/V2
@@ -66,7 +66,9 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
                 C = -1 * EPS2 * EPS1
                 DET = cmath.sqrt(B**2 - 4 * A * C)
                 LOGEPS = (-1 * B + DET) / (2 * A)
-                DFDV = 3 / (4 * (EPS2 - EPS1) * (1 - B / DET))
+                DFDV = 0.75 * (EPS2 - EPS1) * (1 - B / DET)
+
+
                 DEMDE2 = (3 * V2 - 1) / 4 + ((1 - 3 * V2) * B + 4 * EPS1) / (4 * DET)
 
             else :

@@ -1,7 +1,7 @@
 import cmath
 import math
 
-def EPSSIG(T,F,S): 
+def EPSSIG(T,F,S):
     w = 2*math.pi*F
     EOS =8.85434E-12
     EINF = 5.77 - 0.0274 * T

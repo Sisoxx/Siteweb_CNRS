@@ -144,7 +144,7 @@ for ($i=0; $i < count($input_epsi) ; $i++) {
 	echo nl2br("\n");
 }
 
-var_dump($input_sigma,$input_epsi);
+#var_dump($input_sigma,$input_epsi);
 #var_dump($tableau_output);
 
 #------ var dumps ------
