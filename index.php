@@ -113,9 +113,7 @@
 
 <?php include("manager/calculcolecole.php"); ?>
 
-<?php include("manager/optimInput.php"); ?>
 
-<?php include("manager/masse.php"); ?>
 
 
 <div id="ColecoleTable" >
@@ -148,6 +146,9 @@
 	<?php endif ?>
 </div>
 
+<?php include("manager/optimInput.php"); ?>
+
+<?php include("manager/masse.php"); ?>
 
 <?php include("layout/footer.html"); ?>
 

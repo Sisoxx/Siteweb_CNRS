@@ -50,11 +50,6 @@ def colecoleFonction(choix,low_range,high_range,round_step):
         somme=somme+((sig[n]*j)/(w*frequence(i)*epsilon0))
         epsi=somme.real
         M.append(epsi)
-<<<<<<< HEAD
         sig1=somme.imag*w*frequence(i)*epsilon0
         N.append(sig1)
-=======
-        sig=somme.imag*w*frequence(i)*epsilon0
-        N.append(sig)
->>>>>>> 771352ca3ca82adafb55e722a4a38d76fa45b41e
     return (M,N)
