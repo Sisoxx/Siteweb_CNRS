@@ -37,7 +37,7 @@ $frequence_array = range($debut_frequence,$fin_frequence, $round_step);  #We cou
 #var_dump($frequence_array);
 #saut2lignes();
 
-$py_output = exec("python appel_colecole.py $input_choice $debut_frequence $fin_frequence $round_step");
+$py_output = exec("cd python; python appel_colecole.py $input_choice $debut_frequence $fin_frequence $round_step");
 #var_dump($py_output);
 
 #saut2lignes();
