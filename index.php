@@ -52,7 +52,7 @@
 				<option value="Aorta">Aorta</option>
 				<option value="Bladder">Bladder</option>
 				<option value="Blood">Blood</option>
-				<option value="Bone (Cancellous)">Bone Cancellous</option>
+				<option value="Bone_Cancellous">Bone Cancellous</option>
 				<option value="Bone (Cortical)">Bone Cortical</option>
 				<option value="Bone Marrow (Infiltrated)">Bone Marrow Infiltrated</option>
 				<option value="Bone Marrow (Not Infiltrated)">Bone Marrow Not Infiltrated</option>
@@ -122,8 +122,8 @@
 			<thead>
 				<tr>
 					<th>Frequence (GHz)</th>
-					<th>Epsilon</th>
-					<th>Sigma (S/m)</th>
+					<th>&#949;'</th>
+					<th>&#963; (S/m)</th>
 				</tr>
 			</thead>
 			<tbody>
