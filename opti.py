@@ -3,7 +3,6 @@ import cmath
 from colecole import *
 from epsieau import EPSSIG
 
-
 def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu) - 1
@@ -67,8 +66,6 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
                 DET = cmath.sqrt(B**2 - 4 * A * C)
                 LOGEPS = (-1 * B + DET) / (2 * A)
                 DFDV = 0.75 * (EPS2 - EPS1) * (1 - B / DET)
-
-
                 DEMDE2 = (3 * V2 - 1) / 4 + ((1 - 3 * V2) * B + 4 * EPS1) / (4 * DET)
 
             else :

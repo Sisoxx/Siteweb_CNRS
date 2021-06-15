@@ -40,5 +40,4 @@ try:
 except:
     print("il manque un argument 8")
 
-
 print (optiFonction(input_T, input_ST, input_V1, input_RLOI, input_choice, low_range_input, high_range_input,round_step_input))
