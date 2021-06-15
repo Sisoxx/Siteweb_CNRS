@@ -60,7 +60,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
             EPS2 = EPSEAU
             EPSTX = complex(EPSRTX,EPSITX)
             EPS1 = EPSTX
-            if RLOI:
+            if RLOI == 1:
                 A = 2
                 B = EPS2 - 2 * EPS1 - 3 * V2 * (EPS2 - EPS1)
                 C = -1 * EPS2 * EPS1
@@ -77,6 +77,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
                 LOGEPS = (R1+V2*(R2-R1))**2
                 A = cmath.sqrt(EPS1 * EPS2)
                 B = cmath.sqrt(EPS1 / EPS2)
+                print("else")
                 DFDV = 2 * (A - EPS1 + V2 * (EPS1 + EPS2 - 2 * A))
                 DEMDE2 = V2 * B + (1-B) * V2**2
 

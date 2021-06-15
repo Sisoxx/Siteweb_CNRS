@@ -7,10 +7,10 @@ $input_V1 = floatval((array_key_exists('volume1', $_POST)) ? $_POST['volume1'] :
 
 
 if ($_POST['law'] == 'bottcher') {
-  $input_law = True;
+  $input_law = 1;
 }
 else {
-  $input_law = False;
+  $input_law = 2;
 }
 
 #var_dump($round_step);
