@@ -3,7 +3,7 @@ import math
 import cmath
 from colecole import *
 import numpy as np
-from optiBACKUP2 import optim
+from optiBACKUP2 import *
 from epsieau import EPSSIG
 
 
@@ -41,4 +41,4 @@ except:
     print("il manque un argument")
 
 
-print (optiFonction(input_T, input_ST, input_V1, input_RLOI, input_choice, low_range_input, high_range_input,round_step_input))
+print (optim(input_T, input_ST, input_V1, input_RLOI, input_choice, low_range_input, high_range_input,round_step_input))

@@ -72,6 +72,8 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
                 LOGEPS = (-1 * B + DET) / (2 * A)
                 DFDV = 3 / 4 * (EPS2 - EPS1) * (1 - B / DET)
                 DEMDE2 = (3 * V2 - 1) / 4 + ((1 - 3 * V2) * B + 4 * EPS1) / (4 * DET)
+                print(3 / (4 * (EPS2 - EPS1) * (1 - B / DET)))
+
 
             else :
                 R1 = cmath.sqrt(EPS1)
@@ -97,7 +99,7 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
             HES01 = HES01 + 2 * W  * (DFDS * DFDV.conjugate()).real
             HES10 = HES10 + 2 * W * (DFDV * DFDS.conjugate()).real
             HES11 = HES11 + 2 * W * abs(DFDV)**2
-
+            print(DFDV * FI.conjugate()).real)
         DETHES = (HES00 * HES11) - (HES01 * HES10)
         HESINV00 = HES11 / DETHES
         HESINV11 = HES00 / DETHES
@@ -111,6 +113,5 @@ def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_st
         V1 = 1 - V2
         ST = S * V2
         N = N + 1
-
 
     return(N,ST,V1,F01)
