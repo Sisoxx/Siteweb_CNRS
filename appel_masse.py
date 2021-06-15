@@ -3,7 +3,6 @@ from opti import *
 from masse import *
 
 
-
 try:
     input_T = float(sys.argv[1])
 except:

@@ -3,8 +3,6 @@ import cmath
 from colecole import *
 from epsieau import EPSSIG
 
-
-
 def optim (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu) - 1
