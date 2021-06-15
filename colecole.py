@@ -1,10 +1,6 @@
 import math
 import cmath
-#import sys
 import numpy as np
-
-#print("debut")
-
 
 def frequence(i):
     delta=0.5*10**9
@@ -59,8 +55,3 @@ def colecoleFonction(choix,low_range,high_range,round_step):
         sigblood=somme.imag*w*frequence(i)*epsilon0
         N.append(sigblood)
     return (M,N)
-
-#M = colecole(input_choice, low_range_input, high_range_input)[0]
-#print(M)
-#x=np.arange(low_range_input,high_range_input+1,1)
-#print(x)
