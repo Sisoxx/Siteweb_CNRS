@@ -22,25 +22,15 @@ $number_points = (array_key_exists('numberPoints', $_POST)) ? $_POST['numberPoin
 $number_points = intval($number_points);
 $number_points = floatval($number_points);
 
-$step = ($fin_frequence - $debut_frequence)/$number_points;
-#var_dump($step);
-
-$round_step = number_format($step, 4, ".", " ");
-#var_dump($round_step);
 
 
-if ($round_step>$step) {
-  $round_step = $round_step - 0.0001;
-}
+$step = ($fin_frequence - $debut_frequence)/($number_points-1);
 
-$frequence_array = range($debut_frequence,$fin_frequence, $round_step);  #We could add the step
+$frequence_array = range($debut_frequence,$fin_frequence, $step);  #We could add the step
 #var_dump($frequence_array);
-#saut2lignes();
-
-$py_output = exec("cd python; python appel_colecole.py $input_choice $debut_frequence $fin_frequence $round_step");
+$py_output = exec("cd python; python appel_colecole.py $input_choice $debut_frequence $fin_frequence $step");
 #var_dump($py_output);
 
-#saut2lignes();
 
 $py_output = str_replace("(", "", $py_output);
 $py_output = str_replace(")", "", $py_output);
@@ -62,10 +52,8 @@ $epsi_output = substr($epsi_output, 0, ($end_list_epsi-3));
 $number_of_comas = substr_count($epsi_output,",");
 #var_dump($number_of_comas);
 
-#saut2lignes();
 
 $epsi_array = (array) null;
-
 
 for ($i = 1; $i <= $number_of_comas; $i++)
 {
@@ -131,7 +119,6 @@ $input_sigma = $tableau_output['sigma'];
 for ($i=0; $i < count($input_sigma) ; $i++) {
   $input_sigma[$i] = floatval($input_sigma[$i]);
 	#var_dump($input_sigma);
-	#echo nl2br("\n");
 }
 
 $input_epsi = $tableau_output['epsilon'];

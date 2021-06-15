@@ -121,9 +121,9 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th>Frequence (Hz)</th>
-					<th>Espilon</th>
-					<th>Sigma (unit)</th>
+					<th>Frequence (GHz)</th>
+					<th>Epsilon</th>
+					<th>Sigma (S/m)</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -137,6 +137,7 @@
 							<td><?= $espilon; ?></td>
 							<td><?= $sigma[$i]; ?></td>
 							<?php $i++; ?>
+							<?php if ($i == count($frequence_array)) {break;}?>
 					</tr>
 					<?php endforeach ?>
 					<?php break; ?>
@@ -146,9 +147,21 @@
 	<?php endif ?>
 </div>
 
+
 <?php include("manager/optimInput.php"); ?>
 
 <?php include("manager/masse.php"); ?>
+
+<div class="phrase_mixture">
+	<?php if(isset($_POST["boutonColeCole"])): ?>
+		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
+			<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
+			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
+			Water volume: <strong><?= $recipe_array[2]; ?> ml</strong><br>
+		</p>
+	<?php endif ?>
+
+</div>
 
 <?php include("layout/footer.html"); ?>
 

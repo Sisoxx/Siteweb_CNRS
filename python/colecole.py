@@ -7,7 +7,7 @@ def frequence(i):
     f=i*delta
     return f
 
-def colecoleFonction(choix,low_range,high_range,round_step):
+def colecoleFonction(choix,low_range,high_range,step):
     somme=0
     j=cmath.sqrt(-1)
     epsilon0=1/(36*math.pi*10**9)
@@ -42,7 +42,8 @@ def colecoleFonction(choix,low_range,high_range,round_step):
     noms_tissu=["Aorta", "Bladder", "Blood", "Bone (Cancellous)", "Bone (Cortical)", "Bone Marrow (Infiltrated)", "Bone Marrow (Not Infiltrated)", "Brain (Grey Matter)", "Brain (White Matter)", "Breast Fat", "Cartilage", "Cerebellum", "Cerebro Spinal Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye Tissues (Sclera)", "Fat (Average Infiltrated)", "Fat (Not Infiltrated)", "Gall Bladder", "Gall Bladder Bile", "Heart", "Kidney", "Lens Cortex", "Lens Nucleus", "Liver", "Lung (Deflated)", "Lung (Inflated)", "Muscle", "Nerve", "Ovary", "Skin (Dry)", "Skin (Wet)", "Small Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous Humor"]
     index_tissu=noms_tissu.index(choix)
     n=index_tissu
-    for i in np.arange(low_range,high_range, round_step):
+    for i in np.arange(low_range,high_range+step, step):
+        print(step)
         somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
         somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
