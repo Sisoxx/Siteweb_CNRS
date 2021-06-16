@@ -11,6 +11,7 @@
 <body>
 
 <?php include("layout/header.html"); ?>
+
 	<section id="calculateur">
 		<h2 id="titre2">Calculateur</h2>
 
