@@ -2,7 +2,6 @@
 {
 	background-color: #FFFFFF ;
 	text-align: center;
-	padding: 9vh 0 5vh 0;
 }
 
 #titre2
@@ -36,3 +35,4 @@ tbody tr ,td, th {
 
 tbody tr:nth-child(even){
 	background-color: #f3f3f3;
+}

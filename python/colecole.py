@@ -39,11 +39,10 @@ def colecoleFonction(choix,low_range,high_range,step):
     to4=[e*10**(-3) for e in to4]
     alpha4=[0, 0, 0, 0, 0, 0.1, 0.1, 0, 0.02, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.01, 0.01, 0, 0.2, 0, 0, 0, 0, 0.05, 0, 0, 0, 0, 0, 0.2, 0.2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-    noms_tissu=["Aorta", "Bladder", "Blood", "Bone_Cancellous", "Bone_Cortical", "Bone_Marrow_Infiltrated", "Bone_Marrow_Not_Infiltrated", "Brain_Grey_Matter)", "Brain_White_Matter)", "Breast_Fat", "Cartilage", "Cerebellum", "Cerebro_Spinal_Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye_Tissues_Sclera", "Fat_Average_Infiltrated", "Fat_Not_Infiltrated", "Gall_Bladder", "Gall_Bladder_Bile", "Heart", "Kidney", "Lens_Cortex", "Lens_Nucleus", "Liver", "Lung_Deflated", "Lung_Inflated", "Muscle", "Nerve", "Ovary", "Skin_Dry", "Skin_Wet", "Small_Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous_Humor"]
+    noms_tissu=["Aorta", "Bladder", "Blood", "Bone_Cancellous", "Bone_Cortical", "Bone_Marrow_Infiltrated", "Bone_Marrow_Not_Infiltrated", "Brain_Grey_Matter", "Brain_White_Matter", "Breast_Fat", "Cartilage", "Cerebellum", "Cerebro_Spinal_Fluid", "Cervix", "Colon", "Cornea", "Dura", "Eye_Tissues_Sclera", "Fat_Average_Infiltrated", "Fat_Not_Infiltrated", "Gall_Bladder", "Gall_Bladder_Bile", "Heart", "Kidney", "Lens_Cortex", "Lens_Nucleus", "Liver", "Lung_Deflated", "Lung_Inflated", "Muscle", "Nerve", "Ovary", "Skin_Dry", "Skin_Wet", "Small_Intestine", "Spleen", "Stomach", "Tendon", "Testis", "Thyroid", "Tongue", "Trachea", "Uterus", "Vitreous_Humor"]
     index_tissu=noms_tissu.index(choix)
     n=index_tissu
     for i in np.arange(low_range,high_range+step, step):
-        print(step)
         somme=ef[n]+delta1[n]/(1+(-j*w*frequence(i)*to1[n])**(1-alpha1[n]))
         somme=somme+delta2[n]/(1+(-j*w*frequence(i)*to2[n])**(1-alpha2[n]))
         somme=somme+delta3[n]/(1+(-j*w*frequence(i)*to3[n])**(1-alpha3[n]))
