@@ -95,6 +95,53 @@ header
 	transition: 1s ease-in-out;
 }
 
+/************************* SLIDER *********************/
+.slider{
+	width:50%;
+	height: 300px;
+	overflow:hidden;
+	margin: 60px auto;
+}
+
+.slides{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	animation: glisse	10s infinite;
+}
+.slide{
+	float: left;
+}
+
+@keyframes glisse {
+	0%{
+		transform: translateX(0%);
+	}
+	10%{
+		transform: translateX(0%);
+	}
+	33%{
+		transform: translateX(-43%);
+	}
+	43%{
+		transform: translateX(-43%);
+	}
+	66%{
+		transform: translateX(-76%);
+	}
+	76%{
+		transform: translateX(-76%);
+	}
+	86%{
+		transform: translateX(-86%);
+	}
+	96%{
+		transform: translateX(-86%);
+	}
+	100%{
+		transform: translateX(0%);
+	}
+}
 
 /************************* SECTION 1 *********************/
 
@@ -132,7 +179,7 @@ footer h2
 
 input, button,textarea
 {
-	border: none;
+	border: solid;
 	width: 55%;
 	padding: 15px 10px;
 	margin: 1px;

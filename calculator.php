@@ -15,7 +15,6 @@
 
 	<section id="calculateur">
 		<h2 id="titre2">Calculateur</h2>
-
 		<form action="" method="post" id="formulaire2">
 			<label for="">Tissu to mimic</label>
 			<select id="tissu_selection" name="choice" required>
@@ -126,7 +125,6 @@
 				<?php endforeach ?>
 			</tbody>
 		</table>
-
 </div>
 
 
