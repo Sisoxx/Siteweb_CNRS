@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/style2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
 
   <body>
       <?php include("layout/header.html"); ?>
 
-    <section>
+    <section id="contact">
       <h1>Contact Us</h1>
-    <div id="contact">
+    <div >
       <form method="POST" action="manager/contact.php" id="formulaire">
         <input name="nom" placeholder="Nom">
         <input name="prenom"placeholder="Prénom">
