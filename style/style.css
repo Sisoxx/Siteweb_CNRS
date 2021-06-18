@@ -690,6 +690,22 @@ button:hover
 		/*box-shadow: 1px 3px 2px #961e64;*/
 	}
 }
+.btn {
+    height: 100px;
+    width: 100px;
+    background: grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.icone {
+    width: 50px;
+}
 
 /***************Privacy***************/
 #privacy{

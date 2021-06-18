@@ -18,7 +18,7 @@
 
 	<section>
 		<div id="calculateur">
-			<h1>Calculateur</h1>
+			<h1>Simulator</h1>
 			<form action="" method="post" id="formulaire2">
 				<label for="">Tissu to mimic</label>
 				<select id="tissu_selection" name="choice" required>

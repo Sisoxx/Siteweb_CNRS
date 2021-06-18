@@ -12,7 +12,10 @@
   </header>
 
   <body>
-    <section id="terms">
+    <section>
+      <div id="terms">
+
+
       <h2>Terms and Conditions</h2>
 <p>Last updated: June 18, 2021</p>
 <p>Please read these terms and conditions carefully before using Our Service.</p>
@@ -95,6 +98,7 @@ You agree that the original English text shall prevail in the case of a dispute.
 <ul>
 <li>By visiting this page on our website: <a href="contact.php" rel="external nofollow noopener"</a>Contact</li>
 </ul>
+</div>
 
   <footer>
     <?php include("layout/footer.html"); ?>
