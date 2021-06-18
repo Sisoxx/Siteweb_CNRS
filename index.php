@@ -5,21 +5,51 @@
 	<title>Calculateur en ligne</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+	<link href='http://fonts.googleapis.com/css?family=Mr+Dafoe' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
 </head>
+
+
+<header>
+	<?php include("layout/header.html"); ?>
+</header>
+
 
 <body>
 
-<?php include("layout/header.html"); ?>
+	<span id="sl_play" class="sl_command">&nbsp;</span>
+	<span id="sl_pause" class="sl_command">&nbsp;</span>
+	<span id="sl_i1" class="sl_command sl_i">&nbsp;</span>
+	<span id="sl_i2" class="sl_command sl_i">&nbsp;</span>
+	<span id="sl_i3" class="sl_command sl_i">&nbsp;</span>
+	<span id="sl_i4" class="sl_command sl_i">&nbsp;</span>
 
-<div class="slider">
-	<div class="slides">
-		<div class="slide"> <img src="/image/centralesupelec.png" alt=""></div>
-		<div class="slide"> <img src="/image/image_geeps.png" alt=""></div>
-		<div class="slide"> <img src="/image/cnrs.svg" alt=""></div>
-	</div>
-</div>
+	<section id="slideshow">
 
+		<a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+		<a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+
+		<div class="container">
+			<div class="c_slider"></div>
+			<div class="slider">
+				<figure>
+					<img src="image/Fantôme Tête.png" alt="" width="640" height="310" />
+				</figure><!--
+				--><figure>
+					<img src="image/Fantôme Tête.png" alt="" width="640" height="310" />
+				</figure><!--
+				--><figure>
+					<img src="image/Fantôme Tête.png" alt="" width="640" height="310" />
+				</figure><!--
+				--><figure>
+					<img src="image/Fantôme Tête.png" alt="" width="640" height="310" />
+				</figure>
+			</div>
+		</div>
+
+		<span id="timeline"></span>
+
+	</section>
 
 <section>
 	<div id="txtexplication">
@@ -46,8 +76,10 @@
 	</div>
 </section>
 
-<?php include("layout/footer.html"); ?>
 
+<footer>
+	<?php include("layout/footer.html"); ?>
+</footer>
 
 </body>
 </html>

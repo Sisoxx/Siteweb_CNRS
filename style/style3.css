@@ -1,14 +1,7 @@
 #calculateur{
-	background-color: white;
 	text-align: center;
 }
-
-
-#titre2
-{
-	text-align: center;
-}
-
+/***********************************TABLEAU***************/
 .table {
 	border-collapse: collapse;
 	min-width: 400px;
@@ -35,4 +28,17 @@ tbody tr ,td, th {
 
 tbody tr:nth-child(even){
 	background-color: #f3f3f3;
+}
+
+/*******************BOUTTON***************/
+#bouttton{
+	font-size: 1.5em;
+	background-color: ##E6E6E6;
+}
+
+#bouttton:hover{
+	background-color: white;
+	color: #961E64 ;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
 }

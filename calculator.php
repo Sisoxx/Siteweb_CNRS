@@ -11,89 +11,95 @@
 
 <body>
 
-<?php include("layout/header.html"); ?>
+<header>
+	<?php include("layout/header.html"); ?>
+</header>
 
-	<section id="calculateur">
-		<h2 id="titre2">Calculateur</h2>
-		<form action="" method="post" id="formulaire2">
-			<label for="">Tissu to mimic</label>
-			<select id="tissu_selection" name="choice" required>
-				<option value="Choice" disabled selected>Choose one in the list</option>
-				<option value="Aorta" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Aorta') ? 'selected' : ''; ?>>Aorta</option>
-				<option value="Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bladder') ? 'selected' : ''; ?>>Bladder</option>
-				<option value="Blood" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Blood') ? 'selected' : ''; ?>>Blood</option>
-				<option value="Bone_Cancellous" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Cancellous') ? 'selected' : ''; ?>>Bone Cancellous</option>
-				<option value="Bone_Cortical" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Cortical') ? 'selected' : ''; ?>>Bone Cortical</option>
-				<option value="Bone_Marrow_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'option1') ? 'selected' : ''; ?>>Bone Marrow Infiltrated</option>
-				<option value="Bone_Marrow_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Marrow_Not_Infiltrated') ? 'selected' : ''; ?>>Bone Marrow Not Infiltrated</option>
-				<option value="Brain_Grey_Matter" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Brain_Grey_Matter') ? 'selected' : ''; ?>>Brain Grey Matter</option>
-				<option value="Brain_White_Matter" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Brain_White_Matter') ? 'selected' : ''; ?>>Brain White Matter</option>
-				<option value="Breast_Fat" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Breast_Fat') ? 'selected' : ''; ?>>Breast Fat</option>
-				<option value="Cartilage" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cartilage') ? 'selected' : ''; ?>>Cartilage</option>
-				<option value="Cerebellum" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cerebellum') ? 'selected' : ''; ?>>Cerebellum</option>
-				<option value="Cerebro_Spinal_Fluid" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cerebro_Spinal_Fluid') ? 'selected' : ''; ?>>Cerebro Spinal Fluid</option>
-				<option value="Cervix" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cervix') ? 'selected' : ''; ?>>Cervix</option>
-				<option value="Colon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Colon') ? 'selected' : ''; ?>>Colon</option>
-				<option value="Cornea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cornea') ? 'selected' : ''; ?>>Cornea</option>
-				<option value="Dura" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Dura') ? 'selected' : ''; ?>>Dura</option>
-				<option value="Eye_Tissues_Sclera" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Eye_Tissues_Sclera') ? 'selected' : ''; ?>>Eye Tissues</option>
-				<option value="Fat_Average_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Average_Infiltrated') ? 'selected' : ''; ?>> Fat Infiltrated</option>
-				<option value="Fat_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Not_Infiltrated') ? 'selected' : ''; ?>>Fat Not Infiltrated</option>
-				<option value="Gall_Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder') ? 'selected' : ''; ?>>Gall Blader</option>
-				<option value="Gall_Bladder_Bile" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder_Bile') ? 'selected' : ''; ?>>Gall Bladder Bile</option>
-				<option value="Heart" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heart') ? 'selected' : ''; ?>>Heart</option>
-				<option value="Kidney" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Kidney') ? 'selected' : ''; ?>>Kidney</option>
-				<option value="Lens_Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Cortex') ? 'selected' : ''; ?>>Lens Cortex</option>
-				<option value="Lens_Nucleus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Nucleus') ? 'selected' : ''; ?>>Lens Nucleus</option>
-				<option value="Liver" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Liver') ? 'selected' : ''; ?>>Liver</option>
-				<option value="Lung_Deflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Deflated') ? 'selected' : ''; ?>>Lung Deflated</option>
-				<option value="Lung_Inflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Inflated') ? 'selected' : ''; ?>>Lung Inflated</option>
-				<option value="Muscle" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Muscle') ? 'selected' : ''; ?>>Muscle</option>
-				<option value="Nerve" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Nerve') ? 'selected' : ''; ?>>Nerve</option>
-				<option value="Ovary" <?php echo (isset($_POST['choice']) && $_POST['selchoiceect'] === 'Ovary') ? 'selected' : ''; ?>>Ovary</option>
-				<option value="Skin_Dry" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Skin_Dry') ? 'selected' : ''; ?>>Skin Dry</option>
-				<option value="Skin_Wet" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Skin_Wet') ? 'selected' : ''; ?>>Skin Wet</option>
-				<option value="Small_Intestine" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Small_Intestine') ? 'selected' : ''; ?>>Small Intestine</option>
-				<option value="Spleen" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Spleen') ? 'selected' : ''; ?>>Spleen</option>
-				<option value="Stomach" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Stomach') ? 'selected' : ''; ?>>Stomach</option>
-				<option value="Tendon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tendon') ? 'selected' : ''; ?>>Tendon</option>
-				<option value="Testis" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Testis') ? 'selected' : ''; ?>>Testis</option>
-				<option value="Thyroid" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Thyroid') ? 'selected' : ''; ?>>Thyroid</option>
-				<option value="Tongue" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tongue') ? 'selected' : ''; ?>>Tongue</option>
-				<option value="Trachea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Trachea') ? 'selected' : ''; ?>>Trachea</option>
-				<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
-				<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
-			</select><br>
-			<label for="">Low range frequency (in GHz)</label>
-			<input class="case" type="text" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
-			value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
-			<label for="">High range frequency (in GHz)</label>
-			<input class="case" type="text" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
-			value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
-			<label for="">Number of points</label>
-			<input class="case" type="text" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
-			value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
-			<label for="temperature">Temperature (in °C)</label>
-			<input class="case" type="text" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
-			value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
-			<label for="salinity">Salinity (in g/L)</label>
-			<input class="case" type="text" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
-			value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
-			<label for="volume1">Volume V1 (between 0 and 1)</label>
-			<input class="case" type="text" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
-			value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
 
-			<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
-			<label for="bottcher">Bottcher's Law</label>
-			<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
-			<label for="kraszweski">Kraszweski's law</label><br>
-			<label for="">Volume of the mixture (in mL)</label>
-			<input class ="case" type="text" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
-			value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required>
+	<section>
+		<div id="calculateur">
+			<h1>Calculateur</h1>
+			<form action="" method="post" id="formulaire2">
+				<label for="">Tissu to mimic</label>
+				<select id="tissu_selection" name="choice" required>
+					<option value="Choice" disabled selected>Choose one in the list</option>
+					<option value="Aorta" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Aorta') ? 'selected' : ''; ?>>Aorta</option>
+					<option value="Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bladder') ? 'selected' : ''; ?>>Bladder</option>
+					<option value="Blood" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Blood') ? 'selected' : ''; ?>>Blood</option>
+					<option value="Bone_Cancellous" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Cancellous') ? 'selected' : ''; ?>>Bone Cancellous</option>
+					<option value="Bone_Cortical" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Cortical') ? 'selected' : ''; ?>>Bone Cortical</option>
+					<option value="Bone_Marrow_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'option1') ? 'selected' : ''; ?>>Bone Marrow Infiltrated</option>
+					<option value="Bone_Marrow_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bone_Marrow_Not_Infiltrated') ? 'selected' : ''; ?>>Bone Marrow Not Infiltrated</option>
+					<option value="Brain_Grey_Matter" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Brain_Grey_Matter') ? 'selected' : ''; ?>>Brain Grey Matter</option>
+					<option value="Brain_White_Matter" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Brain_White_Matter') ? 'selected' : ''; ?>>Brain White Matter</option>
+					<option value="Breast_Fat" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Breast_Fat') ? 'selected' : ''; ?>>Breast Fat</option>
+					<option value="Cartilage" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cartilage') ? 'selected' : ''; ?>>Cartilage</option>
+					<option value="Cerebellum" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cerebellum') ? 'selected' : ''; ?>>Cerebellum</option>
+					<option value="Cerebro_Spinal_Fluid" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cerebro_Spinal_Fluid') ? 'selected' : ''; ?>>Cerebro Spinal Fluid</option>
+					<option value="Cervix" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cervix') ? 'selected' : ''; ?>>Cervix</option>
+					<option value="Colon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Colon') ? 'selected' : ''; ?>>Colon</option>
+					<option value="Cornea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cornea') ? 'selected' : ''; ?>>Cornea</option>
+					<option value="Dura" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Dura') ? 'selected' : ''; ?>>Dura</option>
+					<option value="Eye_Tissues_Sclera" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Eye_Tissues_Sclera') ? 'selected' : ''; ?>>Eye Tissues</option>
+					<option value="Fat_Average_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Average_Infiltrated') ? 'selected' : ''; ?>> Fat Infiltrated</option>
+					<option value="Fat_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Not_Infiltrated') ? 'selected' : ''; ?>>Fat Not Infiltrated</option>
+					<option value="Gall_Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder') ? 'selected' : ''; ?>>Gall Blader</option>
+					<option value="Gall_Bladder_Bile" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder_Bile') ? 'selected' : ''; ?>>Gall Bladder Bile</option>
+					<option value="Heart" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heart') ? 'selected' : ''; ?>>Heart</option>
+					<option value="Kidney" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Kidney') ? 'selected' : ''; ?>>Kidney</option>
+					<option value="Lens_Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Cortex') ? 'selected' : ''; ?>>Lens Cortex</option>
+					<option value="Lens_Nucleus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Nucleus') ? 'selected' : ''; ?>>Lens Nucleus</option>
+					<option value="Liver" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Liver') ? 'selected' : ''; ?>>Liver</option>
+					<option value="Lung_Deflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Deflated') ? 'selected' : ''; ?>>Lung Deflated</option>
+					<option value="Lung_Inflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Inflated') ? 'selected' : ''; ?>>Lung Inflated</option>
+					<option value="Muscle" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Muscle') ? 'selected' : ''; ?>>Muscle</option>
+					<option value="Nerve" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Nerve') ? 'selected' : ''; ?>>Nerve</option>
+					<option value="Ovary" <?php echo (isset($_POST['choice']) && $_POST['selchoiceect'] === 'Ovary') ? 'selected' : ''; ?>>Ovary</option>
+					<option value="Skin_Dry" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Skin_Dry') ? 'selected' : ''; ?>>Skin Dry</option>
+					<option value="Skin_Wet" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Skin_Wet') ? 'selected' : ''; ?>>Skin Wet</option>
+					<option value="Small_Intestine" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Small_Intestine') ? 'selected' : ''; ?>>Small Intestine</option>
+					<option value="Spleen" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Spleen') ? 'selected' : ''; ?>>Spleen</option>
+					<option value="Stomach" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Stomach') ? 'selected' : ''; ?>>Stomach</option>
+					<option value="Tendon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tendon') ? 'selected' : ''; ?>>Tendon</option>
+					<option value="Testis" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Testis') ? 'selected' : ''; ?>>Testis</option>
+					<option value="Thyroid" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Thyroid') ? 'selected' : ''; ?>>Thyroid</option>
+					<option value="Tongue" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tongue') ? 'selected' : ''; ?>>Tongue</option>
+					<option value="Trachea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Trachea') ? 'selected' : ''; ?>>Trachea</option>
+					<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
+					<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
+				</select><br>
+				<label for="">Low range frequency (in GHz)</label>
+				<input class="case" type="text" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
+				value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
+				<label for="">High range frequency (in GHz)</label>
+				<input class="case" type="text" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
+				value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
+				<label for="">Number of points</label>
+				<input class="case" type="text" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
+				value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
+				<label for="temperature">Temperature (in °C)</label>
+				<input class="case" type="text" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
+				value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
+				<label for="salinity">Salinity (in g/L)</label>
+				<input class="case" type="text" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
+				value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
+				<label for="volume1">Volume V1 (between 0 and 1)</label>
+				<input class="case" type="text" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
+				value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
 
-			<input type="submit" value="Choose" name="boutonColeCole" >
-			<br><br>
-		</form>
+
+				<label for="">Volume of the mixture (in mL)</label>
+				<input class ="case" type="text" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
+				value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required>
+				<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
+				<label for="bottcher">Bottcher's Law</label>
+				<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
+				<label for="kraszweski">Kraszweski's Law</label><br>
+
+				<input id="bouttton"type="submit" value="Choose" name="boutonColeCole" >
+				<br><br>
+			</form>
+		</div>
 
 <?php if(isset($_POST["boutonColeCole"])): ?>
 	<?php include("manager/calculcolecole.php"); ?>
@@ -141,7 +147,10 @@
 	<?php endif ?>
 </div>
 
-<?php include("layout/footer.html"); ?>
+<footer>
+	<?php include("layout/footer.html"); ?>
+</footer>
+
 
 </body>
 </html>
