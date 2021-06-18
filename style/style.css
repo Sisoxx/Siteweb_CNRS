@@ -5,11 +5,7 @@ body
 	padding: 0;
 	margin: 0;
 }
-ul
-{
-	margin: 0;
-	padding: 0;
-}
+
 
 h1{
 	text-align: center;
@@ -28,10 +24,6 @@ a
 {
 	text-decoration: none;
 	color: #961e64;
-}
-.gras
-{
-	font-weight: bold;
 }
 
 html
@@ -697,4 +689,10 @@ button:hover
 		margin: 10px auto;
 		/*box-shadow: 1px 3px 2px #961e64;*/
 	}
+}
+
+/***************Privacy***************/
+#privacy{
+	padding: 0 15%;
+	text-align: justify;
 }
