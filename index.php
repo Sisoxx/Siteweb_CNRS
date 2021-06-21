@@ -33,16 +33,16 @@
 			<div class="c_slider"></div>
 			<div class="slider">
 				<figure>
+					<img src="image/emerald_home.jpg" alt="" width="640" height="310" />
+				</figure><!--
+				--><figure>
 					<img src="image/Fantôme Tête.png" alt="" width="640" height="310" />
 				</figure><!--
 				--><figure>
-					<img src="image/Modèles têtes.png" alt="" width="640" height="310" />
-				</figure><!--
-				--><figure>
-					<img src="image/Cerveau complexe.png" alt="" width="640" height="310" />
-				</figure><!--
-				--><figure>
 					<img src="image/camera1.jpg" alt="" width="640" height="310" />
+				</figure><!--
+				--><figure>
+					<img src="image/Modèles têtes.png" alt="" width="640" height="310" />
 				</figure>
 			</div>
 		</div>
