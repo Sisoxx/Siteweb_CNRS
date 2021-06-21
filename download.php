@@ -15,7 +15,11 @@
     <section id="contact">
       <h1>Download files</h1><br>
       <p>Here you will find some .stl files to download, they represent different phantoms that we developped.</p><br>
+<<<<<<< HEAD
       <a href="image/camera1.jpg" download="camera1">Donloawd File</a>
+=======
+      <a href="image/camera1.jpg" donloawd="camera1">Donloawd File</a>
+>>>>>>> 5c109187cdc949962d8ae0fa5f1d12dae7e1c518
     </section>
 
   <footer>
