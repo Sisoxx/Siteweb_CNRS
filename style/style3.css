@@ -1,5 +1,10 @@
 #calculateur{
 	text-align: center;
+	padding: 0% 15% 2% 15%;
+}
+#radio{
+	padding: 0% 30% 0% 30%;
+	text-align: left;
 }
 /***********************************TABLEAU***************/
 .table {
@@ -30,6 +35,10 @@ tbody tr:nth-child(even){
 	background-color: #f3f3f3;
 }
 
+/*************RESULTAR********************/
+#phrase_mixture{
+	text-align: center;
+}
 /*******************BOUTTON***************/
 #bouttton{
 	font-size: 1.5em;
