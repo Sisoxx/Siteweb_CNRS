@@ -68,36 +68,36 @@
 					<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
 					<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
 				</select><br>
-				<label for="">Low range frequency (in GHz)</label>
+				<label for="">Low range frequency (in GHz)</label><br>
 				<input class="case" type="text" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
 				value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
-				<label for="">High range frequency (in GHz)</label>
+				<label for="">High range frequency (in GHz)</label><br>
 				<input class="case" type="text" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
 				value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
-				<label for="">Number of points</label>
+				<label for="">Number of points</label><br>
 				<input class="case" type="text" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
 				value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
-				<label for="temperature">Temperature (in °C)</label>
+				<label for="temperature">Temperature (in °C)</label><br>
 				<input class="case" type="text" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
 				value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
-				<label for="salinity">Salinity (in g/L)</label>
+				<label for="salinity">Salinity (in g/L)</label><br>
 				<input class="case" type="text" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
 				value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
-				<label for="volume1">Volume V1 (between 0 and 1)</label>
+				<label for="volume1">Volume V1 (between 0 and 1)</label><br>
 				<input class="case" type="text" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
 				value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
 
 
-				<label for="">Volume of the mixture (in mL)</label>
+				<label for="">Volume of the mixture (in mL)</label><br>
 				<input class ="case" type="text" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
 				value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required>
+				<div id="radio">
 				<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
 				<label for="bottcher">Bottcher's Law</label>
 				<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
-				<label for="kraszweski">Kraszweski's Law</label><br>
-
+				<label for="kraszweski">Kraszweski's Law</label>
+				</div>
 				<input id="bouttton"type="submit" value="Choose" name="boutonColeCole" >
-				<br><br>
 			</form>
 		</div>
 
@@ -138,7 +138,7 @@
 
 <?php include("manager/masse.php"); ?>
 
-<div class="phrase_mixture">
+<div id="phrase_mixture">
 		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
 			<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
 			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
