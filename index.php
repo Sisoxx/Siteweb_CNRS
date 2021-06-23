@@ -74,6 +74,11 @@
 	</div>
 </section>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d2d9d161198f00ed7d513f405662b92a996dd52b
 
 <footer>
 	<?php include("layout/footer.html"); ?>

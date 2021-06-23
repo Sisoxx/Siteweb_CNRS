@@ -159,6 +159,34 @@
 
 
 <?php include("manager/optimInput.php"); ?>
+<!--
+<table class="table">
+	<thead>
+		<tr>
+			<th>Frequence (GHz)</th>
+			<th>&#949;'</th>
+			<th>&#963; (S/m)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php /* foreach($tableau_output2 as $tableau2): ?>
+			<?php foreach($tableau_output2 as $sigma2): ?>
+			<?php endforeach ?>
+			<?php $i = 0; ?>
+			<?php foreach($tableau2 as $espilon2): ?>
+			<tr>
+					<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
+					<td><?= $espilon2; ?></td>
+					<td><?= $sigma2[$i]; ?></td>
+					<?php $i++; ?>
+					<?php if ($i == count($frequence_array)) {break;}?>
+			</tr>
+			<?php endforeach ?>
+			<?php break; ?>
+		<?php endforeach*/ ?>
+	</tbody>
+</table>
+</div> -->
 
 <?php include("manager/masse.php"); ?>
 
