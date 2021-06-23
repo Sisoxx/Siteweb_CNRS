@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link href='http://fonts.googleapis.com/css?family=Mr+Dafoe' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
-	<script src="javascript/app.js"></script>
 </head>
 
 
@@ -77,9 +76,7 @@
 	</div>
 </section>
 
-<div class="btn">
-	<img src="image/flechee.jpg">
-</div>
+
 
 
 <footer>
