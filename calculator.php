@@ -5,7 +5,6 @@
 	<title>Simulator</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style3.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
 </head>
 
@@ -21,8 +20,12 @@
 			<div class="page_title">
 				<h1>Simulator</h1>
 			</div>
+			<p>Paragraphe expliquant la simulation.<br>
+			</p>
 				<form action="" method="post" id="formulaire2">
 					<section class="simulator_form">
+
+					<!-- Tissu and number of points -->
 					<div class="simulation_cases">
 					<label for="choice">Tissu to mimic</label>
 					<select id="tissu_selection" name="choice" required>
@@ -72,42 +75,19 @@
 						<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
 						<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
 					</select><br>
-					</div>
-					<div class="simulation_cases">
-					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="0" step="0.001" max="1000" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
-					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
-
-					<label for="finfrequence">High range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="0" step="0.001" max="1000" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
-					value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
-					</div>
-					<div class="simulation_cases">
 					<label for="numberPoints">Number of points</label><br>
 					<input class="case" type="number" min="0" max="200" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
 					value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
 					</div>
+
+					<!-- Frequency range and law -->
 					<div class="simulation_cases">
-					<label for="temperature">Temperature (in °C)</label><br>
-					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
-					value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
-					</div>
-					<div class="simulation_cases">
-					<label for="salinity">Salinity (in g/L)</label><br>
-					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
-					value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
-					</div>
-					<div class="simulation_cases">
-					<label for="volume1">Volume V1 (between 0 and 1)</label><br>
-					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
-					value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
-					</div>
-					<div class="simulation_cases">
-					<label for="">Volume of the mixture (in mL)</label><br>
-					<input class ="case" type="number" min="0" step="0.01" max="50000" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
-					value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required><br>
-					</div>
-					<div class="simulation_cases">
+					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
+					<input class="case" type="number" min="0" step="0.001" max="1000" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
+					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
+					<label for="finfrequence">High range frequency (in GHz)</label><br>
+					<input class="case" type="number" min="0" step="0.001" max="1000" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
+					value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
 					<div class="radio">
 					<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
 					<label for="bottcher">Bottcher's Law</label>
@@ -115,6 +95,28 @@
 					<label for="kraszweski">Kraszweski's Law</label>
 					</div>
 					</div>
+
+					<!-- Temperature and salinity -->
+					<div class="simulation_cases">
+					<label for="temperature">Temperature (in °C)</label><br>
+					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
+					value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
+					<label for="salinity">Salinity (in g/L)</label><br>
+					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
+					value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
+					</div>
+
+					<!-- V1 and Volume of the mixture -->
+					<div class="simulation_cases">
+					<label for="volume1">Volume V1 (between 0 and 1)</label><br>
+					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
+					value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
+					<label for="">Volume of the mixture (in mL)</label><br>
+					<input class ="case" type="number" min="0" step="0.01" max="50000" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
+					value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required><br>
+					</div>
+
+					<!-- Submit button -->
 					<div class="simulation_cases">
 					<input id="bouttton"type="submit" value="Choose" name="boutonColeCole" >
 					</div>
