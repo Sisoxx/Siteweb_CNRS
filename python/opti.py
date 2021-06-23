@@ -17,7 +17,8 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     S = ST/V2
     EPFACT = 1e-9/(36*math.pi)
     N = 0
-    F01 = 10
+    F01 = 1
+    F01_avant = 2
     SOMEPS = 0
     EPSTISSU = []
     X1 = S
@@ -30,6 +31,10 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         SOMEPS = SOMEPS + abs(EPSTISSU[i])**2
 
     while  (N < 20):
+
+        if F01==F01_avant:
+            break
+        F01_avant = F01
         F01 = 0
         GRAD1 = 0
         GRAD2 = 0
@@ -106,4 +111,4 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         ST = S * V2
         N = N + 1
 
-    return(ST,V1,F01)
+    return(N,ST,V1,F01)

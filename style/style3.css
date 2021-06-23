@@ -1,12 +1,38 @@
 #calculateur{
 	text-align: center;
 	padding: 0% 15% 2% 15%;
+	display: flex;
+	flex-direction: column;
+/* justify-content: space-between; */
+	/* flex-wrap: wrap; */
+
 }
-#radio{
+
+.page_title{
+	/* background-color: red; */
+	/* align-self: flex-start; */
+	justify-content: center;
+}
+
+.simulator_form{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+
+}
+/*
+.simulation_cases:nth-child(2n){
+	 background-color: green;
+} */
+
+.radio{
 	padding: 0% 30% 0% 30%;
 	text-align: left;
 }
-/***********************************TABLEAU***************/
+
+/***************TABLEAU***************/
 .table {
 	border-collapse: collapse;
 	min-width: 400px;
@@ -35,11 +61,11 @@ tbody tr:nth-child(even){
 	background-color: #f3f3f3;
 }
 
-/*************RESULTAR********************/
+/***************RESULTATS***************/
 #phrase_mixture{
 	text-align: center;
 }
-/*******************BOUTTON***************/
+/***************BOUTTON***************/
 #bouttton{
 	font-size: 1.5em;
 	background-color: ##E6E6E6;
