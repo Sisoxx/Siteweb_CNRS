@@ -4,15 +4,12 @@ Tissus présentant des erreurs:
 
 
 Liste des tissus présentant des masses négatives de sel: 
-Bone_Cortical  Erreur : 0.02856492245941555  Masse sel : -0.028518837709193133 g  Masse Triton-X : 30.601982909413614 g  Volume d'eau : 11.170617954094688 mL
-Bone_Marrow_Not_Infiltrated  Erreur : 0.06479734616225011  Masse sel : -0.14512627323891178 g  Masse Triton-X : 40.036210295903714 g  Volume d'eau : 2.3327768774891138 mL
-Breast_Fat  Erreur : 0.025404327890179882  Masse sel : -0.09480705617279236 g  Masse Triton-X : 40.630273978515675 g  Volume d'eau : 1.7495717234812869 mL
-Fat_Average_Infiltrated  Erreur : 0.055587075352975475  Masse sel : -0.01949770193294638 g  Masse Triton-X : 30.941604846220876 g  Volume d'eau : 10.84634542618501 mL
-Fat_Not_Infiltrated  Erreur : 0.041809315747771275  Masse sel : -0.16363285342215228 g  Masse Triton-X : 40.19297604235367 g  Volume d'eau : 2.193591914509795 mL
+Bone_Marrow_Not_Infiltrated  Erreur : 0.006008105087679832  Masse sel : -0.02111362847240968 g  Masse Triton-X : 40.453090143121 g  Volume d'eau : 1.8824514131793306 mL
 
 
 Liste des tissus présentant des erreurs superieurs à 10^-1: 
-Gall_Bladder  Erreur : 0.1510907630568159  Masse sel : 0.20220416666851243 g  Masse Triton-X : 6.313821951749456 g  Volume d'eau : 33.955565139188174 mL
+Bone_Cancellous  Erreur : 0.1802037643908766  Masse sel : 0.19815756658867037 g  Masse Triton-X : 25.668906204936473 g  Volume d'eau : 15.715134839244351 mL
+Cartilage  Erreur : 0.15188226045502198  Masse sel : 0.24280065170714177 g  Masse Triton-X : 15.558828582895554 g  Volume d'eau : 25.22328636920285 mL
 
 Nombre de tissus total: 44
-Nombre de tissus présentant une erreur: 6
+Nombre de tissus présentant une erreur: 3
