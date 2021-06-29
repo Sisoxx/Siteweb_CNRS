@@ -111,4 +111,4 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         ST = S * V2
         N = N + 1
 
-    return(N,ST,V1,F01)
+    return(N,ST,V1,F01,EPSOL,SIGSOL)

@@ -41,6 +41,7 @@ $py_output = str_replace(")", "", $py_output);
 $py_output = substr($py_output, 1, strlen($py_output));
 
 
+
 #------Liste des epsilon------
 
 $end_list_epsi = strpos($py_output, "[");
