@@ -21,11 +21,11 @@ $opti_output = str_replace("(", "", $opti_output);
 $opti_output = str_replace(")", "", $opti_output);
 $opti_output = str_replace("[", "", $opti_output);
 $opti_output = str_replace("]", "", $opti_output);
-var_dump($opti_output);
+#var_dump($opti_output);
 
 
 $number_of_comas_opti = substr_count($opti_output,",");
-var_dump($number_of_comas_opti);
+#var_dump($number_of_comas_opti);
 
 $opti_array = (array) null;
 

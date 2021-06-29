@@ -5,12 +5,12 @@ from epsieau import EPSSIG
 
 def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
-    NFRE = len(EPS_Tissu) - 1
+    NFRE = len(EPS_Tissu)
     DELTA = 1.6
     TAU = 13.56 * 1e-12
     EPSINF = 3.14
     SIG0 = 0.036
-    FREQMI = low_range_input * 1e9
+    FREQMI = low_range_input* 1e9
     PASFRE = round_step_input * 1e9
 
     V2 = 1 - V1
@@ -32,7 +32,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
 
     while  (N < 20):
 
-        if F01==F01_avant:
+        if abs(F01-F01_avant)<= 0.00000001:
             break
         F01_avant = F01
         F01 = 0
@@ -111,4 +111,4 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         ST = S * V2
         N = N + 1
 
-    return(N,ST,V1,F01,EPSOL,SIGSOL)
+    return(N,ST,V1,F01)

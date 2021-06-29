@@ -49,10 +49,10 @@ liste_erreurs_neg = []
 liste_erreurs_grandes = []
 
 fichier_texte = open("Liste_des_erreurs.txt","w")
-fichier_texte.write("Liste des tissus présentant des erreurs: \n\n\n")
+fichier_texte.write("Tissus présentant des erreurs: \n\n\n")
 fichier_texte.write("\n\nListe des tissus présentant des masses négatives de sel: \n")
 
-t=28
+t=25
 st=0
 v1=0.5
 loi=1
@@ -79,7 +79,7 @@ for n in noms_tissu:
     NaCl,T,o=calculmasse(t,st,v1,loi,n,fd,ff,pas,vs)
     sous_liste = [n,c,NaCl,T,o]
 
-    if c > 0.1:
+    if c > 0.15:
         liste_erreurs_grandes.append([n,N,c,NaCl])
         sous_liste = str(str(n)+ "  Erreur : "+ str(c)+ "  Masse sel : "+ str(NaCl) +" g  Masse Triton-X : " +str(T)+ " g  Volume d'eau : " + str(o) + " mL")
         fichier_texte.write(sous_liste)
@@ -92,7 +92,7 @@ fichier_texte.write("Nombre de tissus total: ")
 l=str(len(noms_tissu))
 fichier_texte.write(l)
 fichier_texte.write("\n")
-fichier_texte.write("Nombre de tissus présentant une erreurs: ")
+fichier_texte.write("Nombre de tissus présentant une erreur: ")
 l=str(len(liste_erreurs_neg) +len(liste_erreurs_grandes))
 fichier_texte.write(l)
 

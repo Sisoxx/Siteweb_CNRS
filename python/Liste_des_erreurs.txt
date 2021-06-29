@@ -1,19 +1,19 @@
-Liste des tissus présentant des erreurs: 
+Tissus présentant des erreurs: 
 
 
 
 
 Liste des tissus présentant des masses négatives de sel: 
-Bone_Cortical  Erreur : 0.020046140184053617  Masse sel : -0.021853620901634688 g  Masse Triton-X : 30.51209341599148 g  Volume d'eau : 11.252253688534156 mL
-Bone_Marrow_Not_Infiltrated  Erreur : 0.048275438716009506  Masse sel : -0.10703151915773225 g  Masse Triton-X : 40.1901485534053 g  Volume d'eau : 2.170052521411886 mL
-Breast_Fat  Erreur : 0.02141217511189855  Masse sel : -0.07543251211000333 g  Masse Triton-X : 40.6020943100702 g  Volume d'eau : 1.7671615638623082 mL
-Fat_Average_Infiltrated  Erreur : 0.03344646953149396  Masse sel : -0.01020437539556111 g  Masse Triton-X : 31.08738419534021 g  Volume d'eau : 10.704644893165005 mL
-Fat_Not_Infiltrated  Erreur : 0.0530453002567345  Masse sel : -0.10543544408270604 g  Masse Triton-X : 40.31009104662693 g  Volume d'eau : 2.0562669500547974 mL
+Bone_Cortical  Erreur : 0.02856492245941555  Masse sel : -0.028518837709193133 g  Masse Triton-X : 30.601982909413614 g  Volume d'eau : 11.170617954094688 mL
+Bone_Marrow_Not_Infiltrated  Erreur : 0.057508921542245  Masse sel : -0.13183864751024468 g  Masse Triton-X : 40.19992898014759 g  Volume d'eau : 2.172319181716051 mL
+Breast_Fat  Erreur : 0.025404327890179882  Masse sel : -0.09480705617279236 g  Masse Triton-X : 40.630273978515675 g  Volume d'eau : 1.7495717234812869 mL
+Fat_Average_Infiltrated  Erreur : 0.047311684240015396  Masse sel : -0.016102199203291794 g  Masse Triton-X : 31.153087979353987 g  Volume d'eau : 10.645449086269975 mL
+Fat_Not_Infiltrated  Erreur : 0.0627061196062182  Masse sel : -0.13031173121182182 g  Masse Triton-X : 40.3098211529158 g  Volume d'eau : 2.0680381263821697 mL
 
 
 Liste des tissus présentant des erreurs superieurs à 10^-1: 
-Liver  Erreur : 0.16028960804415773  Masse sel : 0.4384167668980988 g  Masse Triton-X : 8.655551737457127 g  Volume d'eau : 31.639110577640647 mL
-Skin_Wet  Erreur : 0.29185032244149217  Masse sel : 1.1693862599457683 g  Masse Triton-X : 0.038597241717601684 g  Volume d'eau : 39.4222392990922 mL
+Liver  Erreur : 0.18867167656055528  Masse sel : 0.454265624036637 g  Masse Triton-X : 9.07764699962347 g  Volume d'eau : 31.23394537548017 mL
+Skin_Wet  Erreur : 0.31534487930698796  Masse sel : 1.2310618663490067 g  Masse Triton-X : 0.695518449775002 g  Volume d'eau : 38.774532895368495 mL
 
 Nombre de tissus total: 44
-Nombre de tissus présentant une erreurs: 7
+Nombre de tissus présentant une erreur: 7
