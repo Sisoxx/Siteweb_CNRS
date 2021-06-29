@@ -8,6 +8,7 @@
 
 }
 
+
 .page_title{
 	/* background-color: red; */
 	/* align-self: flex-start; */
@@ -15,17 +16,19 @@
 }
 
 .simulator_form{
+	text-align: center;
+	padding: 0% 15% 2% 15%;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-
 }
-/*
+
+
 .simulation_cases:nth-child(2n){
-	 background-color: green;
-} */
+	 /* background-color: green; */
+}
 
 .radio{
 	padding: 0% 30% 0% 30%;

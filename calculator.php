@@ -25,7 +25,7 @@
 				<form action="" method="post" id="formulaire2">
 					<section class="simulator_form">
 
-					<!-- Tissu and number of points -->
+					<!-- Tissu and Frequency range -->
 					<div class="simulation_cases">
 					<label for="choice">Tissu to mimic</label>
 					<select id="tissu_selection" name="choice" required>
@@ -75,19 +75,20 @@
 						<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
 						<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
 					</select><br>
+					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
+					<input class="case" type="number" min="0.5" step="0.001" max="6" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
+					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
+					<label for="finfrequence">High range frequency (in GHz)</label><br>
+					<input class="case" type="number" min="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : '0.5'; ?>" step="0.001" max="8" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
+					value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
+					</div>
+
+					<!-- number of points and law -->
+					<div class="simulation_cases">
+
 					<label for="numberPoints">Number of points</label><br>
 					<input class="case" type="number" min="0" max="200" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
 					value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
-					</div>
-
-					<!-- Frequency range and law -->
-					<div class="simulation_cases">
-					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="0" step="0.001" max="1000" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
-					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
-					<label for="finfrequence">High range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="0" step="0.001" max="1000" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
-					value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
 					<div class="radio">
 					<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
 					<label for="bottcher">Bottcher's Law</label>
@@ -194,7 +195,7 @@
 		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
 			<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
 			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
-			Water volume: <strong><?= $recipe_array[2]; ?> ml</strong><br>
+			Water volume: <strong><?= $recipe_array[2]; ?> g</strong><br>
 		</p>
 	<?php endif ?>
 </div>
