@@ -14,34 +14,36 @@
 	/* align-self: flex-start; */
 	/* justify-content: center; */
 	text-align: left;
-	background-color: yellow;
+	/* background-color: yellow; */
 }
 
 .simulator_form{
 	text-align: center;
-	padding: 0% 1% ;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: column;
+	padding: 0% 10% ;
+	display: grid;
+	/* justify-content: space-around; */
+	/* flex-direction: column; */
 	/* flex-wrap: wrap; */
 	align-items: left;
-	background-color: grey;
+	background-color: #EAEAEA;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(1, 1fr);
 }
 
-.simulation_case {
-	display: flex;
+.simulator_form > .simulation_cases {
+	border: solid 3px;
+}
+.simulation_cases {
+	/* display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: flex-start; */
 
 }
 
-.simulation_cases:nth-child(1){
+.simulation_cases:nth-child(2n){
 	 background-color: green;
+	 grid-column: 2;
 
-}
-
-.element:nth-child(1){
-	background-color: blue;
 }
 
 

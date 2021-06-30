@@ -32,7 +32,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
 
     while  (N < 20):
 
-        if abs(F01-F01_avant)<= 0.00000001:
+        if abs(F01-F01_avant)<= 0.00000000001:
             break
         F01_avant = F01
         F01 = 0

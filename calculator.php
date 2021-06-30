@@ -22,13 +22,17 @@
 			</div>
 			<p>Paragraphe expliquant la simulation.<br>
 			</p>
+			<div class="simulator_form">
+
 				<form action="" method="post" id="formulaire2">
-					<section class="simulator_form">
+
+
 
 					<!-- Tissu  -->
-					<section class="simulation_cases">
-						<div class="element">
+					<div class="simulation_cases_label">
 							<label for="choice">Tissu to mimic</label>
+					</div>
+					<div class="simulation_cases">
 							<select id="tissu_selection" name="choice" required>
 						<option value="Choice" disabled selected>Choose one in the list</option>
 						<option value="Aorta" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Aorta') ? 'selected' : ''; ?>>Aorta</option>
@@ -76,27 +80,38 @@
 						<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
 						<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
 					</select><br>
-						</div>
+					</div>
 
 					<!-- Number of points -->
-						<div class="element">
+					<div class="simulation_cases_label">
 							<label for="numberPoints">Number of points</label><br>
+					</div>
+					<div class="simulation_cases">
 							<input class="case" type="number" min="0" max="200" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
 							value="<?php echo isset($_POST['numberPoints']) ? $_POST['numberPoints'] : ''; ?>" required><br>
-						</div>
-					</section>
+					</div>
 
 					<!-- Frequency range -->
-					<div class="simulation_cases">
+					<div class="simulation_cases_label">
 					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="0.5" step="0.001" max="6" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.001" max="6" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
 					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
+					</div>
+					<div class="simulation_cases_label">
 					<label for="finfrequence">High range frequency (in GHz)</label><br>
-					<input class="case" type="number" min="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : '0.5'; ?>" step="0.001" max="8" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.001" max="50" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
 					value="<?php echo isset($_POST['finfrequence']) ? $_POST['finfrequence'] : ''; ?>" required><br>
 					</div>
 
 					<!-- Law -->
+					<div class="simulation_cases_label">
+					<label>Law to use</label><br>
+					</div>
+
 					<div class="simulation_cases">
 					<div class="radio">
 					<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
@@ -107,29 +122,37 @@
 					</div>
 
 					<!-- Temperature -->
-					<div class="simulation_cases">
+					<div class="simulation_cases_label">
 					<label for="temperature">Temperature (in °C)</label><br>
+					</div>
+					<div class="simulation_cases">
 					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
 					value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
 					</div>
 
 					<!-- Salinity -->
-					<div class="simulation_cases">
+					<div class="simulation_cases_label">
 					<label for="salinity">Salinity (in g/L)</label><br>
+					</div>
+					<div class="simulation_cases">
 					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
 					value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
 					</div>
 
 					<!-- V1 -->
-					<div class="simulation_cases">
+					<div class="simulation_cases_label">
 					<label for="volume1">Volume V1 (between 0 and 1)</label><br>
+					</div>
+					<div class="simulation_cases">
 					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
 					value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
 					</div>
 
 					<!-- Volume of the mixture -->
-					<div class="simulation_cases">
+					<div class="simulation_cases_label">
 					<label for="">Volume of the mixture (in mL)</label><br>
+					</div>
+					<div class="simulation_cases">
 					<input class ="case" type="number" min="0" step="0.01" max="50000" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
 					value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required><br>
 					</div>
@@ -138,9 +161,8 @@
 					<div class="simulation_cases">
 					<input id="bouttton"type="submit" value="Choose" name="boutonColeCole" >
 					</div>
-					</section>
 				</form>
-
+			</div>
 		</div>
 
 <?php if(isset($_POST["boutonColeCole"])): ?>
@@ -213,7 +235,7 @@
 		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
 			<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
 			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
-			Water volume: <strong><?= $recipe_array[2]; ?> g</strong><br>
+			Water mass: <strong><?= $recipe_array[2]; ?> g</strong><br>
 		</p>
 	<?php endif ?>
 </div>
