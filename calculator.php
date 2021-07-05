@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>Simulator</title>
+	<title>Simulation</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style3.css">
 	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
@@ -18,7 +18,7 @@
 	<section>
 		<div id="calculateur">
 			<div class="page_title">
-				<h1>Simulator</h1>
+				<h1>Simulation</h1>
 			</div>
 			<p>Paragraphe expliquant la simulation.<br>
 			</p>
@@ -159,7 +159,7 @@
 
 					<!-- Submit button -->
 					<div class="simulation_cases">
-					<input id="bouttton"type="submit" value="Choose" name="boutonColeCole" >
+					<input id="bouttton"type="submit" value="Display results" name="boutonColeCole" >
 					</div>
 				</form>
 			</div>
@@ -237,8 +237,9 @@
 			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
 			Water mass: <strong><?= $recipe_array[2]; ?> g</strong><br>
 		</p>
-	<?php endif ?>
 </div>
+<?php endif ?>
+
 
 <footer>
 	<?php include("layout/footer.html"); ?>

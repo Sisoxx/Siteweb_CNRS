@@ -13,11 +13,12 @@
 	/* background-color: red; */
 	/* align-self: flex-start; */
 	/* justify-content: center; */
+	padding-top: 1.7em;
 	text-align: left;
 	/* background-color: yellow; */
 }
 
-.simulator_form{
+#formulaire2{
 	text-align: center;
 	padding: 0% 10% ;
 	display: grid;
@@ -27,12 +28,47 @@
 	align-items: left;
 	background-color: #EAEAEA;
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(1, 1fr);
+	/* grid-template-rows: repeat(1, 1fr); */
 }
 
-.simulator_form > .simulation_cases {
-	border: solid 3px;
+#formulaire2 > .simulation_cases {
+	/* border: solid 1px; */
+	text-align: left;
+	font-family: "Noto Sans", sans-serif;
 }
+
+#formulaire2 > .simulation_cases_label {
+	/* border: solid 1px; */
+	text-align: right;
+
+}
+
+label{
+	font-family: "Noto Sans Bold", sans-serif;
+	font-weight: bold;
+	color: #707070;
+	font-size: 1.1em;
+}
+
+
+#bouttton{
+	border: solid;
+	border-color: transparent;
+	border-radius: 1em;
+
+	width: 55%;
+	padding: 10px 15px;
+	margin: 15px;
+	background-color: #F7F7F7;
+
+	font-size: 2em;
+	font-family: "Noto Sans", sans-serif;
+	/* font-weight: bold; */
+
+	list-style: hidden;
+}
+
+
 .simulation_cases {
 	/* display: flex;
 	flex-direction: row;
@@ -41,8 +77,9 @@
 }
 
 .simulation_cases:nth-child(2n){
-	 background-color: green;
-	 grid-column: 2;
+
+	/* background-color: green; */
+	/* grid-column: 2; */
 
 }
 
@@ -50,6 +87,7 @@
 .radio{
 	padding: 0% 30%;
 	text-align: left;
+	align-self: left;
 }
 
 /***************TABLEAU***************/
