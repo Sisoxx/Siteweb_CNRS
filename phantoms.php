@@ -12,11 +12,11 @@
   </header>
 
   <body>
-    <section id="contact">
-      <h1>Download files</h1><br>
+    <div id="contact">
+      <h1>Download files</h1>
       <p>Here you will find some .stl files to download, they represent different phantoms that we developped.</p><br>
-      <a href="image/camera1.jpg" download="camera1">Donloawd File</a>
-    </section>
+      <a href="image/camera1.jpg" download="camera1">Download File</a>
+    </div>
 
   <footer>
     <?php include("layout/footer.html"); ?>
