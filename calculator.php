@@ -15,15 +15,13 @@
 </header>
 
 
+	<section>
 		<div id="calculateur">
 			<div class="page_title">
 				<h1>Simulation</h1>
 			</div>
-			<div class="paragraph_exp">
-				<p>Paragraphe expliquant la simulation.<br>
-				</p>
-			</div>
-
+			<p>Paragraphe expliquant la simulation.<br>
+			</p>
 			<div class="simulator_form">
 
 				<form action="" method="post" id="formulaire2">
@@ -32,7 +30,7 @@
 
 					<!-- Tissu  -->
 					<div class="simulation_cases_label">
-							<label for="choice">Tissu to mimic <redStar>*</redStar></label>
+							<label for="choice">Tissu to mimic</label>
 					</div>
 					<div class="simulation_cases">
 							<select id="tissu_selection" name="choice" required>
@@ -86,7 +84,7 @@
 
 					<!-- Number of points -->
 					<div class="simulation_cases_label">
-							<label for="numberPoints">Number of points <redStar>*</redStar></label><br>
+							<label for="numberPoints">Number of points</label><br>
 					</div>
 					<div class="simulation_cases">
 							<input class="case" type="number" min="0" max="200" name="numberPoints"  placeholder="<?php echo isset($_POST['numberPoints']) ? htmlspecialchars($_POST['numberPoints'], ENT_QUOTES) : htmlspecialchars("ex: 10 ..."); ?>"
@@ -95,14 +93,14 @@
 
 					<!-- Frequency range -->
 					<div class="simulation_cases_label">
-					<label for="debutfrequence">Low range frequency (in GHz) <redStar>*</redStar></label><br>
+					<label for="debutfrequence">Low range frequency (in GHz)</label><br>
 					</div>
 					<div class="simulation_cases">
 					<input class="case" type="number" min="0" step="0.001" max="6" name="debutfrequence"  placeholder="<?php echo isset($_POST['debutfrequence']) ? htmlspecialchars($_POST['debutfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 1 GHz..."); ?>"
 					value="<?php echo isset($_POST['debutfrequence']) ? $_POST['debutfrequence'] : ''; ?>" required><br>
 					</div>
 					<div class="simulation_cases_label">
-					<label for="finfrequence">High range frequency (in GHz) <redStar>*</redStar></label><br>
+					<label for="finfrequence">High range frequency (in GHz)</label><br>
 					</div>
 					<div class="simulation_cases">
 					<input class="case" type="number" min="0" step="0.001" max="50" name="finfrequence"  placeholder="<?php echo isset($_POST['finfrequence']) ? htmlspecialchars($_POST['finfrequence'], ENT_QUOTES) : htmlspecialchars("ex: 5 GHz..."); ?>"
@@ -115,20 +113,12 @@
 					</div>
 
 					<div class="simulation_cases">
-						<div class="radio">
-							<div>
-								<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
-							</div>
-							<div class="radioLabel">
-								<label for="bottcher">Bottcher's Law</label>
-							</div>
-							<div>
-								<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
-							</div>
-							<div class="radioLabel">
-								<label for="kraszweski">Kraszweski's Law</label>
-							</div>
-						</div>
+					<div class="radio">
+					<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
+					<label for="bottcher">Bottcher's Law</label>
+					<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
+					<label for="kraszweski">Kraszweski's Law</label>
+					</div>
 					</div>
 
 					<!-- Temperature -->
@@ -141,22 +131,22 @@
 					</div>
 
 					<!-- Salinity -->
-					<!-- <div class="simulation_cases_label">
+					<div class="simulation_cases_label">
 					<label for="salinity">Salinity (in g/L)</label><br>
 					</div>
 					<div class="simulation_cases">
-					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder="<?php #echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
-					value="<?php #echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
-					</div> -->
+					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder="<?php echo isset($_POST['salinity']) ? htmlspecialchars($_POST['salinity'], ENT_QUOTES) : htmlspecialchars("ex: 0 g/L..."); ?>"
+					value="<?php echo isset($_POST['salinity']) ? $_POST['salinity'] : ''; ?>" required><br>
+					</div>
 
 					<!-- V1 -->
-					<!-- <div class="simulation_cases_label">
+					<div class="simulation_cases_label">
 					<label for="volume1">Volume V1 (between 0 and 1)</label><br>
 					</div>
 					<div class="simulation_cases">
-					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder="<?php #echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
-					value="<?php #echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
-					</div> -->
+					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder="<?php echo isset($_POST['volume1']) ? htmlspecialchars($_POST['volume1'], ENT_QUOTES) : htmlspecialchars("ex: 0.5 ..."); ?>"
+					value="<?php echo isset($_POST['volume1']) ? $_POST['volume1'] : ''; ?>" required ><br>
+					</div>
 
 					<!-- Volume of the mixture -->
 					<div class="simulation_cases_label">
@@ -167,55 +157,19 @@
 					value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required><br>
 					</div>
 
-					<!-- Grey line -->
-					<div id="result_line"></div>
-
 					<!-- Submit button -->
-					<div class="submit_button">
-					<input id="bouttton" type="submit" value="Display results" name="boutonColeCole" >
+					<div class="simulation_cases">
+					<input id="bouttton"type="submit" value="Display results" name="boutonColeCole" >
 					</div>
 				</form>
 			</div>
 		</div>
 
-
 <?php if(isset($_POST["boutonColeCole"])): ?>
 	<?php include("manager/calculcolecole.php"); ?>
-<div class="resultsTables">
 
-	<div class="tables" >
-		<p>Tableau de valeurs des modèles de références selon le modèle 4-Cole-Cole.</p>
-			<table class="table">
-				<thead>
-					<tr>
-						<th>Frequence (GHz)</th>
-						<th>&#949;'</th>
-						<th>&#963; (S/m)</th>
-					</tr>
-				</thead>
-				<tbody>
-					<?php foreach($tableau_output as $tableau): ?>
-						<?php foreach($tableau_output as $sigma): ?>
-						<?php endforeach ?>
-						<?php $i = 0; ?>
-						<?php foreach($tableau as $espilon): ?>
-						<tr>
-								<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
-								<td><?= $espilon; ?></td>
-								<td><?= $sigma[$i]; ?></td>
-								<?php $i++; ?>
-								<?php if ($i == count($frequence_array)) {break;}?>
-						</tr>
-						<?php endforeach ?>
-						<?php break; ?>
-					<?php endforeach ?>
-				</tbody>
-			</table>
-	</div>
-
-	<div class="tables">
-		<?php include("manager/optimInput.php"); ?>
-		<p>Tableau des valeurs du fluide selon le programme d'optimisation.</p>
+<div id="ColecoleTable" >
+	<p>Tableau de valeurs des modèles de références selon le modèle 4-Cole-Cole.</p>
 		<table class="table">
 			<thead>
 				<tr>
@@ -225,15 +179,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php foreach($tableau_output2 as $tableau2): ?>
-					<?php foreach($tableau_output2 as $sigma2): ?>
+				<?php foreach($tableau_output as $tableau): ?>
+					<?php foreach($tableau_output as $sigma): ?>
 					<?php endforeach ?>
 					<?php $i = 0; ?>
-					<?php foreach($tableau2 as $espilon2): ?>
+					<?php foreach($tableau as $espilon): ?>
 					<tr>
 							<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
-							<td><?= $espilon2; ?></td>
-							<td><?= $sigma2[$i]; ?></td>
+							<td><?= $espilon; ?></td>
+							<td><?= $sigma[$i]; ?></td>
 							<?php $i++; ?>
 							<?php if ($i == count($frequence_array)) {break;}?>
 					</tr>
@@ -276,8 +230,7 @@
 	</table>
 	</div>
 
-	<?php include("manager/masse.php"); ?>
-</div>
+<?php include("manager/masse.php"); ?>
 
 <div id="phrase_mixture">
 		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
