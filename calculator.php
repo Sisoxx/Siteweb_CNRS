@@ -20,8 +20,11 @@
 			<div class="page_title">
 				<h1>Simulation</h1>
 			</div>
-			<p>Paragraphe expliquant la simulation.<br>
-			</p>
+			<div class="paragraph_exp">
+				<p>Paragraphe expliquant la simulation.<br>
+				</p>
+			</div>
+
 			<div class="simulator_form">
 
 				<form action="" method="post" id="formulaire2">
@@ -157,9 +160,12 @@
 					value="<?php echo isset($_POST['volumebecher']) ? $_POST['volumebecher'] : ''; ?>" required><br>
 					</div>
 
+					<!-- Grey line -->
+					<div id="result_line"></div>
+
 					<!-- Submit button -->
-					<div class="simulation_cases">
-					<input id="bouttton"type="submit" value="Display results" name="boutonColeCole" >
+					<div class="submit_button">
+					<input id="bouttton" type="submit" value="Display results" name="boutonColeCole" >
 					</div>
 				</form>
 			</div>
