@@ -3,6 +3,7 @@
 	padding: 0% 15% 2% 15%;
 	display: flex;
 	flex-direction: column;
+	/* background-color: #FFF9F0; */
 }
 
 
@@ -15,10 +16,25 @@
 	box-shadow: 1px 3px 7px rgba(0,0,0,0.16);
 }
 
+.red_star_note{
+	grid-column: 1 / 3;
+	text-align: left;
+}
+
+note {
+	font-family: "Noto Sans Bold", sans-serif;
+	font-weight: normal;
+	color: #707070;
+	font-size: 0.8em;
+	/* padding-bottom: 1em; */
+
+}
+
 #formulaire2 > .simulation_cases {
 	/* border: solid 1px; */
 	text-align: left;
 	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
 	padding-left: 0.2em;
 }
 
@@ -97,6 +113,18 @@ redStar{
 }
 
 .radioLabel > label{
+	font-family: "Noto Sans Bold", sans-serif;
+	font-weight: normal;
+	color: #707070;
+	font-size: 0.8em;
+}
+
+.output_display{
+	display: grid;
+	grid-template-rows: 3em 3em;
+}
+
+.output_display > label{
 	font-family: "Noto Sans Bold", sans-serif;
 	font-weight: normal;
 	color: #707070;

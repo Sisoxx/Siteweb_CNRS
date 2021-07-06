@@ -13,8 +13,9 @@
 <header>
 	<?php include("layout/header.html"); ?>
 </header>
+<div class="background_colors">
 
-
+</div>
 		<div id="calculateur">
 			<div class="page_title">
 				<h1>Simulation</h1>
@@ -28,7 +29,9 @@
 
 				<form action="" method="post" id="formulaire2">
 
-
+				<div class="red_star_note">
+					<note>All fields marked with * are mandatory.</note>
+				</div>
 
 					<!-- Tissu  -->
 					<div class="simulation_cases_label">
@@ -160,7 +163,7 @@
 
 					<!-- Volume of the mixture -->
 					<div class="simulation_cases_label">
-					<label for="">Volume of the mixture (in mL)</label><br>
+					<label for="">Volume of the mixture (in mL) <redStar>*</redStar></label><br>
 					</div>
 					<div class="simulation_cases">
 					<input class ="case" type="number" min="0" step="0.01" max="50000" name="volumebecher" placeholder="<?php echo isset($_POST['volumebecher']) ? htmlspecialchars($_POST['volumebecher'], ENT_QUOTES) : htmlspecialchars('ex: 40 mL ...'); ?>"
@@ -169,6 +172,22 @@
 
 					<!-- Grey line -->
 					<div id="result_line"></div>
+
+					<!-- Output selection -->
+					<div class="simulation_cases_label">
+						<p>Please select parameters to display : </p>
+					</div>
+					<div class="output_display">
+						<label class="colecoleResults">Cole-Cole model table of result
+						  <input type="checkbox" >
+						  <span class="checkmark"></span>
+						</label>
+						<label class="mixtureResults">Results for the mixture
+						  <input type="checkbox" checked="checked">
+						  <span class="checkmark"></span>
+						</label>
+					</div>
+
 
 					<!-- Submit button -->
 					<div class="submit_button">
