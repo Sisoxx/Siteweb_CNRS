@@ -198,6 +198,7 @@
 		</table>
 </div>
 
+<?php echo "<img src='image/temp/graph.png' />"; ?>
 
 	<?php include("manager/optimInput.php"); ?>
 <p>Tableau des valeurs du fluide selon le programme d'optimisation.</p>

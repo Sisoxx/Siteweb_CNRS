@@ -535,6 +535,10 @@ figure {
 	text-align: center;
 }
 
+#y{
+	text-align: center;
+}
+
 /**************************Details*****************/
 input,textarea
 {
@@ -571,6 +575,7 @@ button:hover
 	cursor: pointer;
 	transition: 0.3s ease-in-out;
 }
+
 
 /******************* FOOTER *********************/
 .footer {

@@ -1,6 +1,3 @@
-
-
-
 <?php
 #------ Functions ------
 
@@ -127,23 +124,23 @@ $input_epsi = $tableau_output['epsilon'];
 
 for ($i=0; $i < count($input_epsi) ; $i++) {
   $input_epsi[$i] = floatval($input_epsi[$i]);
-#	var_dump($input_epsi);
-	#echo nl2br("\n");
+
 }
 
-#var_dump($input_sigma,$input_epsi);
-#var_dump($tableau_output);
+require_once("jpgraph/jpgraph.php");
+require_once("jpgraph/jpgraph_line.php");
 
-#------ var dumps ------
-
-#var_dump($epsi_output);
-#saut2lignes();
-
-#var_dump($sig_output);
-#var_dump($py_output);
-
-# echo $py_output;
-
-
+$x_axis = $frequence_array;
+$y_axis = $epsi_array;
+$graph = new Graph(500, 500);
+$graph->SetScale("textint");
+$graph->title->Set("Graphique représentant la permittivité en fonction de la fréquence");
+$graph->yaxis->SetTitle("Permittivité");
+$graph->xaxis->SetTitle("Fréquence en GHz");
+$graph->xaxis->SetTickLabels($x_axis);
+$courbe = new LinePlot($y_axis);
+$courbe->SetColor('red');
+$graph->Add($courbe);
+$graph->Stroke("image/temp/graph.png");
 
 ?>

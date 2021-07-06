@@ -10,7 +10,7 @@
 </head>
 
 
-	<?php include("layout/header.html"); ?>
+	<?php include("layout/header.html");?>
 
 
 <body>
@@ -73,6 +73,8 @@
 	</ul>
 	</div>
 </section>
+
+
 
 
 <footer>

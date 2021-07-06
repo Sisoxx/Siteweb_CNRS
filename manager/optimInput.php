@@ -16,7 +16,7 @@ else {
 
 $opti_output = exec("cd python; python appel_opti.py  $input_temperature $input_salinity $input_V1 $input_law $input_choice $debut_frequence $fin_frequence $step");
 
-var_dump($opti_output);
+#var_dump($opti_output);
 
 $opti_output = str_replace("(", "", $opti_output);
 $opti_output = str_replace(")", "", $opti_output);
