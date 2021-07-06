@@ -580,7 +580,10 @@ button:hover
 	transition: 0.3s ease-in-out;
 }
 
-
+/******************* PUBLICATIONS *********************/
+.titrepubli{
+	color: red;
+}
 /******************* FOOTER *********************/
 .footer {
   display: flex;

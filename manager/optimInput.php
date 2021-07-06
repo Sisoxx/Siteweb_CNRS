@@ -78,7 +78,7 @@ for ($i = 1; $i <= $number_of_comas2; $i++){
 array_push($epsi_array2, $epsi_output2);
 
 foreach ($epsi_array2 as  &$value2){
-  $value2 = number_format($value2, 4, ".", " ");
+  $value2 = number_format($value2, 2, ".", " ");
 }
 #var_dump($epsi_array2);
 
@@ -106,7 +106,7 @@ array_push($sig_array2, $sig_output2);
 
 
 foreach ($sig_array2 as  &$value2) {
-  $value2 = number_format($value2, 4, ".", " "); # formatage des valeur à 4 decimales
+  $value2 = number_format($value2, 2, ".", " "); # formatage des valeur à 2 decimales
 }
 
 #-------------TABLEAU2------------
@@ -127,4 +127,30 @@ $input_epsi2 = $tableau_output2['epsilon2'];
 for ($i=0; $i < count($input_epsi2) ; $i++) {
    $input_epsi2[$i] = floatval($input_epsi2[$i]);
 }
+require_once("jpgraph/jpgraph.php");
+require_once("jpgraph/jpgraph_line.php");
+
+$x_axis = $frequence_array;
+$y_axis = $epsi_array2;
+$graph = new Graph(700, 700);
+$graph->SetScale("textlin");
+$theme_class=new UniversalTheme;
+$graph->SetTheme($theme_class);
+$graph->img->SetAntiAliasing(false);
+$graph->SetBox(false);
+$graph->SetMargin(40,20,36,63);
+$graph->yaxis->HideZeroLabel();
+$graph->yaxis->HideLine(false);
+$graph->yaxis->HideTicks(false,false);
+$graph->img->SetAntiAliasing();
+$graph->xgrid->Show();
+$graph->xgrid->SetLineStyle("solid");
+$graph->title->Set("Permittivity by frequency - Optim Model");
+$graph->yaxis->SetTitle("Permittivity");
+$graph->xaxis->SetTitle("Frequency in GHz");
+$graph->xaxis->SetTickLabels($x_axis);
+$courbe = new LinePlot($y_axis);
+$courbe->SetColor("red");
+$graph->Add($courbe);
+$graph->Stroke("image/temp/graph2.png");
 ?>
