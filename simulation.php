@@ -214,6 +214,7 @@
 	</div>
 
 	<div class="tables">
+
 		<?php include("manager/optimInput.php"); ?>
 		<p>Tableau des valeurs du fluide selon le programme d'optimisation.</p>
 		<table class="table">
@@ -242,51 +243,22 @@
 				<?php endforeach ?>
 			</tbody>
 		</table>
-</div>
-
-<?php echo "<img src='image/temp/graph.png' />"; ?>
-
-	<?php include("manager/optimInput.php"); ?>
-<p>Tableau des valeurs du fluide selon le programme d'optimisation.</p>
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Frequence (GHz)</th>
-				<th>&#949;'</th>
-				<th>&#963; (S/m)</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach($tableau_output2 as $tableau2): ?>
-				<?php foreach($tableau_output2 as $sigma2): ?>
-				<?php endforeach ?>
-				<?php $i = 0; ?>
-				<?php foreach($tableau2 as $espilon2): ?>
-				<tr>
-						<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
-						<td><?= $espilon2; ?></td>
-						<td><?= $sigma2[$i]; ?></td>
-						<?php $i++; ?>
-						<?php if ($i == count($frequence_array)) {break;}?>
-				</tr>
-				<?php endforeach ?>
-				<?php break; ?>
-			<?php endforeach ?>
-		</tbody>
-	</table>
+		</div>
 	</div>
 
 	<?php include("manager/masse.php"); ?>
-</div>
 
-<div id="phrase_mixture">
-		<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
-			<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
-			TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
-			Water mass: <strong><?= $recipe_array[2]; ?> g</strong><br>
-		</p>
-</div>
-<?php endif ?>
+	<div id="phrase_mixture">
+			<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
+				<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
+				TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
+				Water mass: <strong><?= $recipe_array[2]; ?> g</strong><br>
+			</p>
+	</div>
+
+	<?php echo "<img src='image/temp/graph.png' />"; ?>
+
+	<?php endif ?>
 
 
 <footer>
