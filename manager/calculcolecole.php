@@ -68,11 +68,13 @@ array_push($epsi_array, $epsi_output);
 #var_dump($epsi_array);
 
 foreach ($epsi_array as  &$value) {
-  $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
+  $value = number_format($value, 2, ".", " "); # formatage des valeur à 2 decimales
 }
 
 
-#var_dump($epsi_array);
+foreach ($frequence_array as &$value) {
+  $value = number_format($value,2,".", " ");
+}
 
 
 
@@ -100,7 +102,7 @@ array_push($sig_array, $sig_output);
 #var_dump($sig_array);
 
 foreach ($sig_array as  &$value) {
-  $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
+  $value = number_format($value, 2, ".", " "); # formatage des valeur à 2 decimales
 }
 
 #var_dump($sig_array);
@@ -132,15 +134,26 @@ require_once("jpgraph/jpgraph_line.php");
 
 $x_axis = $frequence_array;
 $y_axis = $epsi_array;
-$graph = new Graph(500, 500);
-$graph->SetScale("textint");
-$graph->title->Set("Graphique représentant la permittivité en fonction de la fréquence");
-$graph->yaxis->SetTitle("Permittivité");
-$graph->xaxis->SetTitle("Fréquence en GHz");
+$graph = new Graph(700, 700);
+$graph->SetScale("textlin");
+$theme_class=new UniversalTheme;
+$graph->SetTheme($theme_class);
+$graph->img->SetAntiAliasing(false);
+$graph->SetBox(false);
+$graph->SetMargin(40,20,36,63);
+$graph->yaxis->HideZeroLabel();
+$graph->yaxis->HideLine(false);
+$graph->yaxis->HideTicks(false,false);
+$graph->img->SetAntiAliasing();
+$graph->xgrid->Show();
+$graph->xgrid->SetLineStyle("solid");
+$graph->title->Set("Permittivity by frequency - ColeCole Model");
+$graph->yaxis->SetTitle("Permittivity");
+$graph->xaxis->SetTitle("Frequency in GHz");
 $graph->xaxis->SetTickLabels($x_axis);
 $courbe = new LinePlot($y_axis);
 $courbe->SetColor('red');
 $graph->Add($courbe);
-$graph->Stroke("image/temp/graph.png");
+$graph->Stroke("image/temp/graph1.png");
 
 ?>

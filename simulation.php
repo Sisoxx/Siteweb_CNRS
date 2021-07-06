@@ -219,7 +219,7 @@
 						<?php $i = 0; ?>
 						<?php foreach($tableau as $espilon): ?>
 						<tr>
-								<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
+								<td><?= number_format($frequence_array[$i], 2, ".", " "); ?></td>
 								<td><?= $espilon; ?></td>
 								<td><?= $sigma[$i]; ?></td>
 								<?php $i++; ?>
@@ -251,7 +251,7 @@
 					<?php $i = 0; ?>
 					<?php foreach($tableau2 as $espilon2): ?>
 					<tr>
-							<td><?= number_format($frequence_array[$i], 3, ".", " "); ?></td>
+							<td><?= number_format($frequence_array[$i], 2, ".", " "); ?></td>
 							<td><?= $espilon2; ?></td>
 							<td><?= $sigma2[$i]; ?></td>
 							<?php $i++; ?>
@@ -275,7 +275,8 @@
 			</p>
 	</div>
 
-	<?php echo "<img src='image/temp/graph.png' />"; ?>
+	<?php echo "<img src='image/temp/graph1.png' />"; ?>
+	<?php echo "<img src='image/temp/graph2.png' />"; ?>
 
 	<?php endif ?>
 
