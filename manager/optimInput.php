@@ -1,8 +1,10 @@
 <?php
 
 $input_temperature = floatval((array_key_exists('temperature', $_POST)) ? $_POST['temperature'] : "");
-$input_salinity = floatval((array_key_exists('salinity', $_POST)) ? $_POST['salinity'] : "");
-$input_V1 = floatval((array_key_exists('volume1', $_POST)) ? $_POST['volume1'] : "");
+// $input_salinity = floatval((array_key_exists('salinity', $_POST)) ? $_POST['salinity'] : "");
+$input_salinity = floatval(0);
+// $input_V1 = floatval((array_key_exists('volume1', $_POST)) ? $_POST['volume1'] : "");
+$input_V1 = floatval(0.5);
 #var_dump($input_temperature,$input_salinity,$input_V1);
 
 
@@ -16,7 +18,7 @@ else {
 
 $opti_output = exec("cd python; python appel_opti.py  $input_temperature $input_salinity $input_V1 $input_law $input_choice $debut_frequence $fin_frequence $step");
 
-var_dump($opti_output);
+// var_dump($opti_output);
 
 $opti_output = str_replace("(", "", $opti_output);
 $opti_output = str_replace(")", "", $opti_output);

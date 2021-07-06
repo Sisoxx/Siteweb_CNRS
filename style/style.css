@@ -9,8 +9,10 @@ body
 
 
 h1{
+	padding-top: 1.3em;
 	text-align: left;
 	color: #961E64;
+	font-size: 1.7em;
 
 }
 
@@ -19,7 +21,7 @@ h2
 	text-transform: uppercase;
 	text-align: left;
 	padding-top: 30px;
-	font-size: 1.6em;
+	font-size: 1.3em;
 }
 a
 {
@@ -29,6 +31,8 @@ a
 
 p{
 	text-align: left;
+	padding-bottom: 2em;
+
 
 }
 html
@@ -540,9 +544,9 @@ input,textarea
 {
 	border: solid;
 	width: 55%;
-	padding: 15px 10px;
-	margin: 15px;
-	font-size: 1em;
+	padding: 11px 10px;
+	margin: 15px ;
+	font-size: 0.8em;
 	font-family: "Noto Sans", sans-serif;
 	/* border-radius: 0.2em; */
 	border-width: 0.01em;
