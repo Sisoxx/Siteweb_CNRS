@@ -174,18 +174,36 @@
 					<div id="result_line"></div>
 
 					<!-- Output selection -->
+
+					<!-- <div class="output_display">
+						<label class="Results">Cole-Cole model table of result
+						  <input type="checkbox" >
+						  <span class="checkmark"></span>
+						</label>
+						<label class="Results">Results for the mixture
+						  <input type="checkbox" checked="checked">
+						  <span class="checkmark"></span>
+						</label>
+					</div> -->
+
 					<div class="simulation_cases_label">
 						<p>Please select parameters to display : </p>
 					</div>
 					<div class="output_display">
-						<label class="colecoleResults">Cole-Cole model table of result
-						  <input type="checkbox" >
-						  <span class="checkmark"></span>
-						</label>
-						<label class="mixtureResults">Results for the mixture
-						  <input type="checkbox" checked="checked">
-						  <span class="checkmark"></span>
-						</label>
+						<div class="checkbox">
+							<div>
+								<input type="checkbox" value="mixture_results" name="colecoleResults" checked>
+							</div>
+							<div class="checkboxLabel">
+								<label for="mixture_results">Results for the mixture</label>
+							</div>
+							<div>
+								<input type="checkbox" value="cole_cole_results" name="optiResults" <?php echo (isset($_POST['optiResults']) && $_POST['optiResults'] === 'cole_cole_results') ? 'checked' : ''; ?>>
+							</div>
+							<div class="checkboxLabel">
+								<label for="cole_cole_results">Cole-Cole model table of results</label>
+							</div>
+						</div>
 					</div>
 
 
