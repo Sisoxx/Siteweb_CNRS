@@ -23,9 +23,10 @@
           diagnostics 8040085</li>
     </ul>
     </div>
-  </body>
 
   <footer>
     <?php include("layout/footer.html"); ?>
   </footer>
+</body>
+
 </html>

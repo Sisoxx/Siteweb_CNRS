@@ -49,7 +49,7 @@ for n in noms_tissu:
     eColeCole,sColeCole = colecoleFonction(n,fd,ff,pas)
     r1,r2,r3,r4,eOpti,sOpti=optiFonction(t,st,v1,loi,n,fd,ff,pas)
     for i in range(len(eColeCole)):
-        diff.append(abs(eColeCole[i] - eOpti[i]))
+        diff.append((abs(eColeCole[i] - eOpti[i]))/eColeCole[i])
     moy = statistics.mean(diff)
     min_diff = min(diff)
     max_diff = max(diff)
@@ -81,7 +81,7 @@ for n in noms_tissu:
     eColeCole,sColeCole = colecoleFonction(n,fd,ff,pas)
     r1,r2,r3,r4,eOpti,sOpti=optiFonction(t,st,v1,loi,n,fd,ff,pas)
     for i in range(len(eColeCole)):
-        diff.append(abs(sColeCole[i] - sOpti[i]))
+        diff.append((abs(sColeCole[i] - sOpti[i]))/sColeCole[i])
     moy = statistics.mean(diff)
     min_diff = min(diff)
     max_diff = max(diff)

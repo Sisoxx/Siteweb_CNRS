@@ -218,10 +218,20 @@
 
 <?php if(isset($_POST["boutonColeCole"])): ?>
 	<?php include("manager/calculcolecole.php"); ?>
-<div class="resultsTables">
+	<?php include("manager/optimInput.php"); ?>
+	<?php include("manager/masse.php"); ?>
+
+	<div id="phrase_mixture">
+			For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
+				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 2, ".", " "); ?> g</strong><br>
+				TritonX100 mass: <strong><?= number_format($recipe_array[1], 2, ".", " "); ?> g</strong><br>
+				Water mass: <strong><?= number_format($recipe_array[2], 2, ".", " "); ?> g</strong><br>
+
+	</div>
+<div id="resultsTables">
 
 	<div class="tables" >
-		<p>Tableau de valeurs des modèles de références selon le modèle 4-Cole-Cole.</p>
+		<p>Tableau de valeurs des modèles de références <br>selon le modèle 4-Cole-Cole.</p>
 			<table class="table">
 				<thead>
 					<tr>
@@ -252,8 +262,7 @@
 
 	<div class="tables">
 
-		<?php include("manager/optimInput.php"); ?>
-		<p>Tableau des valeurs du fluide selon le programme d'optimisation.</p>
+		<p>Tableau des valeurs du fluide <br>selon le programme d'optimisation.</p>
 		<table class="table">
 			<thead>
 				<tr>
@@ -283,18 +292,14 @@
 		</div>
 	</div>
 
-	<?php include("manager/masse.php"); ?>
-
-	<div id="phrase_mixture">
-			<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
-				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 2, ".", " "); ?> g</strong><br>
-				TritonX100 mass: <strong><?= number_format($recipe_array[1], 2, ".", " "); ?> g</strong><br>
-				Water mass: <strong><?= number_format($recipe_array[2], 2, ".", " "); ?> g</strong><br>
-			</p>
+<div id="graphs">
+	<div>
+		<?php echo "<img src='image/temp/graph1.png' />"; ?>
 	</div>
-
-	<?php echo "<img src='image/temp/graph1.png' />"; ?>
-	<?php echo "<img src='image/temp/graph2.png' />"; ?>
+	<div>
+		<?php echo "<img src='image/temp/graph2.png' />"; ?>
+	</div>
+</div>
 
 	<?php endif ?>
 
