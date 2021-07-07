@@ -19,7 +19,7 @@ $number_points = (array_key_exists('numberPoints', $_POST)) ? $_POST['numberPoin
 $number_points = intval($number_points);
 $number_points = floatval($number_points);
 
-
+$fin_frequence1 = $fin_frequence+1;
 
 $step = ($fin_frequence - $debut_frequence)/($number_points-1);
 
@@ -128,32 +128,5 @@ for ($i=0; $i < count($input_epsi) ; $i++) {
   $input_epsi[$i] = floatval($input_epsi[$i]);
 
 }
-
-require_once("jpgraph/jpgraph.php");
-require_once("jpgraph/jpgraph_line.php");
-
-$x_axis = $frequence_array;
-$y_axis = $epsi_array;
-$graph = new Graph(700, 700);
-$graph->SetScale("textlin");
-$theme_class=new UniversalTheme;
-$graph->SetTheme($theme_class);
-$graph->img->SetAntiAliasing(false);
-$graph->SetBox(false);
-$graph->SetMargin(40,20,36,63);
-$graph->yaxis->HideZeroLabel();
-$graph->yaxis->HideLine(false);
-$graph->yaxis->HideTicks(false,false);
-$graph->img->SetAntiAliasing();
-$graph->xgrid->Show();
-$graph->xgrid->SetLineStyle("solid");
-$graph->title->Set("Permittivity by frequency - ColeCole Model");
-$graph->yaxis->SetTitle("Permittivity");
-$graph->xaxis->SetTitle("Frequency in GHz");
-$graph->xaxis->SetTickLabels($x_axis);
-$courbe = new LinePlot($y_axis);
-$courbe->SetColor('red');
-$graph->Add($courbe);
-$graph->Stroke("image/temp/graph1.png");
 
 ?>
