@@ -287,9 +287,9 @@
 
 	<div id="phrase_mixture">
 			<p>For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
-				<br><br>NaCl mass: <strong><?= $recipe_array[0]; ?> g</strong><br>
-				TritonX100 mass: <strong><?= $recipe_array[1]; ?> g</strong><br>
-				Water mass: <strong><?= $recipe_array[2]; ?> g</strong><br>
+				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 2, ".", " "); ?> g</strong><br>
+				TritonX100 mass: <strong><?= number_format($recipe_array[1], 2, ".", " "); ?> g</strong><br>
+				Water mass: <strong><?= number_format($recipe_array[2], 2, ".", " "); ?> g</strong><br>
 			</p>
 	</div>
 

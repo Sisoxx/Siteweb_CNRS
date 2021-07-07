@@ -134,7 +134,7 @@ $x_axis = $frequence_array;
 $y_axis1 = $epsi_array;
 $y_axis2 = $epsi_array2;
 $graph = new Graph(600, 600);
-$graph->SetScale("intlin",1,80,0,0);
+$graph->SetScale("intlin",0,80,0,0);
 $theme_class=new UniversalTheme;
 $graph->SetTheme($theme_class);
 $graph->img->SetAntiAliasing(false);
