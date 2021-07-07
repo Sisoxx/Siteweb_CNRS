@@ -19,7 +19,7 @@
         <input name="nom" placeholder="Name" required>
         <input name="email" placeholder="E-mail" required> <br>
         <textarea name="message" id="textearea" placeholder="Your message here ..." required></textarea><br>
-        <button>To Send</button>
+        <button>Send</button>
       </form>
     </div>
     </section>

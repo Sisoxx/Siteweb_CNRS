@@ -562,6 +562,11 @@ input,textarea
 	padding: 0% 15% 2% 15%;
 }
 
+#publications{
+	padding: 0% 15% 2% 15%;
+	text-align: justify;
+}
+
 #textearea
 {
 	height: 120px;

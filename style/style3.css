@@ -79,11 +79,11 @@ redStar{
 	/* display: flex;
 	align-self: center;
 	justify-content: flex-end; */
-  width: 75%;
+  width: 57%;
   height: 1px;
   background: #707070;
   /* position: static; */
-	margin: 1.7em;
+	margin: 1.2em auto;
 	/* text-align: center; */
 }
 
