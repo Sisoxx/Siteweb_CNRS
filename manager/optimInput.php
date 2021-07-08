@@ -129,6 +129,7 @@ for ($i=0; $i < count($input_epsi2) ; $i++) {
 }
 require_once("jpgraph/jpgraph.php");
 require_once("jpgraph/jpgraph_line.php");
+require_once('jpgraph/jpgraph_scatter.php');
 
 $x_axis = $frequence_array;
 $y_axis1 = $epsi_array;
@@ -159,6 +160,8 @@ $graph->Add($courbe1);
 $graph->Add($courbe2);
 $courbe1->SetColor('red');
 $courbe2->SetColor('blue');
+$courbe2->value->Show();
+$courbe2->value->SetColor("black");
 $graph->legend->SetFrameWeight(1);
 $graph->SetShadow();
 $graph->Stroke("image/temp/graph1.png");
@@ -192,6 +195,8 @@ $graph->Add($courbe1);
 $graph->Add($courbe2);
 $courbe1->SetColor('red');
 $courbe2->SetColor('blue');
+$courbe2->value->Show();
+$courbe2->value->SetColor("black");
 $graph->legend->SetFrameWeight(1);
 $graph->SetShadow();
 $graph->Stroke("image/temp/graph2.png");

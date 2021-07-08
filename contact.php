@@ -14,10 +14,10 @@
   <body>
     <section id="contact">
       <h1>Contact Us</h1>
-    <div>
-      <form method="POST" action="manager/contact.php" id="formulaire">
+    <div id="formulaire2">
+      <form method="POST" action="manager/contact.php">
         <input name="nom" placeholder="Name" required>
-        <input name="email" placeholder="E-mail" required> <br>
+        <input name="email" placeholder="E-mail" required>
         <textarea name="message" id="textearea" placeholder="Your message here ..." required></textarea><br>
         <button>Send</button>
       </form>

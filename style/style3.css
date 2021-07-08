@@ -166,9 +166,10 @@ redStar{
 	min-width: 400px;
 	width: auto;
 	box-shadow: 1px 3px 7px rgba(0,0,0,0.16);
-	cursor: pointer;
+	/* cursor: pointer; */
 	margin: 2.5em auto;
 	border: 2px solid #EAEAEA;
+	text-align: center;
 }
 
 thead tr {
