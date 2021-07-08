@@ -667,10 +667,10 @@ button:hover
   column-gap: 1.50em;
 }
 
-.legal {
+.legal{
   display: flex;
   flex-wrap: wrap;
-  color: #999;
+  color: black;
 }
 
 .legal__links {

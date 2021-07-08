@@ -16,9 +16,9 @@ require '../traitement/contact.php';
 class Manager{
 public function contact($donnee){
 //Enregistre les données dans la BDD et rédireige en fonction du résultat //
-      $bdd=new PDO('mysql:host=localhost;dbname=geeps; charset=utf8','root', '');
-    $req=$bdd->prepare('INSERT into contact (nom, prenom, raison_sociale, email, message) VALUES(:nom, :prenom, :raison_sociale, :email, :message)');
-    $req->execute(array('nom'=>$donnee->getnom(), 'prenom'=>$donnee->getprenom(), 'raison_sociale'=>$donnee->getraison_sociale(), 'email'=>$donnee->getemail(), 'message'=>$donnee->getmessage()));
+    $bdd=new PDO('mysql:host=localhost;dbname=geeps; charset=utf8','root', '');
+    $req=$bdd->prepare('INSERT into contact (nom, email, message) VALUES(:nom, :email, :message)');
+    $req->execute(array('nom'=>$donnee->getnom(), 'email'=>$donnee->getemail(), 'message'=>$donnee->getmessage()));
     $a=$req->fetchall();
     // Si la requete s'execute alors on redirige vers une page//
 
