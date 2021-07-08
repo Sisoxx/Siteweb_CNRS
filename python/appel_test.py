@@ -62,7 +62,7 @@ pas=0.5
 vs=40
 
 for n in noms_tissu:
-    N,a,b,c=optiFonction(t,st,v1,loi,n,fd,ff,pas)
+    N,a,b,c,r1,r2=optiFonction(t,st,v1,loi,n,fd,ff,pas)
     NaCl,T,o=calculmasse(t,st,v1,loi,n,fd,ff,pas,vs)
     sous_liste = [n,c,NaCl,T,o]
 
@@ -75,7 +75,7 @@ for n in noms_tissu:
 fichier_texte.write("\n\nListe des tissus présentant des erreurs superieurs à 10^-1: \n")
 
 for n in noms_tissu:
-    N,a,b,c=optiFonction(t,st,v1,loi,n,fd,ff,pas)
+    N,a,b,c,r1,r2=optiFonction(t,st,v1,loi,n,fd,ff,pas)
     NaCl,T,o=calculmasse(t,st,v1,loi,n,fd,ff,pas,vs)
     sous_liste = [n,c,NaCl,T,o]
 

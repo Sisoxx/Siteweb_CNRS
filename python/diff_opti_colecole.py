@@ -17,7 +17,7 @@ loi=1
 fd=0.5
 ff=6
 pas=0.5
-# vs=40
+vs=40
 
 fichier_texte = open("Liste_des_erreurs.txt","w")
 fichier_texte.write("Paramètres: \n")
@@ -35,8 +35,8 @@ fichier_texte.write("   freq_haute: ")
 fichier_texte.write(str(ff))
 fichier_texte.write("   pas: ")
 fichier_texte.write(str(pas))
-# fichier_texte.write("   vs: ")
-# fichier_texte.write(vs)
+fichier_texte.write("   vs: ")
+fichier_texte.write(str(vs))
 
 fichier_texte.write("\n\n Tissus triés par erreur croissante des epsilons: \n\n")
 
@@ -48,12 +48,30 @@ for n in noms_tissu:
 
     eColeCole,sColeCole = colecoleFonction(n,fd,ff,pas)
     r1,r2,r3,r4,eOpti,sOpti=optiFonction(t,st,v1,loi,n,fd,ff,pas)
+    mNaCl,mTx,mEau=calculmasse(t,st,v1,loi,n,fd,ff,pas,vs)
     for i in range(len(eColeCole)):
         diff.append((abs(eColeCole[i] - eOpti[i]))/eColeCole[i])
-    moy = statistics.mean(diff)
-    min_diff = min(diff)
-    max_diff = max(diff)
-    liste_moy.append([n,moy,min_diff,max_diff])
+    moy = format(statistics.mean(diff),".2f")
+    moy = float(moy) * 100
+    moy = format(moy,".1f")
+    min_diff = format(min(diff),".2f")
+    min_diff = float(min_diff) * 100
+    min_diff = format(min_diff,".1f")
+    max_diff = format(max(diff), ".2f")
+    max_diff = float(max_diff) * 100
+    max_diff = format(max_diff, ".1f")
+    mNaCl = format(mNaCl,".2f")
+    mNaCl = float(mNaCl)
+    mTx = format(mTx,".2f")
+    mTx = float(mTx)
+    mEau = format(mEau,".2f")
+    mEau = float(mEau)
+    pTx = mTx/(mNaCl+mEau+mTx)
+    pTx = format(pTx, ".2f")
+    pTx = float(pTx) * 100
+    pTx = format(pTx, ".1f")
+
+    liste_moy.append([n,moy,min_diff,max_diff,pTx])
 
 liste_moy.sort(key = lambda i: i[1])
 
@@ -64,10 +82,15 @@ for tissu in liste_moy:
     fichier_texte.write(str(tissu[0]))
     fichier_texte.write(" - err_moy: ")
     fichier_texte.write(str(tissu[1]))
-    fichier_texte.write(" - e_min:")
+    fichier_texte.write("% - e_min:")
     fichier_texte.write(str(tissu[2]))
-    fichier_texte.write(" - e_max:")
+    fichier_texte.write("% - e_max:")
     fichier_texte.write(str(tissu[3]))
+    fichier_texte.write("% - proportion masse Tx:")
+    fichier_texte.write(str(tissu[4]))
+    fichier_texte.write("%")
+    if float(tissu[4])>40:
+        fichier_texte.write("   Gélifié")
     fichier_texte.write("\n")
     numero +=1
 
@@ -80,12 +103,29 @@ for n in noms_tissu:
 
     eColeCole,sColeCole = colecoleFonction(n,fd,ff,pas)
     r1,r2,r3,r4,eOpti,sOpti=optiFonction(t,st,v1,loi,n,fd,ff,pas)
-    for i in range(len(eColeCole)):
+    mNaCl,mTx,mEau=calculmasse(t,st,v1,loi,n,fd,ff,pas,vs)
+    for i in range(len(sColeCole)):
         diff.append((abs(sColeCole[i] - sOpti[i]))/sColeCole[i])
-    moy = statistics.mean(diff)
-    min_diff = min(diff)
-    max_diff = max(diff)
-    liste_moy_sig.append([n,moy,min_diff,max_diff])
+    moy = format(statistics.mean(diff),".2f")
+    moy = float(moy) * 100
+    moy = format(moy,".1f")
+    min_diff = format(min(diff),".2f")
+    min_diff = float(min_diff) * 100
+    min_diff = format(min_diff,".1f")
+    max_diff = format(max(diff), ".2f")
+    max_diff = float(max_diff) * 100
+    max_diff = format(max_diff, ".1f")
+    mNaCl = format(mNaCl,".2f")
+    mNaCl = float(mNaCl)
+    mTx = format(mTx,".2f")
+    mTx = float(mTx)
+    mEau = format(mEau,".2f")
+    mEau = float(mEau)
+    pTx = mTx/(mNaCl+mEau+mTx)
+    pTx = format(pTx, ".2f")
+    pTx = float(pTx) * 100
+    pTx = format(pTx, ".1f")
+    liste_moy_sig.append([n,moy,min_diff,max_diff,pTx])
 
 liste_moy_sig.sort(key = lambda i: i[1])
 
@@ -96,10 +136,15 @@ for tissu in liste_moy_sig:
     fichier_texte.write(str(tissu[0]))
     fichier_texte.write(" - err_moy: ")
     fichier_texte.write(str(tissu[1]))
-    fichier_texte.write(" - e_min:")
+    fichier_texte.write("% - e_min:")
     fichier_texte.write(str(tissu[2]))
-    fichier_texte.write(" - e_max:")
+    fichier_texte.write("% - e_max:")
     fichier_texte.write(str(tissu[3]))
+    fichier_texte.write("% - proportion masse Tx:")
+    fichier_texte.write(str(tissu[4]))
+    fichier_texte.write("%")
+    if float(tissu[4])>40:
+        fichier_texte.write("   Gélifié")
     fichier_texte.write("\n")
     numero +=1
 

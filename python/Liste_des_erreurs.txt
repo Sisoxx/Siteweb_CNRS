@@ -1,97 +1,97 @@
 Paramètres: 
-t: 25   st: 0   v1: 0.5  loi: 1   freq_basse: 0.5   freq_haute: 6   pas: 0.5
+t: 25   st: 0   v1: 0.5  loi: 1   freq_basse: 0.5   freq_haute: 6   pas: 0.5   vs: 40
 
  Tissus triés par erreur croissante des epsilons: 
 
-1 - Vitreous_Humor - err_moy: 0.004097769935835962 - e_min:0.00025246787280719374 - e_max:0.011071106386363725
-2 - Gall_Bladder - err_moy: 0.007733850476624337 - e_min:5.852283142475153e-05 - e_max:0.03238837477036339
-3 - Gall_Bladder_Bile - err_moy: 0.008147103166444722 - e_min:0.000478304860135016 - e_max:0.034350795641660666
-4 - Bone_Marrow_Not_Infiltrated - err_moy: 0.010050373875955258 - e_min:0.00029517347523260314 - e_max:0.02832944497283224
-5 - Fat_Not_Infiltrated - err_moy: 0.010307899487867544 - e_min:0.0007035136917073093 - e_max:0.032272446385453325
-6 - Cerebro_Spinal_Fluid - err_moy: 0.016694381383569483 - e_min:0.00027253319192663684 - e_max:0.047247283875655084
-7 - Muscle - err_moy: 0.01691608269156944 - e_min:0.0008755852807365834 - e_max:0.054157417832683886
-8 - Lens_Cortex - err_moy: 0.019560038614113366 - e_min:0.0019838850445093176 - e_max:0.0525367005304199
-9 - Thyroid - err_moy: 0.019885734571939023 - e_min:0.0025358107414000784 - e_max:0.051713775960661054
-10 - Cervix - err_moy: 0.020471036225450833 - e_min:0.0022340697912333544 - e_max:0.05622748815456531
-11 - Stomach - err_moy: 0.02142911101289952 - e_min:0.00234066738725661 - e_max:0.05811535716772543
-12 - Bladder - err_moy: 0.021483030453120538 - e_min:0.002817026924813179 - e_max:0.040631521549759776
-13 - Eye_Tissues_Sclera - err_moy: 0.022636556112301143 - e_min:0.002217613785617958 - e_max:0.06465617714975148
-14 - Tongue - err_moy: 0.02275022834334102 - e_min:0.0015173122830970916 - e_max:0.06413533658177505
-15 - Fat_Average_Infiltrated - err_moy: 0.023180277149589944 - e_min:0.0016091263771055462 - e_max:0.04839704503235685
-16 - Testis - err_moy: 0.02365155416132364 - e_min:0.0019292962412363033 - e_max:0.06814737979127926
-17 - Blood - err_moy: 0.02567504298312905 - e_min:0.0036657548791038976 - e_max:0.07021921542551889
-18 - Uterus - err_moy: 0.02580229769800189 - e_min:0.0016398591036467952 - e_max:0.076972890580118
-19 - Bone_Marrow_Infiltrated - err_moy: 0.026175501624447272 - e_min:0.0004446713310176838 - e_max:0.10608392186906875
-20 - Trachea - err_moy: 0.026416372416332105 - e_min:0.0006760393772948589 - e_max:0.07431934279800101
-21 - Aorta - err_moy: 0.027134795756852733 - e_min:0.002184573219749199 - e_max:0.06977364088455766
-22 - Dura - err_moy: 0.027303290436962935 - e_min:0.004261031000689476 - e_max:0.07537625695470239
-23 - Lung_Deflated - err_moy: 0.028214408356481105 - e_min:0.00019015498534804092 - e_max:0.08482412499345725
-24 - Lens_Nucleus - err_moy: 0.028696156085144954 - e_min:0.0013870344735898209 - e_max:0.06961775237783682
-25 - Lung_Inflated - err_moy: 0.02975853842627421 - e_min:0.0003587885155420618 - e_max:0.08593342331584436
-26 - Cornea - err_moy: 0.031035851830901583 - e_min:0.0016277414972393103 - e_max:0.0987313905901724
-27 - Skin_Dry - err_moy: 0.03153026105734405 - e_min:0.001774538622245311 - e_max:0.13382901909930262
-28 - Skin_Wet - err_moy: 0.03326413395300839 - e_min:0.0008761202605529197 - e_max:0.10605168802853256
-29 - Brain_White_Matter - err_moy: 0.03342871770500393 - e_min:0.0016692669496312902 - e_max:0.10463616473404878
-30 - Colon - err_moy: 0.03370422878193141 - e_min:0.00028507702648564496 - e_max:0.10580972401308147
-31 - Nerve - err_moy: 0.03416949701323602 - e_min:0.001823628016051036 - e_max:0.10975922273915228
-32 - Brain_Grey_Matter - err_moy: 0.03470501569184028 - e_min:0.001060701128591506 - e_max:0.11161064207631813
-33 - Breast_Fat - err_moy: 0.03632920430682746 - e_min:0.0017751694718851775 - e_max:0.07851408863504349
-34 - Spleen - err_moy: 0.03954901151114589 - e_min:0.00047938059721351644 - e_max:0.13113848794005073
-35 - Small_Intestine - err_moy: 0.03975655001494492 - e_min:0.0036565230572547453 - e_max:0.13992213923606048
-36 - Heart - err_moy: 0.040978268415672175 - e_min:0.0007490859444655522 - e_max:0.13249350626094822
-37 - Liver - err_moy: 0.042211568995594015 - e_min:0.00023477998707913247 - e_max:0.12426622188253407
-38 - Cerebellum - err_moy: 0.04423332286738742 - e_min:0.0004881434511988069 - e_max:0.1541539738804254
-39 - Tendon - err_moy: 0.04634257929538121 - e_min:0.00404292925154753 - e_max:0.09505818727300085
-40 - Bone_Cortical - err_moy: 0.047505575570524795 - e_min:0.006492032405170001 - e_max:0.08553096218807367
-41 - Kidney - err_moy: 0.048680460172875674 - e_min:0.000576851884363142 - e_max:0.16273190028272472
-42 - Ovary - err_moy: 0.060155183257211704 - e_min:0.00477133232907487 - e_max:0.18350064540934496
-43 - Cartilage - err_moy: 0.06597642810513307 - e_min:0.006972068224415046 - e_max:0.13179414039273635
-44 - Bone_Cancellous - err_moy: 0.06832932974566577 - e_min:0.00590259515290175 - e_max:0.13493095329566196
+1 - Vitreous_Humor - err_moy: 0.0% - e_min:0.0% - e_max:1.0% - proportion masse Tx:6.0%
+2 - Bone_Marrow_Not_Infiltrated - err_moy: 1.0% - e_min:0.0% - e_max:3.0% - proportion masse Tx:96.0%   Gélifié
+3 - Fat_Not_Infiltrated - err_moy: 1.0% - e_min:0.0% - e_max:3.0% - proportion masse Tx:96.0%   Gélifié
+4 - Gall_Bladder - err_moy: 1.0% - e_min:0.0% - e_max:3.0% - proportion masse Tx:17.0%
+5 - Gall_Bladder_Bile - err_moy: 1.0% - e_min:0.0% - e_max:3.0% - proportion masse Tx:6.0%
+6 - Bladder - err_moy: 2.0% - e_min:0.0% - e_max:4.0% - proportion masse Tx:62.0%   Gélifié
+7 - Cerebro_Spinal_Fluid - err_moy: 2.0% - e_min:0.0% - e_max:5.0% - proportion masse Tx:7.0%
+8 - Cervix - err_moy: 2.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:28.0%
+9 - Eye_Tissues_Sclera - err_moy: 2.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:23.0%
+10 - Fat_Average_Infiltrated - err_moy: 2.0% - e_min:0.0% - e_max:5.0% - proportion masse Tx:75.0%   Gélifié
+11 - Lens_Cortex - err_moy: 2.0% - e_min:0.0% - e_max:5.0% - proportion masse Tx:32.0%
+12 - Muscle - err_moy: 2.0% - e_min:0.0% - e_max:5.0% - proportion masse Tx:23.0%
+13 - Stomach - err_moy: 2.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:13.0%
+14 - Testis - err_moy: 2.0% - e_min:0.0% - e_max:7.0% - proportion masse Tx:18.0%
+15 - Thyroid - err_moy: 2.0% - e_min:0.0% - e_max:5.0% - proportion masse Tx:18.0%
+16 - Tongue - err_moy: 2.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:23.0%
+17 - Aorta - err_moy: 3.0% - e_min:0.0% - e_max:7.0% - proportion masse Tx:34.0%
+18 - Blood - err_moy: 3.0% - e_min:0.0% - e_max:7.0% - proportion masse Tx:16.0%
+19 - Bone_Marrow_Infiltrated - err_moy: 3.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:78.0%   Gélifié
+20 - Brain_Grey_Matter - err_moy: 3.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:27.0%
+21 - Brain_White_Matter - err_moy: 3.0% - e_min:0.0% - e_max:10.0% - proportion masse Tx:41.0%   Gélifié
+22 - Colon - err_moy: 3.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:22.0%
+23 - Cornea - err_moy: 3.0% - e_min:0.0% - e_max:10.0% - proportion masse Tx:23.0%
+24 - Dura - err_moy: 3.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:34.0%
+25 - Lens_Nucleus - err_moy: 3.0% - e_min:0.0% - e_max:7.0% - proportion masse Tx:43.0%   Gélifié
+26 - Lung_Deflated - err_moy: 3.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:28.0%
+27 - Lung_Inflated - err_moy: 3.0% - e_min:0.0% - e_max:9.0% - proportion masse Tx:59.0%   Gélifié
+28 - Nerve - err_moy: 3.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:47.0%   Gélifié
+29 - Skin_Dry - err_moy: 3.0% - e_min:0.0% - e_max:13.0% - proportion masse Tx:38.0%
+30 - Skin_Wet - err_moy: 3.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:33.0%
+31 - Trachea - err_moy: 3.0% - e_min:0.0% - e_max:7.0% - proportion masse Tx:37.0%
+32 - Uterus - err_moy: 3.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:17.0%
+33 - Breast_Fat - err_moy: 4.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:97.0%   Gélifié
+34 - Cerebellum - err_moy: 4.0% - e_min:0.0% - e_max:15.0% - proportion masse Tx:30.0%
+35 - Heart - err_moy: 4.0% - e_min:0.0% - e_max:13.0% - proportion masse Tx:20.0%
+36 - Liver - err_moy: 4.0% - e_min:0.0% - e_max:12.0% - proportion masse Tx:33.0%
+37 - Small_Intestine - err_moy: 4.0% - e_min:0.0% - e_max:14.0% - proportion masse Tx:19.0%
+38 - Spleen - err_moy: 4.0% - e_min:0.0% - e_max:13.0% - proportion masse Tx:23.0%
+39 - Bone_Cortical - err_moy: 5.0% - e_min:1.0% - e_max:9.0% - proportion masse Tx:74.0%   Gélifié
+40 - Kidney - err_moy: 5.0% - e_min:0.0% - e_max:16.0% - proportion masse Tx:22.0%
+41 - Tendon - err_moy: 5.0% - e_min:0.0% - e_max:10.0% - proportion masse Tx:34.0%
+42 - Ovary - err_moy: 6.0% - e_min:0.0% - e_max:18.0% - proportion masse Tx:31.0%
+43 - Bone_Cancellous - err_moy: 7.0% - e_min:1.0% - e_max:13.0% - proportion masse Tx:62.0%   Gélifié
+44 - Cartilage - err_moy: 7.0% - e_min:1.0% - e_max:13.0% - proportion masse Tx:38.0%
 
 
  Tissus triés par erreur croissante des sigmas: 
 
-1 - Gall_Bladder_Bile - err_moy: 0.009343041890633853 - e_min:0.00130286653825611 - e_max:0.017557177596057558
-2 - Gall_Bladder - err_moy: 0.010499601235930392 - e_min:0.00240082086852704 - e_max:0.020133641206420555
-3 - Cerebro_Spinal_Fluid - err_moy: 0.028548677315429476 - e_min:0.008494356381414294 - e_max:0.04328737266993348
-4 - Muscle - err_moy: 0.03310946010901079 - e_min:0.003918153120165743 - e_max:0.05863338424174929
-5 - Vitreous_Humor - err_moy: 0.03695214431002301 - e_min:0.0004722478997842872 - e_max:0.062102823891164276
-6 - Skin_Dry - err_moy: 0.04772316838221724 - e_min:0.004176793510322328 - e_max:0.08889206928188724
-7 - Cervix - err_moy: 0.051044421577322995 - e_min:0.0026310524051299153 - e_max:0.07630992988430661
-8 - Lens_Cortex - err_moy: 0.05275040627690363 - e_min:0.004358505239936789 - e_max:0.07859779708698325
-9 - Eye_Tissues_Sclera - err_moy: 0.05286678617363708 - e_min:0.0027503830285835066 - e_max:0.07836279796344989
-10 - Thyroid - err_moy: 0.052949023566431705 - e_min:0.003446943047362868 - e_max:0.07924669588720007
-11 - Stomach - err_moy: 0.05464774128518583 - e_min:0.003967910273777226 - e_max:0.08123444004821057
-12 - Testis - err_moy: 0.05639851209674556 - e_min:0.0046281690045180245 - e_max:0.08305131427310201
-13 - Dura - err_moy: 0.058878444474700774 - e_min:0.0002813567231538578 - e_max:0.0908581202611118
-14 - Uterus - err_moy: 0.05930158995785107 - e_min:0.005212403381652811 - e_max:0.08658840759302322
-15 - Tongue - err_moy: 0.05981616466417222 - e_min:0.0077927823704604824 - e_max:0.08808023758414309
-16 - Small_Intestine - err_moy: 0.06056241002095065 - e_min:0.005921772434710074 - e_max:0.0848408407346418
-17 - Cornea - err_moy: 0.06280047742408715 - e_min:0.003183946222391126 - e_max:0.09006823303692671
-18 - Blood - err_moy: 0.06343082653675432 - e_min:0.007330443682228438 - e_max:0.08680573250552967
-19 - Lung_Deflated - err_moy: 0.07377317943402169 - e_min:0.014282029709031889 - e_max:0.1066392561023222
-20 - Fat_Not_Infiltrated - err_moy: 0.07862917582769012 - e_min:0.030986316281148892 - e_max:0.11709636903908259
-21 - Trachea - err_moy: 0.07940996205543528 - e_min:0.0005739636323298451 - e_max:0.10707807218181228
-22 - Skin_Wet - err_moy: 0.080371596844709 - e_min:0.016010944463534165 - e_max:0.11408796531994474
-23 - Colon - err_moy: 0.08055326980677782 - e_min:0.01498769242956201 - e_max:0.1145457234736669
-24 - Cerebellum - err_moy: 0.08216508204778336 - e_min:0.007643943035959085 - e_max:0.11990167549155337
-25 - Spleen - err_moy: 0.08248082090673388 - e_min:0.011785485451457578 - e_max:0.11744589667792263
-26 - Bone_Marrow_Not_Infiltrated - err_moy: 0.08249220001123679 - e_min:0.03540644432791409 - e_max:0.2871919119858188
-27 - Brain_Grey_Matter - err_moy: 0.08277223496611738 - e_min:0.01748658039423116 - e_max:0.11990250323027896
-28 - Nerve - err_moy: 0.08786684380289657 - e_min:0.016032671052631266 - e_max:0.1285066030165679
-29 - Heart - err_moy: 0.09090789532428474 - e_min:0.01550818145765321 - e_max:0.13311918255057723
-30 - Brain_White_Matter - err_moy: 0.09094594736215648 - e_min:0.02161001698928416 - e_max:0.13844190050762548
-31 - Aorta - err_moy: 0.09382343262583788 - e_min:0.00801214764959267 - e_max:0.12251627509093513
-32 - Kidney - err_moy: 0.09689443781729584 - e_min:0.011798229465528283 - e_max:0.14647979283811735
-33 - Lung_Inflated - err_moy: 0.10444422793303135 - e_min:0.021499834526287114 - e_max:0.13269727460081124
-34 - Bone_Marrow_Infiltrated - err_moy: 0.1160023366905962 - e_min:0.011005126567835616 - e_max:0.21882247059971566
-35 - Liver - err_moy: 0.11824073288394364 - e_min:0.002904042952189462 - e_max:0.16753299649848397
-36 - Lens_Nucleus - err_moy: 0.11909595561177558 - e_min:0.01239028099676337 - e_max:0.15614861451636952
-37 - Bladder - err_moy: 0.12075925662703596 - e_min:0.01944538163897406 - e_max:0.1611694199580482
-38 - Ovary - err_moy: 0.12410993706145677 - e_min:0.007695237952884035 - e_max:0.1833309851410646
-39 - Fat_Average_Infiltrated - err_moy: 0.1609236865662029 - e_min:0.0405119222382609 - e_max:0.23314149403665918
-40 - Tendon - err_moy: 0.19885347557826488 - e_min:0.06469011424399693 - e_max:0.24807182288371726
-41 - Cartilage - err_moy: 0.2189117577894766 - e_min:0.06560870254044636 - e_max:0.3029935680429802
-42 - Bone_Cancellous - err_moy: 0.2579911503192218 - e_min:0.08188398763234743 - e_max:0.44901331631476454
-43 - Breast_Fat - err_moy: 0.27794797542676775 - e_min:0.05858908939950015 - e_max:0.3430566155423488
-44 - Bone_Cortical - err_moy: 0.2921597084280769 - e_min:0.004880094102312659 - e_max:0.6939436061437184
+1 - Gall_Bladder - err_moy: 1.0% - e_min:0.0% - e_max:2.0% - proportion masse Tx:17.0%
+2 - Gall_Bladder_Bile - err_moy: 1.0% - e_min:0.0% - e_max:2.0% - proportion masse Tx:6.0%
+3 - Kidney - err_moy: 10.0% - e_min:1.0% - e_max:15.0% - proportion masse Tx:22.0%
+4 - Lung_Inflated - err_moy: 10.0% - e_min:2.0% - e_max:13.0% - proportion masse Tx:59.0%   Gélifié
+5 - Bladder - err_moy: 12.0% - e_min:2.0% - e_max:16.0% - proportion masse Tx:62.0%   Gélifié
+6 - Bone_Marrow_Infiltrated - err_moy: 12.0% - e_min:1.0% - e_max:22.0% - proportion masse Tx:78.0%   Gélifié
+7 - Lens_Nucleus - err_moy: 12.0% - e_min:1.0% - e_max:16.0% - proportion masse Tx:43.0%   Gélifié
+8 - Liver - err_moy: 12.0% - e_min:0.0% - e_max:17.0% - proportion masse Tx:33.0%
+9 - Ovary - err_moy: 12.0% - e_min:1.0% - e_max:18.0% - proportion masse Tx:31.0%
+10 - Fat_Average_Infiltrated - err_moy: 16.0% - e_min:4.0% - e_max:23.0% - proportion masse Tx:75.0%   Gélifié
+11 - Tendon - err_moy: 20.0% - e_min:6.0% - e_max:25.0% - proportion masse Tx:34.0%
+12 - Cartilage - err_moy: 22.0% - e_min:7.0% - e_max:30.0% - proportion masse Tx:38.0%
+13 - Bone_Cancellous - err_moy: 26.0% - e_min:8.0% - e_max:45.0% - proportion masse Tx:62.0%   Gélifié
+14 - Breast_Fat - err_moy: 28.0% - e_min:6.0% - e_max:34.0% - proportion masse Tx:97.0%   Gélifié
+15 - Bone_Cortical - err_moy: 29.0% - e_min:0.0% - e_max:69.0% - proportion masse Tx:74.0%   Gélifié
+16 - Cerebro_Spinal_Fluid - err_moy: 3.0% - e_min:1.0% - e_max:4.0% - proportion masse Tx:7.0%
+17 - Muscle - err_moy: 3.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:23.0%
+18 - Vitreous_Humor - err_moy: 4.0% - e_min:0.0% - e_max:6.0% - proportion masse Tx:6.0%
+19 - Cervix - err_moy: 5.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:28.0%
+20 - Eye_Tissues_Sclera - err_moy: 5.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:23.0%
+21 - Lens_Cortex - err_moy: 5.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:32.0%
+22 - Skin_Dry - err_moy: 5.0% - e_min:0.0% - e_max:9.0% - proportion masse Tx:38.0%
+23 - Stomach - err_moy: 5.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:13.0%
+24 - Thyroid - err_moy: 5.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:18.0%
+25 - Blood - err_moy: 6.0% - e_min:1.0% - e_max:9.0% - proportion masse Tx:16.0%
+26 - Cornea - err_moy: 6.0% - e_min:0.0% - e_max:9.0% - proportion masse Tx:23.0%
+27 - Dura - err_moy: 6.0% - e_min:0.0% - e_max:9.0% - proportion masse Tx:34.0%
+28 - Small_Intestine - err_moy: 6.0% - e_min:1.0% - e_max:8.0% - proportion masse Tx:19.0%
+29 - Testis - err_moy: 6.0% - e_min:0.0% - e_max:8.0% - proportion masse Tx:18.0%
+30 - Tongue - err_moy: 6.0% - e_min:1.0% - e_max:9.0% - proportion masse Tx:23.0%
+31 - Uterus - err_moy: 6.0% - e_min:1.0% - e_max:9.0% - proportion masse Tx:17.0%
+32 - Lung_Deflated - err_moy: 7.0% - e_min:1.0% - e_max:11.0% - proportion masse Tx:28.0%
+33 - Bone_Marrow_Not_Infiltrated - err_moy: 8.0% - e_min:4.0% - e_max:29.0% - proportion masse Tx:96.0%   Gélifié
+34 - Brain_Grey_Matter - err_moy: 8.0% - e_min:2.0% - e_max:12.0% - proportion masse Tx:27.0%
+35 - Cerebellum - err_moy: 8.0% - e_min:1.0% - e_max:12.0% - proportion masse Tx:30.0%
+36 - Colon - err_moy: 8.0% - e_min:1.0% - e_max:11.0% - proportion masse Tx:22.0%
+37 - Fat_Not_Infiltrated - err_moy: 8.0% - e_min:3.0% - e_max:12.0% - proportion masse Tx:96.0%   Gélifié
+38 - Skin_Wet - err_moy: 8.0% - e_min:2.0% - e_max:11.0% - proportion masse Tx:33.0%
+39 - Spleen - err_moy: 8.0% - e_min:1.0% - e_max:12.0% - proportion masse Tx:23.0%
+40 - Trachea - err_moy: 8.0% - e_min:0.0% - e_max:11.0% - proportion masse Tx:37.0%
+41 - Aorta - err_moy: 9.0% - e_min:1.0% - e_max:12.0% - proportion masse Tx:34.0%
+42 - Brain_White_Matter - err_moy: 9.0% - e_min:2.0% - e_max:14.0% - proportion masse Tx:41.0%   Gélifié
+43 - Heart - err_moy: 9.0% - e_min:2.0% - e_max:13.0% - proportion masse Tx:20.0%
+44 - Nerve - err_moy: 9.0% - e_min:2.0% - e_max:13.0% - proportion masse Tx:47.0%   Gélifié
