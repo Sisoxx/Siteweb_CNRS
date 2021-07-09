@@ -6,10 +6,10 @@ from epsieau import EPSSIG
 def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu)
-    DELTA = 1.6
-    TAU = 13.56 * 1e-12
-    EPSINF = 3.14
-    SIG0 = 0.036
+    DELTA = 1.92
+    TAU = 90.9 * 1e-12
+    EPSINF = 3.45
+    SIG0 = 0.05
     FREQMI = low_range_input* 1e9
     PASFRE = round_step_input * 1e9
 

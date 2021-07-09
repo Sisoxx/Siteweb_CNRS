@@ -13,7 +13,7 @@ noms_tissu=["Aorta", "Bladder", "Blood", "Bone_Cancellous", "Bone_Cortical", "Bo
 t=25
 st=0
 v1=0.5
-loi=1
+loi=2
 fd=0.5
 ff=6
 pas=0.5
@@ -82,11 +82,11 @@ for tissu in liste_moy:
     fichier_texte.write(str(tissu[0]))
     fichier_texte.write(" - err_moy: ")
     fichier_texte.write(str(tissu[1]))
-    fichier_texte.write("% - e_min:")
+    fichier_texte.write("% - e_min: ")
     fichier_texte.write(str(tissu[2]))
-    fichier_texte.write("% - e_max:")
+    fichier_texte.write("% - e_max: ")
     fichier_texte.write(str(tissu[3]))
-    fichier_texte.write("% - proportion masse Tx:")
+    fichier_texte.write("% - proportion masse Tx: ")
     fichier_texte.write(str(tissu[4]))
     fichier_texte.write("%")
     if float(tissu[4])>40:
@@ -126,11 +126,15 @@ for n in noms_tissu:
     pTx = float(pTx) * 100
     pTx = format(pTx, ".1f")
     liste_moy_sig.append([n,moy,min_diff,max_diff,pTx])
-
 liste_moy_sig.sort(key = lambda i: i[1])
-
 numero = 1
-for tissu in liste_moy_sig:
+
+liste_bizarre = liste_moy_sig[2:15]
+# print(liste_bizarre)
+liste_moy_sig = [elem for elem in liste_moy_sig if elem not in liste_bizarre]
+liste_moy_sig = liste_moy_sig + liste_bizarre
+
+for tissu in    liste_moy_sig:
     fichier_texte.write(str(numero))
     fichier_texte.write(" - ")
     fichier_texte.write(str(tissu[0]))

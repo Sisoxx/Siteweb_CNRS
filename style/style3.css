@@ -194,14 +194,15 @@ tbody tr:nth-child(even){
 /***************RESULTATS***************/
 #phrase_mixture{
 	/* text-align: center; */
-	padding: 1% 0% ;
+	padding: 2.8% 0% ;
 	text-align: center;
 	/* display: flex; */
 	/* flex-direction: column; */
 	background-color: #EAEAEA;
 	box-shadow: 1px 3px 7px rgba(0,0,0,0.16);
-	margin: auto 15%;
+	margin: 3% 30%;
 	font-size: 1.5em;
+	/* border-radius: 2em; */
 
 }
 
