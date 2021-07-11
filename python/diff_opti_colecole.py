@@ -54,22 +54,24 @@ for n in noms_tissu:
     moy = format(statistics.mean(diff),".2f")
     moy = float(moy) * 100
     moy = format(moy,".1f")
+    moy = float(moy)
     min_diff = format(min(diff),".2f")
     min_diff = float(min_diff) * 100
     min_diff = format(min_diff,".1f")
     max_diff = format(max(diff), ".2f")
     max_diff = float(max_diff) * 100
     max_diff = format(max_diff, ".1f")
-    mNaCl = format(mNaCl,".2f")
+    # mNaCl = format(mNaCl,".2f")
     mNaCl = float(mNaCl)
-    mTx = format(mTx,".2f")
+    # mTx = format(mTx,".2f")
     mTx = float(mTx)
-    mEau = format(mEau,".2f")
+    # mEau = format(mEau,".2f")
     mEau = float(mEau)
     pTx = mTx/(mNaCl+mEau+mTx)
-    pTx = format(pTx, ".2f")
+    # pTx = format(pTx, ".2f")
     pTx = float(pTx) * 100
     pTx = format(pTx, ".1f")
+    pTx = float(pTx)
 
     liste_moy.append([n,moy,min_diff,max_diff,pTx])
 
@@ -89,7 +91,7 @@ for tissu in liste_moy:
     fichier_texte.write("% - proportion masse Tx: ")
     fichier_texte.write(str(tissu[4]))
     fichier_texte.write("%")
-    if float(tissu[4])>40:
+    if float(tissu[4])>=40 and float(tissu[4])<=60 :
         fichier_texte.write("   Gélifié")
     fichier_texte.write("\n")
     numero +=1
@@ -109,6 +111,7 @@ for n in noms_tissu:
     moy = format(statistics.mean(diff),".2f")
     moy = float(moy) * 100
     moy = format(moy,".1f")
+    moy = float(moy)
     min_diff = format(min(diff),".2f")
     min_diff = float(min_diff) * 100
     min_diff = format(min_diff,".1f")
@@ -125,14 +128,15 @@ for n in noms_tissu:
     pTx = format(pTx, ".2f")
     pTx = float(pTx) * 100
     pTx = format(pTx, ".1f")
+    pTx = float(pTx)
     liste_moy_sig.append([n,moy,min_diff,max_diff,pTx])
 liste_moy_sig.sort(key = lambda i: i[1])
 numero = 1
 
-liste_bizarre = liste_moy_sig[2:15]
+# liste_bizarre = liste_moy_sig[2:15]
 # print(liste_bizarre)
-liste_moy_sig = [elem for elem in liste_moy_sig if elem not in liste_bizarre]
-liste_moy_sig = liste_moy_sig + liste_bizarre
+# liste_moy_sig = [elem for elem in liste_moy_sig if elem not in liste_bizarre]
+# liste_moy_sig = liste_moy_sig + liste_bizarre
 
 for tissu in    liste_moy_sig:
     fichier_texte.write(str(numero))
@@ -147,7 +151,7 @@ for tissu in    liste_moy_sig:
     fichier_texte.write("% - proportion masse Tx:")
     fichier_texte.write(str(tissu[4]))
     fichier_texte.write("%")
-    if float(tissu[4])>40:
+    if float(tissu[4])>=40 and float(tissu[4])<=60 :
         fichier_texte.write("   Gélifié")
     fichier_texte.write("\n")
     numero +=1
