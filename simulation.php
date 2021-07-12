@@ -19,7 +19,7 @@
 				<h1>Simulation</h1>
 			</div>
 			<div class="paragraph_exp">
-				<p>Paragraphe expliquant la simulation.<br>
+				<p>//Paragraphe expliquant la simulation//<br>
 				</p>
 			</div>
 
@@ -133,13 +133,13 @@
 					</div>
 
 					<!-- Temperature -->
-					<div class="simulation_cases_label">
+					<!-- <div class="simulation_cases_label">
 					<label for="temperature">Temperature (in °C)</label><br>
 					</div>
 					<div class="simulation_cases">
-					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
-					value="<?php echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
-					</div>
+					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php# echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
+					value="<?php# echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
+					</div> -->
 
 					<!-- Salinity -->
 					<!-- <div class="simulation_cases_label">
@@ -190,13 +190,13 @@
 					<div class="output_display">
 						<div class="checkbox">
 							<div>
-								<input type="checkbox" value="mixture_results" name="colecoleResults" checked>
+								<input type="checkbox" value="mixture_results" name="mixtureResults" <?php echo (isset($_POST['mixtureResults']) && $_POST['mixtureResults'] === 'mixture_results') ? 'checked' : 'checked'; ?>>
 							</div>
 							<div class="checkboxLabel">
 								<label for="mixture_results">Recipe for the mixture</label>
 							</div>
 							<div>
-								<input type="checkbox" value="cole_cole_results" name="optiResults" <?php echo (isset($_POST['optiResults']) && $_POST['optiResults'] === 'cole_cole_results') ? 'checked' : ''; ?>>
+								<input type="checkbox" value="cole_cole_results" name="colecoleResults" <?php echo (isset($_POST['colecoleResults']) && $_POST['colecoleResults'] === 'cole_cole_results') ? 'checked' : 'checked'; ?>>
 							</div>
 							<div class="checkboxLabel">
 								<label for="cole_cole_results">Table of the dialectric properties</label>
@@ -219,17 +219,51 @@
 	<?php include("manager/optimInput.php"); ?>
 	<?php include("manager/masse.php"); ?>
 
+	<?php if(isset($_POST["mixtureResults"])): ?>
 	<div id="phrase_mixture">
 			For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
 				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 1, ".", " "); ?> g</strong><br>
 				TritonX100 mass: <strong><?= number_format($recipe_array[1], 1, ".", " "); ?> g</strong><br>
 				Water mass: <strong><?= number_format($recipe_array[2], 1, ".", " "); ?> g</strong><br>
-
 	</div>
-<div id="resultsTables">
+	<?php endif ?>
 
-	<div class="tables" >
-		<h3>Reference Table</h3>
+
+	<?php if(isset($_POST["colecoleResults"])): ?>
+	<div id="resultsTables">
+
+		<div class="tables" >
+			<h3>Reference Table</h3>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Frequence (GHz)</th>
+							<th>&#949;'</th>
+							<th>&#963; (S/m)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($tableau_output as $tableau): ?>
+							<?php foreach($tableau_output as $sigma): ?>
+							<?php endforeach ?>
+							<?php $i = 0; ?>
+							<?php foreach($tableau as $espilon): ?>
+							<tr>
+									<td><?= number_format($frequence_array[$i], 2, ".", " "); ?></td>
+									<td><?= $espilon; ?></td>
+									<td><?= $sigma[$i]; ?></td>
+									<?php $i++; ?>
+									<?php if ($i == count($frequence_array)) {break;}?>
+							</tr>
+							<?php endforeach ?>
+							<?php break; ?>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+		</div>
+
+		<div class="tables">
+			<h3>Mixture Table</h3>
 			<table class="table">
 				<thead>
 					<tr>
@@ -239,15 +273,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php foreach($tableau_output as $tableau): ?>
-						<?php foreach($tableau_output as $sigma): ?>
+					<?php foreach($tableau_output2 as $tableau2): ?>
+						<?php foreach($tableau_output2 as $sigma2): ?>
 						<?php endforeach ?>
 						<?php $i = 0; ?>
-						<?php foreach($tableau as $espilon): ?>
+						<?php foreach($tableau2 as $espilon2): ?>
 						<tr>
 								<td><?= number_format($frequence_array[$i], 2, ".", " "); ?></td>
-								<td><?= $espilon; ?></td>
-								<td><?= $sigma[$i]; ?></td>
+								<td><?= $espilon2; ?></td>
+								<td><?= $sigma2[$i]; ?></td>
 								<?php $i++; ?>
 								<?php if ($i == count($frequence_array)) {break;}?>
 						</tr>
@@ -256,49 +290,20 @@
 					<?php endforeach ?>
 				</tbody>
 			</table>
-	</div>
+			</div>
+		</div>
 
-	<div class="tables">
-		<h3>Mixture Table</h3>
-		<table class="table">
-			<thead>
-				<tr>
-					<th>Frequence (GHz)</th>
-					<th>&#949;'</th>
-					<th>&#963; (S/m)</th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php foreach($tableau_output2 as $tableau2): ?>
-					<?php foreach($tableau_output2 as $sigma2): ?>
-					<?php endforeach ?>
-					<?php $i = 0; ?>
-					<?php foreach($tableau2 as $espilon2): ?>
-					<tr>
-							<td><?= number_format($frequence_array[$i], 2, ".", " "); ?></td>
-							<td><?= $espilon2; ?></td>
-							<td><?= $sigma2[$i]; ?></td>
-							<?php $i++; ?>
-							<?php if ($i == count($frequence_array)) {break;}?>
-					</tr>
-					<?php endforeach ?>
-					<?php break; ?>
-				<?php endforeach ?>
-			</tbody>
-		</table>
+	<div id="graphs">
+		<div>
+			<?php echo "<img src='image/temp/graph1.png' />"; ?>
+		</div>
+		<div>
+			<?php echo "<img src='image/temp/graph2.png' />"; ?>
 		</div>
 	</div>
-
-<div id="graphs">
-	<div>
-		<?php echo "<img src='image/temp/graph1.png' />"; ?>
-	</div>
-	<div>
-		<?php echo "<img src='image/temp/graph2.png' />"; ?>
-	</div>
-</div>
-
 	<?php endif ?>
+
+<?php endif ?>
 
 
 <footer>

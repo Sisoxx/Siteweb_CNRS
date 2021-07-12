@@ -1,6 +1,7 @@
 <?php
 
-$input_temperature = floatval((array_key_exists('temperature', $_POST)) ? $_POST['temperature'] : "");
+// $input_temperature = floatval((array_key_exists('temperature', $_POST)) ? $_POST['temperature'] : "");
+$input_temperature = floatval(25);
 // $input_salinity = floatval((array_key_exists('salinity', $_POST)) ? $_POST['salinity'] : "");
 $input_salinity = floatval(0);
 // $input_V1 = floatval((array_key_exists('volume1', $_POST)) ? $_POST['volume1'] : "");
