@@ -223,15 +223,15 @@
 
 	<div id="phrase_mixture">
 			For a mixture of <strong> <?= $input_volumebecher; ?>  mL</strong>, please use:
-				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 2, ".", " "); ?> g</strong><br>
-				TritonX100 mass: <strong><?= number_format($recipe_array[1], 2, ".", " "); ?> g</strong><br>
-				Water mass: <strong><?= number_format($recipe_array[2], 2, ".", " "); ?> g</strong><br>
+				<br><br>NaCl mass: <strong><?= number_format($recipe_array[0], 1, ".", " "); ?> g</strong><br>
+				TritonX100 mass: <strong><?= number_format($recipe_array[1], 1, ".", " "); ?> g</strong><br>
+				Water mass: <strong><?= number_format($recipe_array[2], 1, ".", " "); ?> g</strong><br>
 
 	</div>
 <div id="resultsTables">
 
 	<div class="tables" >
-		<p>Tableau de valeurs des modèles de références <br>selon le modèle 4-Cole-Cole.</p>
+		<h3>Reference Table</h3>
 			<table class="table">
 				<thead>
 					<tr>
@@ -261,8 +261,7 @@
 	</div>
 
 	<div class="tables">
-
-		<p>Tableau des valeurs du fluide <br>selon le programme d'optimisation.</p>
+		<h3>Mixture Table</h3>
 		<table class="table">
 			<thead>
 				<tr>
