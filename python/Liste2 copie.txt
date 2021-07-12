@@ -1,0 +1,41 @@
+Paramètres: 
+t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 1
+
+ Tissus triés par constante diélectrique croissante à 1 GHz : 
+
+1 - Breast_Fat - epsilon: 5.41
+2 - Fat_Not_Infiltrated - epsilon: 5.45
+3 - Bone_Marrow_Not_Infiltrated - epsilon: 5.49
+4 - Bone_Marrow_Infiltrated - epsilon: 11.2
+5 - Fat_Average_Infiltrated - epsilon: 11.29
+6 - Bone_Cortical - epsilon: 12.36
+7 - Bladder - epsilon: 18.85
+8 - Bone_Cancellous - epsilon: 20.58
+9 - Lung_Inflated - epsilon: 21.83
+11 - Lens_Nucleus - epsilon: 35.67   Gélifié
+12 - Brain_White_Matter - epsilon: 38.58   Gélifié
+13 - Skin_Dry - epsilon: 40.94   Gélifié
+14 - Trachea - epsilon: 41.78
+15 - Cartilage - epsilon: 42.32   Gélifié
+16 - Dura - epsilon: 44.2
+17 - Aorta - epsilon: 44.56
+18 - Tendon - epsilon: 45.63
+19 - Skin_Wet - epsilon: 45.71
+20 - Lens_Cortex - epsilon: 46.4
+21 - Liver - epsilon: 46.4
+22 - Cerebellum - epsilon: 48.86
+23 - Cervix - epsilon: 49.58
+24 - Ovary - epsilon: 49.78
+25 - Lung_Deflated - epsilon: 51.1
+26 - Brain_Grey_Matter - epsilon: 52.28
+27 - Muscle - epsilon: 54.81
+28 - Cornea - epsilon: 54.84
+29 - Eye_Tissues_Sclera - epsilon: 55.02
+30 - Tongue - epsilon: 55.02
+37 - Thyroid - epsilon: 59.47
+38 - Testis - epsilon: 60.26
+39 - Uterus - epsilon: 60.78
+40 - Blood - epsilon: 61.06
+42 - Cerebro_Spinal_Fluid - epsilon: 68.44
+43 - Vitreous_Humor - epsilon: 68.88
+44 - Gall_Bladder_Bile - epsilon: 70.01

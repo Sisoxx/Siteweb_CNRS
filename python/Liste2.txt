@@ -1,0 +1,49 @@
+Paramètres: 
+t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 1
+
+ Tissus triés par constante diélectrique croissante à 1 GHz : 
+
+1 - Breast_Fat - epsilon: 5.41% - proportion masse Tx: 101.0
+2 - Fat_Not_Infiltrated - epsilon: 5.45% - proportion masse Tx: 100.0
+3 - Bone_Marrow_Not_Infiltrated - epsilon: 5.49% - proportion masse Tx: 101.0
+4 - Bone_Marrow_Infiltrated - epsilon: 11.2% - proportion masse Tx: 86.0
+5 - Fat_Average_Infiltrated - epsilon: 11.29% - proportion masse Tx: 85.0
+6 - Bone_Cortical - epsilon: 12.36% - proportion masse Tx: 84.0
+7 - Bladder - epsilon: 18.85% - proportion masse Tx: 70.0
+8 - Bone_Cancellous - epsilon: 20.58% - proportion masse Tx: 69.0
+9 - Lung_Inflated - epsilon: 21.83% - proportion masse Tx: 66.0
+10 - Nerve - epsilon: 32.25% - proportion masse Tx: 51.0   Gélifié
+11 - Lens_Nucleus - epsilon: 35.67% - proportion masse Tx: 46.0   Gélifié
+12 - Brain_White_Matter - epsilon: 38.58% - proportion masse Tx: 43.0   Gélifié
+13 - Skin_Dry - epsilon: 40.94% - proportion masse Tx: 40.0   Gélifié
+14 - Trachea - epsilon: 41.78% - proportion masse Tx: 38.0
+15 - Cartilage - epsilon: 42.32% - proportion masse Tx: 40.0   Gélifié
+16 - Dura - epsilon: 44.2% - proportion masse Tx: 35.0
+17 - Aorta - epsilon: 44.56% - proportion masse Tx: 35.0
+18 - Tendon - epsilon: 45.63% - proportion masse Tx: 34.0
+19 - Skin_Wet - epsilon: 45.71% - proportion masse Tx: 34.0
+20 - Lens_Cortex - epsilon: 46.4% - proportion masse Tx: 32.0
+21 - Liver - epsilon: 46.4% - proportion masse Tx: 34.0
+22 - Cerebellum - epsilon: 48.86% - proportion masse Tx: 31.0
+23 - Cervix - epsilon: 49.58% - proportion masse Tx: 28.999999999999996
+24 - Ovary - epsilon: 49.78% - proportion masse Tx: 31.0
+25 - Lung_Deflated - epsilon: 51.1% - proportion masse Tx: 28.000000000000004
+26 - Brain_Grey_Matter - epsilon: 52.28% - proportion masse Tx: 27.0
+27 - Muscle - epsilon: 54.81% - proportion masse Tx: 23.0
+28 - Cornea - epsilon: 54.84% - proportion masse Tx: 23.0
+29 - Eye_Tissues_Sclera - epsilon: 55.02% - proportion masse Tx: 23.0
+30 - Tongue - epsilon: 55.02% - proportion masse Tx: 23.0
+31 - Spleen - epsilon: 56.61% - proportion masse Tx: 23.0
+32 - Colon - epsilon: 57.48% - proportion masse Tx: 22.0
+33 - Kidney - epsilon: 57.94% - proportion masse Tx: 22.0
+34 - Small_Intestine - epsilon: 58.87% - proportion masse Tx: 19.0
+35 - Gall_Bladder - epsilon: 59.0% - proportion masse Tx: 17.0
+36 - Heart - epsilon: 59.29% - proportion masse Tx: 20.0
+37 - Thyroid - epsilon: 59.47% - proportion masse Tx: 18.0
+38 - Testis - epsilon: 60.26% - proportion masse Tx: 17.0
+39 - Uterus - epsilon: 60.78% - proportion masse Tx: 17.0
+40 - Blood - epsilon: 61.06% - proportion masse Tx: 16.0
+41 - Stomach - epsilon: 64.8% - proportion masse Tx: 13.0
+42 - Cerebro_Spinal_Fluid - epsilon: 68.44% - proportion masse Tx: 7.000000000000001
+43 - Vitreous_Humor - epsilon: 68.88% - proportion masse Tx: 6.0
+44 - Gall_Bladder_Bile - epsilon: 70.01% - proportion masse Tx: 5.0

@@ -13,9 +13,7 @@
 <header>
 	<?php include("layout/header.html"); ?>
 </header>
-<div class="background_colors">
 
-</div>
 		<div id="calculateur">
 			<div class="page_title">
 				<h1>Simulation</h1>
@@ -35,7 +33,7 @@
 
 					<!-- Tissu  -->
 					<div class="simulation_cases_label">
-							<label for="choice">Tissu to mimic <redStar>*</redStar></label>
+							<label for="choice">Tissue to mimic <redStar>*</redStar></label>
 					</div>
 					<div class="simulation_cases">
 							<select id="tissu_selection" name="choice" required>
@@ -195,13 +193,13 @@
 								<input type="checkbox" value="mixture_results" name="colecoleResults" checked>
 							</div>
 							<div class="checkboxLabel">
-								<label for="mixture_results">Results for the mixture</label>
+								<label for="mixture_results">Recipe for the mixture</label>
 							</div>
 							<div>
 								<input type="checkbox" value="cole_cole_results" name="optiResults" <?php echo (isset($_POST['optiResults']) && $_POST['optiResults'] === 'cole_cole_results') ? 'checked' : ''; ?>>
 							</div>
 							<div class="checkboxLabel">
-								<label for="cole_cole_results">Cole-Cole model table of results</label>
+								<label for="cole_cole_results">Table of the dialectric properties</label>
 							</div>
 						</div>
 					</div>

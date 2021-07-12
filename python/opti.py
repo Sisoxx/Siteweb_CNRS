@@ -7,7 +7,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu)
     DELTA = 2.14
-    TAU = 30.2* 1e-12
+    TAU = 30.2 * 1e-12
     EPSINF = 3.35
     SIG0 = 0.1
     FREQMI = low_range_input* 1e9

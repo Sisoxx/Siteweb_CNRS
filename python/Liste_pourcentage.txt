@@ -1,0 +1,26 @@
+Paramètres: 
+t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 1   freq_haute: 6   pas: 0.5   vs: 60
+
+ Tissus triés par erreur croissante des epsilons: 
+
+1 - Nerve
+ mNaCl: 0.23 g 
+ mTx: 31.51 g 
+ mEau: 30.19 g 
+ proportion masse Tx: 51.0%   Gélifié
+
+
+2 - Cartilage
+ mNaCl: 0.43 g 
+ mTx: 24.47 g 
+ mEau: 36.74 g 
+ proportion masse Tx: 40.0%   Gélifié
+
+
+3 - Brain_White_Matter
+ mNaCl: 0.23 g 
+ mTx: 26.48 g 
+ mEau: 34.94 g 
+ proportion masse Tx: 43.0%   Gélifié
+
+
