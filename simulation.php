@@ -19,8 +19,15 @@
 				<h1>Simulation</h1>
 			</div>
 			<div class="paragraph_exp">
-				<p>//Paragraphe expliquant la simulation//<br>
-				</p>
+				<h4>Experimental Protocol</h4>
+				<ul>
+					<li>Tar the balance with an empty beaker.</li>
+					<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
+					<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
+					<li>Add the salted water to a beaker with the mass of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
+					<li>Place the beaker in a water bath at 45° C and stir the solution with a magnetic bar. The bath water must cover all the mixture. Note that the 40-60% solutions of TritonX-100 are gelled at room temperature, it is therefore necessary to increase the temperature to 45 ° C to obtain homogeneous mixtures in all cases.</li>
+					<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
+				</ul>
 			</div>
 
 			<div class="simulator_form">

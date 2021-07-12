@@ -50,7 +50,7 @@
 	</section>
 
 <section>
-	<div id="txtexplication">
+	<div class="txtexplication">
 	<h1>Topic presentation</h1> <br>
 	<h4>Introduction</h4>
 	<p>During the last decades, microwave imaging has attracted remarkable attention for biomedical applications mainly due to the significant contrast between the dielectric properties of normal and abnormal tissues. Compared to the other conventional imaging modalities, such as X–ray mammography, microwave imaging is an attractive approach in several aspects, namely its non–ionizing nature, low cost, and compactness of the equipment associated with its hardware system.
@@ -62,15 +62,6 @@
 	</p>
 	<h4>TRITON X-100 AND SALTED WATER SOLUTIONS</h4>
 	<p>Used in the framework on the EMERALD project, the manufacturing process has to be easily reproducible by an electrical engineer in a non-specific environment (no hood), and without drastic precautions. Following our previous works, the phantoms such as the breast and head are composed of 3D printed cavities filled up with liquid binary mixtures of Triton X-100 (TX-100, a non-ionic surfactant) and salted water. Those liquid mixtures are adjustable in time therefore their use in the manufacturing process, provide stable phantoms over time.</p>
-	<h5>Experimental Protocol</h5>
-	<ul>
-		<li>Tar the balance with an empty beaker.</li>
-		<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
-		<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
-		<li>Add the mass of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
-		<li>Place the beaker in a water bath at 45° C and stir the solution with a magnetic bar. The bath water must cover all the mixture. Note that the 40-60% solutions of TritonX-100 are gelled at room temperature, it is therefore necessary to increase the temperature to 45 ° C to obtain homogeneous mixtures in all cases.</li>
-		<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
-	</ul>
 	</div>
 </section>
 
