@@ -24,7 +24,7 @@
 					<li>Tar the balance with an empty beaker.</li>
 					<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
 					<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
-					<li>Add the salted water to a beaker with the mass of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
+					<li>Add the salted water to the beaker of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
 					<li>Place the beaker in a water bath at 45° C and stir the solution with a magnetic bar. The bath water must cover all the mixture. Note that the 40-60% solutions of TritonX-100 are gelled at room temperature, it is therefore necessary to increase the temperature to 45 ° C to obtain homogeneous mixtures in all cases.</li>
 					<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
 				</ul>
@@ -45,6 +45,9 @@
 					<div class="simulation_cases">
 							<select id="tissu_selection" name="choice" required>
 						<option value="Choice" disabled selected>Choose one in the list</option>
+						<option value="Adenocarninoma" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Adenocarninoma') ? 'selected' : ''; ?>>Adenocarninoma</option>
+						<option value="Adenoma_HGD" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Adenoma_HGD') ? 'selected' : ''; ?>>Adenoma HGD</option>
+						<option value="Adenoma_LGD" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Adenoma_LGD') ? 'selected' : ''; ?>>Adenoma LGD</option>
 						<option value="Aorta" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Aorta') ? 'selected' : ''; ?>>Aorta</option>
 						<option value="Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Bladder') ? 'selected' : ''; ?>>Bladder</option>
 						<option value="Blood" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Blood') ? 'selected' : ''; ?>>Blood</option>
@@ -67,7 +70,9 @@
 						<option value="Fat_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Not_Infiltrated') ? 'selected' : ''; ?>>Fat Not Infiltrated</option>
 						<option value="Gall_Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder') ? 'selected' : ''; ?>>Gall Blader</option>
 						<option value="Gall_Bladder_Bile" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder_Bile') ? 'selected' : ''; ?>>Gall Bladder Bile</option>
+						<option value="Healthy_mucosa" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Healthy_mucosa') ? 'selected' : ''; ?>>Healthy mucosa</option>
 						<option value="Heart" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heart') ? 'selected' : ''; ?>>Heart</option>
+						<option value="Hyperplastic" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Hyperplastic') ? 'selected' : ''; ?>>Hyperplastic</option>
 						<option value="Kidney" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Kidney') ? 'selected' : ''; ?>>Kidney</option>
 						<option value="Lens_Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Cortex') ? 'selected' : ''; ?>>Lens Cortex</option>
 						<option value="Lens_Nucleus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Nucleus') ? 'selected' : ''; ?>>Lens Nucleus</option>
@@ -125,17 +130,18 @@
 					<div class="simulation_cases">
 						<div class="radio">
 							<div>
-								<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? '' : 'checked'; ?>>
-							</div>
-							<div class="radioLabel">
-								<label for="bottcher">Bottcher's Law</label>
-							</div>
-							<div>
-								<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'kraszweski') ? 'checked' : ''; ?>>
+								<input type="radio" value="kraszweski" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'bottcher') ? '' : 'checked'; ?>>
 							</div>
 							<div class="radioLabel">
 								<label for="kraszweski">Kraszweski's Law</label>
 							</div>
+							<div>
+								<input type="radio" value="bottcher" name="law" <?php echo (isset($_POST['law']) && $_POST['law'] === 'bottcher') ? 'checked' : ''; ?>>
+							</div>
+							<div class="radioLabel">
+								<label for="bottcher">Bottcher's Law</label>
+							</div>
+
 						</div>
 					</div>
 

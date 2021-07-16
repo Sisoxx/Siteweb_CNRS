@@ -19,15 +19,12 @@ else {
 
 $opti_output = exec("cd python; python appel_opti.py  $input_temperature $input_salinity $input_V1 $input_law $input_choice $debut_frequence $fin_frequence $step");
 
-#var_dump($opti_output);
 
 $opti_output = str_replace("(", "", $opti_output);
 $opti_output = str_replace(")", "", $opti_output);
 $opti_output2 = $opti_output;
 $opti_output = str_replace("[", "", $opti_output);
 $opti_output = str_replace("]", "", $opti_output);
-
-#var_dump($opti_output);
 
 
 $number_of_comas_opti = substr_count($opti_output,",");
@@ -50,35 +47,13 @@ foreach ($opti_array as  &$value) {
   $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
 }
 
-// var_dump($opti_output2)
-
-
-
-for ($i = 1; $i <= 4 ; $i++){
-  $pos2 = strpos($opti_output2, ",");
-  // var_dump($pos2);
-
-  if (i==3) {
-    $F01 = substr($opti_output2, 0, $pos2+2);
-  }
-
+for ($i = 1; $i <= 3 ; $i++){
   $pos2 = strpos($opti_output2, ",");
   $opti_output2 = substr($opti_output2, $pos2+2, strlen($opti_output2));
-
-  // echo nl2br("\n");
-  // echo nl2br("\n");
-  //
-  // var_dump($pos2);
-  // echo nl2br("\n");
-
-  // var_dump($opti_output2);
-
 }
 
-// var_dump($F01);
-
 $opti_output2 = substr($opti_output2, 1 , strlen($opti_output2));
-#var_dump($opti_output2);
+
 
 #-------Liste des epsilon-------------
 $end_list_epsi2 = strpos($opti_output2, "[");
@@ -133,11 +108,41 @@ foreach ($sig_array2 as  &$value2) {
   $value2 = number_format($value2, 2, ".", " "); # formatage des valeur à 2 decimales
 }
 
+#-------------Liste erreurs------------
+$end_list_epsi2 = strpos($opti_output2, "err");
+$err_output = substr($opti_output2,$end_list_epsi2, strlen($opti_output2));
+$err_output = str_replace("[", "", $err_output);
+$err_output = str_replace("]", "", $err_output);
+$err_output = substr($err_output, 6, strlen($err_output));
+$err_output = trim($err_output);
+
+$err_array = (array) null;
+
+
+for ($i = 1; $i <= $number_of_comas; $i++)
+{
+  $pos4 = strpos($err_output, ",");
+  $next_err = substr($err_output, 0, $pos4);
+  array_push($err_array, $next_err);
+  $err_output = substr($err_output, $pos4+2, strlen($err_output));
+}
+
+array_push($err_array, $err_output);
+
+
+foreach ($err_array as  &$value3) {
+  $value3 = (float) $value3;
+  $value3 = $value3 * 100;
+  $value3 = number_format($value3, 2, ".", " "); # formatage des valeur à 2 decimales
+}
+
+
 #-------------TABLEAU2------------
 
 $tableau_output2 = array (
    'epsilon2' => $epsi_array2,
-   'sigma2' => $sig_array2
+   'sigma2' => $sig_array2,
+   'error' => $err_array
  );
 
 $input_sigma2 = $tableau_output2['sigma2'];
