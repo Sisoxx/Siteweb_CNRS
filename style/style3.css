@@ -17,7 +17,7 @@
 }
 
 .paragraph_exp{
-	text-align: left;
+	text-align: justify;
 	margin-bottom: 1.5em;
 }
 
@@ -70,9 +70,9 @@ label{
 
 redStar{
 	font-family: "Noto Sans Bold", sans-serif;
-	font-weight: bold;
+	font-weight: medium;
 	color: #961e64;
-	font-size: 1.1em;
+	font-size: 1em;
 }
 
 #result_line{

@@ -14,5 +14,11 @@ def calculmasse (T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     massetx = (cVtx * VTOT/100) * rotx
 
     masseeau = (VTOT-(cVtx * VTOT/100)- (massenacl / roNACL)) * roeau
+    #if massenacl<0:
+    #    return (0,massetx,masseeau)
+    #if massetx <0 :
+    #    return (massenacl,0,masseeau)
+    #if masseeau<0:
+    #    return (massenacl,massetx,0)
 
     return(massenacl,massetx,masseeau)

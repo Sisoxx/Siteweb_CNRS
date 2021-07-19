@@ -27,11 +27,8 @@ $opti_output2 = $opti_output;
 $opti_output = str_replace("[", "", $opti_output);
 $opti_output = str_replace("]", "", $opti_output);
 
-#var_dump($opti_output);
-
-
 $number_of_comas_opti = substr_count($opti_output,",");
-#var_dump($number_of_comas_opti);
+
 
 $opti_array = (array) null;
 
@@ -50,36 +47,21 @@ foreach ($opti_array as  &$value) {
   $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
 }
 
-// var_dump($opti_output2)
-
-
 
 for ($i = 1; $i <= 4 ; $i++){
   $pos2 = strpos($opti_output2, ",");
-  // var_dump($pos2);
 
-  if (i==3) {
-    $F01 = substr($opti_output2, 0, $pos2+2);
+  if ($i==4) {
+    $F01 = substr($opti_output2, 0, $pos2);
   }
 
-  $pos2 = strpos($opti_output2, ",");
   $opti_output2 = substr($opti_output2, $pos2+2, strlen($opti_output2));
-
-  // echo nl2br("\n");
-  // echo nl2br("\n");
-  //
-  // var_dump($pos2);
-  // echo nl2br("\n");
-
-  // var_dump($opti_output2);
-
 }
 
-// var_dump($F01);
 
 $opti_output2 = substr($opti_output2, 1 , strlen($opti_output2));
-#var_dump($opti_output2);
 
+$F01 = floatval($F01) * 100;
 #-------Liste des epsilon-------------
 $end_list_epsi2 = strpos($opti_output2, "[");
 $epsi_output2 = substr($opti_output2, 0, $end_list_epsi2);
@@ -173,7 +155,7 @@ $graph->img->SetAntiAliasing("white");
 // $graph->title->Set("Permittivity depending on frequencies - Cole-Cole and Optim Model");
 $graph->yaxis->SetTitle("Dielectric Constant","center");
 $graph->yaxis->SetTitleMargin(40);
-$graph->xaxis->SetTitle("Frequency","center");
+$graph->xaxis->SetTitle("Frequency (GHz)","center");
 $graph->xaxis->SetTitleMargin(20);
 $graph->xaxis->SetTickLabels($x_axis);
 $courbe1 = new LinePlot($y_axis1);
@@ -184,7 +166,7 @@ $graph->Add($courbe1);
 $graph->Add($courbe2);
 $courbe1->SetColor('red');
 $courbe2->SetColor('green');
-$courbe2->value->Show();
+//$courbe2->value->Show();
 $courbe2->value->SetColor("darkgreen");
 $graph->legend->SetFrameWeight(1);
 $graph->legend->SetPos(0.5,0.08,'center','bottom');
@@ -211,7 +193,7 @@ $graph->SetBackgroundImage("image/fond_blanc.png",BGIMG_FILLFRAME);
 // $graph->title->Set("Conductivity depending on frequencies - Cole-Cole and Optim Model");
 $graph->yaxis->SetTitle("Conductivity (S/m)","center");
 $graph->yaxis->SetTitleMargin(40);
-$graph->xaxis->SetTitle("Frequency","center");
+$graph->xaxis->SetTitle("Frequency(GHz)","center");
 $graph->xaxis->SetTitleMargin(20);
 $graph->xaxis->SetTickLabels($x_axis);
 $courbe1 = new LinePlot($y_axis1);
@@ -222,7 +204,7 @@ $graph->Add($courbe1);
 $graph->Add($courbe2);
 $courbe1->SetColor('red');
 $courbe2->SetColor('green');
-$courbe2->value->Show();
+//$courbe2->value->Show();
 $courbe2->value->SetColor("darkgreen");
 $graph->legend->SetFrameWeight(1);
 $graph->legend->SetPos(0.5,0.08,'center','bottom');
