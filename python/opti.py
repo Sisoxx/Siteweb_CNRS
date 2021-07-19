@@ -6,10 +6,17 @@ from epsieau import EPSSIG
 def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,round_step_input):
     EPS_Tissu, SIG_Tissu = colecoleFonction(input_choice, low_range_input, high_range_input,round_step_input)
     NFRE = len(EPS_Tissu)
-    DELTA = 2.14
-    TAU = 30.2 * 1e-12
-    EPSINF = 3.35
-    SIG0 = 0.1
+
+    # DELTA = 2.14
+    # TAU = 30.2 * 1e-12
+    # EPSINF = 3.35
+    # SIG0 = 0.1
+
+    DELTA = 2.58
+    TAU = 41.6 * 1e-12
+    EPSINF = 3.51
+    SIG0 = 0.066
+
     FREQMI = low_range_input* 1e9
     PASFRE = round_step_input * 1e9
 
@@ -17,8 +24,8 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
     S = ST/V2
     EPFACT = 1e-9/(36*math.pi)
     N = 0
-    F01 = 1
-    F01_avant = 2
+    F02 = 1
+    F02_avant = 2
     SOMEPS = 0
     EPSTISSU = []
     X1 = S
@@ -32,9 +39,9 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
 
     while  (N < 20):
 
-        if abs(F01-F01_avant)<= 0.00000001:
+        if abs(F02-F02_avant)<= 0.00000001:
             break
-        F01_avant = F01
+        F02_avant = F02
         F01 = 0
         GRAD1 = 0
         GRAD2 = 0
@@ -90,7 +97,7 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
             FI = LOGEPS - EPSTISSU[i]
             W = 1 / abs(EPSTISSU[i])**2
 
-            F01 = W * abs(FI)**2 + F01
+            F01 = abs(FI)**2 + F01
             GRAD1 = GRAD1 + 2 * W * (DFDS * FI.conjugate()).real
             GRAD2 = GRAD2  + 2 * W * (DFDV * FI.conjugate()).real
             HES00 = HES00 + 2 * W * abs(DFDS)**2
@@ -110,5 +117,8 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         V1 = 1 - V2
         ST = S * V2
         N = N + 1
+        F02 = F01 / SOMEPS
+        if V1 > 1:
+            V1 = 1
 
-    return(N,ST,V1,F01,EPSOL,SIGSOL)
+    return(N,ST,V1,F02,EPSOL,SIGSOL)

@@ -9,13 +9,13 @@ t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 0.5   freq_haute: 6   pas: 0.5   v
 4 - Gall_Bladder_Bile - err_moy: 1.0% - e_min: 0.0% - e_max: 3.0% - proportion masse Tx: 5.4%
 5 - Lens_Cortex - err_moy: 1.0% - e_min: 0.0% - e_max: 4.0% - proportion masse Tx: 32.2%
 6 - Muscle - err_moy: 1.0% - e_min: 0.0% - e_max: 5.0% - proportion masse Tx: 22.9%
-7 - Aorta - err_moy: 2.0% - e_min: 0.0% - e_max: 6.0% - proportion masse Tx: 34.9%
+7 - Aorta - err_moy: 2.0% - e_min: 0.0% - e_max: 5.0% - proportion masse Tx: 35.4%
 8 - Blood - err_moy: 2.0% - e_min: 0.0% - e_max: 7.0% - proportion masse Tx: 16.0%
 9 - Cerebro_Spinal_Fluid - err_moy: 2.0% - e_min: 0.0% - e_max: 5.0% - proportion masse Tx: 6.6%
 10 - Cervix - err_moy: 2.0% - e_min: 0.0% - e_max: 5.0% - proportion masse Tx: 28.5%
 11 - Dura - err_moy: 2.0% - e_min: 0.0% - e_max: 7.0% - proportion masse Tx: 34.9%
 12 - Eye_Tissues_Sclera - err_moy: 2.0% - e_min: 0.0% - e_max: 6.0% - proportion masse Tx: 22.6%
-13 - Fat_Average_Infiltrated - err_moy: 2.0% - e_min: 0.0% - e_max: 4.0% - proportion masse Tx: 85.2%
+13 - Fat_Average_Infiltrated - err_moy: 2.0% - e_min: 0.0% - e_max: 4.0% - proportion masse Tx: 85.1%
 14 - Lens_Nucleus - err_moy: 2.0% - e_min: 0.0% - e_max: 6.0% - proportion masse Tx: 46.0%   Gélifié
 15 - Lung_Deflated - err_moy: 2.0% - e_min: 0.0% - e_max: 8.0% - proportion masse Tx: 27.8%
 16 - Lung_Inflated - err_moy: 2.0% - e_min: 0.0% - e_max: 8.0% - proportion masse Tx: 65.4%
@@ -44,9 +44,9 @@ t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 0.5   freq_haute: 6   pas: 0.5   v
 39 - Kidney - err_moy: 5.0% - e_min: 0.0% - e_max: 16.0% - proportion masse Tx: 21.9%
 40 - Cartilage - err_moy: 6.0% - e_min: 1.0% - e_max: 12.0% - proportion masse Tx: 39.7%
 41 - Ovary - err_moy: 6.0% - e_min: 0.0% - e_max: 18.0% - proportion masse Tx: 31.1%
-42 - Breast_Fat - err_moy: 8.0% - e_min: 6.0% - e_max: 10.0% - proportion masse Tx: 100.8%
-43 - Fat_Not_Infiltrated - err_moy: 9.0% - e_min: 4.0% - e_max: 16.0% - proportion masse Tx: 100.5%
-44 - Bone_Marrow_Not_Infiltrated - err_moy: 11.0% - e_min: 6.0% - e_max: 17.0% - proportion masse Tx: 100.7%
+42 - Breast_Fat - err_moy: 8.0% - e_min: 6.0% - e_max: 10.0% - proportion masse Tx: 100.0%
+43 - Fat_Not_Infiltrated - err_moy: 9.0% - e_min: 4.0% - e_max: 16.0% - proportion masse Tx: 100.0%
+44 - Bone_Marrow_Not_Infiltrated - err_moy: 11.0% - e_min: 6.0% - e_max: 17.0% - proportion masse Tx: 100.0%
 
 
  Tissus triés par erreur croissante des sigmas: 
@@ -92,6 +92,6 @@ t: 25   st: 0   v1: 0.5  loi: 2   freq_basse: 0.5   freq_haute: 6   pas: 0.5   v
 39 - Tendon - err_moy: 18.0% - e_min:6.0% - e_max:23.0% - proportion masse Tx:34.0%
 40 - Bone_Cancellous - err_moy: 19.0% - e_min:2.0% - e_max:29.0% - proportion masse Tx:69.0%
 41 - Cartilage - err_moy: 20.0% - e_min:5.0% - e_max:27.0% - proportion masse Tx:40.0%   Gélifié
-42 - Breast_Fat - err_moy: 59.0% - e_min:1.0% - e_max:204.0% - proportion masse Tx:101.0%
+42 - Breast_Fat - err_moy: 59.0% - e_min:1.0% - e_max:204.0% - proportion masse Tx:100.0%
 43 - Fat_Not_Infiltrated - err_moy: 94.0% - e_min:46.0% - e_max:155.0% - proportion masse Tx:100.0%
-44 - Bone_Marrow_Not_Infiltrated - err_moy: 119.0% - e_min:49.0% - e_max:251.0% - proportion masse Tx:101.0%
+44 - Bone_Marrow_Not_Infiltrated - err_moy: 119.0% - e_min:49.0% - e_max:251.0% - proportion masse Tx:100.0%
