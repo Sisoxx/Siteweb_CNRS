@@ -105,6 +105,7 @@ header
 /************************* SLIDER *********************/
 figure {
 	display: inline-block;
+	vertical-align:middle;
 }
 
 #slideshow {
