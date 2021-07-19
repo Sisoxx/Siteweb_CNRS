@@ -18,17 +18,6 @@
 			<div class="page_title">
 				<h1>Simulation</h1>
 			</div>
-			<div class="paragraph_exp">
-				<h4>Experimental Protocol</h4>
-				<ul>
-					<li>Tar the balance with an empty beaker.</li>
-					<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
-					<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
-					<li>Add the salted water to the beaker of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
-					<li>Place the beaker in a water bath at 45° C and stir the solution with a magnetic bar. The bath water must cover all the mixture. Note that the 40-60% solutions of TritonX-100 are gelled at room temperature, it is therefore necessary to increase the temperature to 45 ° C to obtain homogeneous mixtures in all cases.</li>
-					<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
-				</ul>
-			</div>
 
 			<div class="simulator_form">
 
@@ -73,12 +62,21 @@
 						<option value="Gall_Bladder_Bile" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder_Bile') ? 'selected' : ''; ?>>Gall Bladder Bile</option>
 						<option value="Healthy_mucosa" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Healthy_mucosa') ? 'selected' : ''; ?>>Healthy mucosa [3]</option>
 						<option value="Heart" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heart') ? 'selected' : ''; ?>>Heart</option>
+<<<<<<< HEAD
 						<option value="Artial_Appendage_Int" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Artial_Appendage_Int') ? 'selected' : ''; ?>>Heart - Artial Appendage (Interior)</option>
 						<option value="Artial_Appendage_Ext" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Artial_Appendage_Ext') ? 'selected' : ''; ?>>Heart - Artial Appendage (Exterior)</option>
 						<option value="Endocardiom" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Endocardiom') ? 'selected' : ''; ?>>Heart - Endocardiom</option>
 						<option value="Epicardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Epicardium') ? 'selected' : ''; ?>>Heart - Epicardium</option>
 						<option value="Myocardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Myocardium') ? 'selected' : ''; ?>>Heart - Myocardium</option>
 						<option value="Great_Vessel" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Great_Vessel') ? 'selected' : ''; ?>>Heart - Great Vessel (Luminal Vessel)</option>
+=======
+						<option value="Artial_Appendage_Int" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Artial_Appendage_Int') ? 'selected' : ''; ?>>Heart - Artial Appendage (Interior) [4]</option>
+						<option value="Artial_Appendage_Ext" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Artial_Appendage_Ext') ? 'selected' : ''; ?>>Heart - Artial Appendage (Exterior) [4]</option>
+						<option value="Endocardiom" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Endocardiom') ? 'selected' : ''; ?>>Heart - Endocardiom [4]</option>
+						<option value="Epicardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Epicardium') ? 'selected' : ''; ?>>Heart - Epicardium [4]</option>
+						<option value="Myocardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Myocardium') ? 'selected' : ''; ?>>Heart - Myocardium [4]</option>
+						<option value="Great_Vessel" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Great_Vessel') ? 'selected' : ''; ?>>Heart - Great Vessel (Luminal Vessel) [4]</option>
+>>>>>>> dbfd060ee63e967dadc82533c98191a0a6229716
 						<option value="Hyperplastic" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Hyperplastic') ? 'selected' : ''; ?>>Hyperplastic [3]</option>
 						<option value="Kidney" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Kidney') ? 'selected' : ''; ?>>Kidney</option>
 						<option value="Lens_Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Cortex') ? 'selected' : ''; ?>>Lens Cortex</option>
@@ -245,8 +243,25 @@
 			For a mixture of <redStar> <?= $input_volumebecher; ?>  mL</redStar>, please use:
 				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 1, ".", " "); ?> g</redStar><br>
 				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 1, ".", " "); ?> g</redStar><br>
+<<<<<<< HEAD
 				Water mass: <redStar><?= number_format($recipe_array[2], 1, ".", " "); ?> g</redStar><br><br><br>
 				Quadratic error: <redStar><?= number_format($recipe_array[3], 2, ".", " "); ?> %</redStar><br>
+=======
+				Water mass: <redStar><?= number_format($recipe_array[2], 1, ".", " "); ?> g</redStar><br><br>
+				Quadratic error: <redStar><?= number_format($recipe_array[3], 2, ".", " "); ?> %</redStar><br>
+	</div>
+	<br>
+	<div class="paragraph_exp">
+		<h4>Experimental Protocol</h4>
+		<ul>
+			<li>Tar the balance with an empty beaker.</li>
+			<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
+			<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
+			<li>Add the salted water to the beaker of TritonX-100. Note that, the TritonX- 100 is very viscous at room temperature, then it must be heated first separately, in a 45 ° C water bath.</li>
+			<li>Place the beaker in a water bath at 45° C and stir the solution with a magnetic bar. The bath water must cover all the mixture. Note that the 40-60% solutions of TritonX-100 are gelled at room temperature, it is therefore necessary to increase the temperature to 45 ° C to obtain homogeneous mixtures in all cases.</li>
+			<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
+		</ul>
+>>>>>>> dbfd060ee63e967dadc82533c98191a0a6229716
 	</div>
 	<?php endif ?>
 

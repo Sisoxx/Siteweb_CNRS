@@ -121,7 +121,13 @@ def optiFonction(T,ST,V1,RLOI,input_choice, low_range_input, high_range_input,ro
         if ST < 0:
             ST = 0
         N = N + 1
+<<<<<<< HEAD
        	F02 = F01 / SOMEPS
 
+=======
+        F02 = F01 / SOMEPS
+        if V1 > 1:
+            V1 = 1
+>>>>>>> dbfd060ee63e967dadc82533c98191a0a6229716
 
     return(N,ST,V1,F02,EPSOL,SIGSOL)
