@@ -59,7 +59,7 @@
 		is an attractive approach in several aspects, namely its non–ionizing nature, low cost, and compactness of the equipment associated with its hardware system.
 		This is the reason why, at the present time, there are multiple research teams around the world working on bio-medical applications of microwave imaging.
 		This is evidenced by the emergence of several COST and particularly, MiMed. The latter gave rise to several projects; among them, the European
-		project “EMERALD” (ElectroMagnetic Imaging for a novel genERation of medicAL Devices) has started. EMERALD is a multidisciplinary project involving 27 partners
+		project <a href="http://www.msca-emerald.eu/" target="_blank">EMERALD</a> (ElectroMagnetic Imaging for a novel genERation of medicAL Devices) has started. EMERALD is a multidisciplinary project involving 27 partners
 		across the Europe. It offers a unique opportunity for interactions between clinicians, researchers and instrumentation
 		developers.
 		Newly designed devices require multiple tests under a controlled environment before moving to human clinical test. This website is mainly concerned with

@@ -733,7 +733,9 @@ button:hover
 .icone {
     width: 50px;
 }
-
+/* .nav__item {
+		margin-top: 100px;
+} */
 /***************Privacy***************/
 #privacy{
 	padding: 0 15%;
