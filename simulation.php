@@ -20,7 +20,6 @@
 			</div>
 
 			<div class="simulator_form">
-
 				<form action="" method="post" id="formulaire2">
 
 				<div class="red_star_note">
@@ -180,19 +179,6 @@
 					<!-- Grey line -->
 					<div id="result_line"></div>
 
-					<!-- Output selection -->
-
-					<!-- <div class="output_display">
-						<label class="Results">Cole-Cole model table of result
-						  <input type="checkbox" >
-						  <span class="checkmark"></span>
-						</label>
-						<label class="Results">Results for the mixture
-						  <input type="checkbox" checked="checked">
-						  <span class="checkmark"></span>
-						</label>
-					</div> -->
-
 					<div class="simulation_cases_label">
 						<p>Please select parameters to display : </p>
 					</div>
@@ -213,7 +199,6 @@
 						</div>
 					</div>
 
-
 					<!-- Submit button -->
 					<div class="submit_button">
 					<input id="bouttton" type="submit" value="Display results" name="boutonColeCole" >
@@ -231,26 +216,38 @@
 	<?php if(isset($_POST["mixtureResults"])): ?>
 
 	<div id="phrase_mixture">
+		<?php if ($input_volumebecher>1000): ?>
+			<?php  $input_volumebecher=$input_volumebecher/1000;?>
+			For a mixture of <redStar> <?= $input_volumebecher; ?>  L</redStar>, please use:
+		<?php else: ?>
 			For a mixture of <redStar> <?= $input_volumebecher; ?>  mL</redStar>, please use:
+		<?php endif ?>
+<?php for($i=0;$i<3;$i++){
+	$recipe_array[$i]= floatval($recipe_array[$i]);
+} ?>
+
 			<?php if ($recipe_array[0]>1000): ?>
-				<?php  $recipe_array[0]=$recipe_array[0]/1000?>
-				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 2, ".", " "); ?> kg</redStar><br>
+				<?php  $recipe_array[0]=$recipe_array[0]/1000;?>
+				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 3, ".", " "); ?> kg</redStar><br>
 			<?php else: ?>
 				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 1, ".", " "); ?> g</redStar><br>
 			<?php endif ?>
+
 			<?php if ($recipe_array[1]>1000): ?>
-				<?php  $recipe_array[1]=$recipe_array[1]/1000?>
-				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 2, ".", " "); ?> kg</redStar><br>
+				<?php  $recipe_array[1]=$recipe_array[1]/1000;?>
+				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 3, ".", " "); ?> kg</redStar><br>
 			<?php else: ?>
 				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 1, ".", " "); ?> g</redStar><br>
 			<?php endif ?>
-			<?php if ($recipe_array[3]<0){$recipe_array[3]=0} ?>
+
+			<?php if ($recipe_array[2]<0){$recipe_array[2]=0;} ?>
 				<?php if ($recipe_array[2]>1000): ?>
-				<?php  $recipe_array[2]=$recipe_array[2]/1000?>
-				Water mass: <redStar><?= number_format($recipe_array[2], 2, ".", " "); ?> kg</redStar><br><br>
+				<?php  $recipe_array[2]=$recipe_array[2]/1000;?>
+				Water mass: <redStar><?= number_format($recipe_array[2], 3, ".", " "); ?> kg</redStar><br><br>
 			<?php else: ?>
 				Water mass: <redStar><?= number_format($recipe_array[2], 1, ".", " "); ?> g</redStar><br><br>
 			<?php endif ?>
+
 				Quadratic error: <redStar><?= number_format($recipe_array[3], 2, ".", " "); ?> %</redStar><br>
 
 	</div>

@@ -193,7 +193,7 @@ $graph->SetBackgroundImage("image/fond_blanc.png",BGIMG_FILLFRAME);
 // $graph->title->Set("Conductivity depending on frequencies - Cole-Cole and Optim Model");
 $graph->yaxis->SetTitle("Conductivity (S/m)","center");
 $graph->yaxis->SetTitleMargin(40);
-$graph->xaxis->SetTitle("Frequency(GHz)","center");
+$graph->xaxis->SetTitle("Frequency (GHz)","center");
 $graph->xaxis->SetTitleMargin(20);
 $graph->xaxis->SetTickLabels($x_axis);
 $courbe1 = new LinePlot($y_axis1);

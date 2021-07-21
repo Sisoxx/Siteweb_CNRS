@@ -25,10 +25,10 @@ for ($i = 1; $i <= $number_of_comas_recipe ; $i++)
 }
 
 array_push($recipe_array, $recipe_output);
-
-foreach ($recipe_array as  &$value) {
-  $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
-}
+// 
+// foreach ($recipe_array as  &$value) {
+//   $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
+// }
 
 #var_dump($recipe_array[1]);
 

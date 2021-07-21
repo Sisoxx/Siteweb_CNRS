@@ -31,7 +31,8 @@
 }
 
 note {
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: normal;
 	color: #707070;
 	font-size: 0.8em;
@@ -42,7 +43,8 @@ note {
 #formulaire2 > .simulation_cases {
 	/* border: solid 1px; */
 	text-align: left;
-	font-family: "Noto Sans", sans-serif;
+	font-family: "Arial", sans-serif;
+	/* font-family: "Noto Sans", sans-serif; */
 	font-weight: bold;
 	padding-left: 0.2em;
 }
@@ -64,14 +66,16 @@ note {
 }
 
 label{
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial Bold", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: bold;
 	color: #707070;
 	font-size: 1.1em;
 }
 
 redStar{
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial Bold", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: medium;
 	color: #961e64;
 	font-size: 1em;
@@ -108,7 +112,8 @@ redStar{
 	background-color: #F7F7F7;
 
 	font-size: 2em;
-	font-family: "Noto Sans", sans-serif;
+	font-family: "Montserrat", sans-serif;
+	/* font-family: "Noto Sans", sans-serif; */
 	color: #961e64;
 
 	box-shadow: 1px 3px 6px rgba(0,0,0,0.14);
@@ -136,14 +141,16 @@ redStar{
 }
 
 .radioLabel > label{
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: normal;
 	color: #707070;
 	font-size: 0.8em;
 }
 
 .checkboxLabel > label{
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: normal;
 	color: #707070;
 	font-size: 0.8em;
@@ -155,7 +162,8 @@ redStar{
 }
 
 .simulation_cases_label > p{
-	font-family: "Noto Sans Bold", sans-serif;
+	font-family: "Arial", sans-serif;
+	/* font-family: "Noto Sans Bold", sans-serif; */
 	font-weight: normal;
 	color: #707070;
 	font-size: 1em;
