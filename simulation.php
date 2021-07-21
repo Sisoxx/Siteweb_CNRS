@@ -232,9 +232,25 @@
 
 	<div id="phrase_mixture">
 			For a mixture of <redStar> <?= $input_volumebecher; ?>  mL</redStar>, please use:
+			<?php if ($recipe_array[0]>1000): ?>
+				<?php  $recipe_array[0]=$recipe_array[0]/1000?>
+				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 2, ".", " "); ?> kg</redStar><br>
+			<?php else: ?>
 				<br><br>NaCl mass: <redStar><?= number_format($recipe_array[0], 1, ".", " "); ?> g</redStar><br>
+			<?php endif ?>
+			<?php if ($recipe_array[1]>1000): ?>
+				<?php  $recipe_array[1]=$recipe_array[1]/1000?>
+				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 2, ".", " "); ?> kg</redStar><br>
+			<?php else: ?>
 				TritonX100 mass: <redStar><?= number_format($recipe_array[1], 1, ".", " "); ?> g</redStar><br>
+			<?php endif ?>
+			<?php if ($recipe_array[3]<0){$recipe_array[3]=0} ?>
+				<?php if ($recipe_array[2]>1000): ?>
+				<?php  $recipe_array[2]=$recipe_array[2]/1000?>
+				Water mass: <redStar><?= number_format($recipe_array[2], 2, ".", " "); ?> kg</redStar><br><br>
+			<?php else: ?>
 				Water mass: <redStar><?= number_format($recipe_array[2], 1, ".", " "); ?> g</redStar><br><br>
+			<?php endif ?>
 				Quadratic error: <redStar><?= number_format($recipe_array[3], 2, ".", " "); ?> %</redStar><br>
 
 	</div>

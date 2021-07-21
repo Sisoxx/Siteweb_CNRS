@@ -15,7 +15,7 @@
     <div id="contact">
       <h1>Download files</h1>
       <p>Here you will find some .stl files to download, they represent different phantoms that we developped.</p><br>
-      <a href="image/camera1.jpg" download="camera1">Download File</a>
+      <a href="phantom/Tete/bas_tete.stl" download="bas_tete.stl">bas_tete.stl</a>
     </div>
 
   <footer>
