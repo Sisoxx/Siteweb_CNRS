@@ -64,20 +64,20 @@
 		developers.
 		Newly designed devices require multiple tests under a controlled environment before moving to human clinical test. This website is mainly concerned with
 		the development and realization of the biological phantoms dedicated to test the microwaving imaging devices and particularly is well suited to a remote developement.
-		To be more specific,the website allows the user to produce liquid mixtures mimicking any type of biological tissue <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a> referenced
-		in the Gabriel database <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a>, at least over a range of frequencies [1 to 5 GHz]. The database has been extended thanks to data from
-		literature <a href="url" target="_blank">[<?php $num++; $colon = $num; echo $num; ?>]</a><a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a>. Moreover, from this website you can download .stl files corresponding
+		To be more specific,the website allows the user to produce liquid mixtures mimicking any type of biological tissue <a href="https://ieeexplore.ieee.org/abstract/document/8740151" target="_blank">[<?php $num++; echo $num; ?>]</a> referenced
+		in the Gabriel database <a href="https://iopscience.iop.org/article/10.1088/0031-9155/41/11/003/meta" target="_blank">[<?php $num++; echo $num; ?>]</a>, at least over a range of frequencies [1 to 5 GHz]. The database has been extended thanks to data from
+		literature <a href="https://ieeexplore.ieee.org/abstract/document/4385287" target="_blank">[<?php $num++; $colon = $num; echo $num; ?>]</a><a href="https://aapm.onlinelibrary.wiley.com/doi/full/10.1002/mp.13016" target="_blank">[<?php $num++; echo $num; ?>]</a>. Moreover, from this website you can download .stl files corresponding
 		to the printed head phantoms and to their numerical version which can be used for electromagnetic simulations<br>
 
 	</p>
 	<h4>TRITON X-100 AND SALTED WATER SOLUTIONS</h4>
 	<p>Used in the framework on the EMERALD project, the manufacturing process has to be easily reproducible by an electrical
 		 engineer in a non-specific environment (no hood), and without drastic precautions. Following our previous
-		 works <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a><a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a>, the phantoms
-		 such as the breast, head <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a> and thorax <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a> are composed
+		 works <a href="https://www.mdpi.com/2075-4418/11/3/531" target="_blank">[<?php $num++; echo $num; ?>]</a><a href="https://ieeexplore.ieee.org/document/6849465" target="_blank">[<?php $num++; echo $num; ?>]</a>, the phantoms
+		 such as the breast, head <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6315968/" target="_blank">[<?php $num++; echo $num; ?>]</a> and thorax <a href="https://www.mdpi.com/2075-4418/11/2/376" target="_blank">[<?php $num++; echo $num; ?>]</a> are composed
 		 of 3D printed cavities filled up with liquid binary mixtures of Triton X-100 (TX-100, a non-ionic surfactant) and salted water. Those liquid
 		 mixtures are adjustable in time therefore their use in the manufacturing process, provide stable phantoms over time. Moreover, the TritonX's and
-		 salt's concentrations are given by a Gauss-Newton algorithm <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a> based on a binary law (Bottcher <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a>
+		 salt's concentrations are given by a Gauss-Newton algorithm <a href="https://www.mdpi.com/1424-8220/20/17/4968" target="_blank">[<?php $num++; echo $num; ?>]</a> based on a binary law (Bottcher <a href="https://link.springer.com/book/10.1007%2F978-3-319-07671-3" target="_blank">[<?php $num++; echo $num; ?>]</a>
 		 or Krasczewski <a href="url" target="_blank">[<?php $num++; echo $num; ?>]</a>). The algorithm used as reference values provided from the database. </p>
 	</div>
 </section>
