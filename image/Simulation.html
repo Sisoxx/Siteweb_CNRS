@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Simulation</title>
+	<link rel="stylesheet" href="Simulation_fichiers/style.css">
+	<link rel="stylesheet" href="Simulation_fichiers/style3.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+</head>
+
+<body>
+
+<header>
+	<header>
+  <div id="traitHaut"></div>
+  <div>
+    <p>
+      <a href="http://localhost:8888/index.php"><img id="logo" src="Simulation_fichiers/LOGO_3.jpg" alt="logo du geeps" width="auto" height="115"></a>
+    </p>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="http://localhost:8888/contact.php">Contact</a></li>
+      <li><a href="http://localhost:8888/publications.php">Publications</a></li>
+      <li><a href="http://localhost:8888/phantoms.php">Phantoms</a></li>
+      <li><a href="http://localhost:8888/simulation.php">Simulation</a></li>
+      <li><a href="http://localhost:8888/index.php">Presentation</a></li>
+    </ul>
+  </nav>
+</header>
+</header>
+
+		<div id="calculateur">
+			<div class="page_title">
+				<h1>Simulation</h1>
+			</div>
+
+			<div class="simulator_form">
+
+				<form action="" method="post" id="formulaire2">
+
+				<div class="red_star_note">
+					<note>All fields marked with * are mandatory.</note>
+				</div>
+
+					<!-- Tissu  -->
+					<div class="simulation_cases_label">
+							<label for="choice">Tissue to mimic <redstar>*</redstar></label>
+					</div>
+
+					<div class="simulation_cases">
+							<select id="tissu_selection" name="choice" required="">
+						<option value="Choice" disabled="disabled">Choose one in the list</option>
+						<option value="Adenocarninoma">Adenocarninoma [3]</option>
+						<option value="Adenoma_HGD" selected="selected">Adenoma HGD [3]</option>
+						<option value="Adenoma_LGD">Adenoma LGD [3]</option>
+						<option value="Aorta">Aorta</option>
+						<option value="Bladder">Bladder</option>
+						<option value="Blood">Blood</option>
+						<option value="Bone_Cancellous">Bone Cancellous</option>
+						<option value="Bone_Cortical">Bone Cortical</option>
+						<option value="Bone_Marrow_Infiltrated">Bone Marrow Infiltrated</option>
+						<option value="Bone_Marrow_Not_Infiltrated">Bone Marrow Not Infiltrated</option>
+						<option value="Brain_Grey_Matter">Brain Grey Matter</option>
+						<option value="Brain_White_Matter">Brain White Matter</option>
+						<option value="Breast_Fat">Breast Fat</option>
+						<option value="Cartilage">Cartilage</option>
+						<option value="Cerebellum">Cerebellum</option>
+						<option value="Cerebro_Spinal_Fluid">Cerebro Spinal Fluid</option>
+						<option value="Cervix">Cervix</option>
+						<option value="Colon">Colon</option>
+						<option value="Cornea">Cornea</option>
+						<option value="Dura">Dura</option>
+						<option value="Eye_Tissues_Sclera">Eye Tissues</option>
+						<option value="Fat_Average_Infiltrated"> Fat Infiltrated</option>
+						<option value="Fat_Not_Infiltrated">Fat Not Infiltrated</option>
+						<option value="Gall_Bladder">Gall Blader</option>
+						<option value="Gall_Bladder_Bile">Gall Bladder Bile</option>
+						<option value="Healthy_mucosa">Healthy mucosa [3]</option>
+						<option value="Heart">Heart</option>
+						<option value="Artial_Appendage_Int">Heart - Artial Appendage (Interior)</option>
+						<option value="Artial_Appendage_Ext">Heart - Artial Appendage (Exterior)</option>
+						<option value="Endocardiom">Heart - Endocardiom</option>
+						<option value="Epicardium">Heart - Epicardium</option>
+						<option value="Myocardium">Heart - Myocardium</option>
+						<option value="Great_Vessel">Heart - Great Vessel (Luminal Vessel)</option>
+						<option value="Hyperplastic">Hyperplastic [3]</option>
+						<option value="Kidney">Kidney</option>
+						<option value="Lens_Cortex">Lens Cortex</option>
+						<option value="Lens_Nucleus">Lens Nucleus</option>
+						<option value="Liver">Liver</option>
+						<option value="Lung_Deflated">Lung Deflated</option>
+						<option value="Lung_Inflated">Lung Inflated</option>
+						<option value="Muscle">Muscle</option>
+						<option value="Nerve">Nerve</option>
+						<option value="Ovary">Ovary</option>
+						<option value="Skin_Dry">Skin Dry</option>
+						<option value="Skin_Wet">Skin Wet</option>
+						<option value="Small_Intestine">Small Intestine</option>
+						<option value="Spleen">Spleen</option>
+						<option value="Stomach">Stomach</option>
+						<option value="Tendon">Tendon</option>
+						<option value="Testis">Testis</option>
+						<option value="Thyroid">Thyroid</option>
+						<option value="Tongue">Tongue</option>
+						<option value="Trachea">Trachea</option>
+						<option value="Uterus">Uterus</option>
+						<option value="Vitreous_Humor">Vitres Humor</option>
+					</select><br>
+					</div>
+
+					<!-- Number of points -->
+					<div class="simulation_cases_label">
+							<label for="numberPoints">Number of frequency points <redstar>*</redstar></label><br>
+					</div>
+					<div class="simulation_cases">
+							<input class="case" type="number" min="0" max="200" name="numberPoints" placeholder="10" value="10" required=""><br>
+					</div>
+
+					<!-- Frequency range -->
+					<div class="simulation_cases_label">
+					<label for="debutfrequence">Low range frequency (in GHz) <redstar>*</redstar></label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.001" max="6" name="debutfrequence" placeholder="1" value="1" required=""><br>
+					</div>
+					<div class="simulation_cases_label">
+					<label for="finfrequence">High range frequency (in GHz) <redstar>*</redstar></label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.001" max="50" name="finfrequence" placeholder="20" value="8" required=""><br>
+					</div>
+
+					<!-- Law -->
+					<div class="simulation_cases_label">
+					<label>Law to use</label><br>
+					</div>
+
+					<div class="simulation_cases">
+						<div class="radio">
+							<div>
+								<input type="radio" value="kraszweski" name="law" checked="checked">
+							</div>
+							<div class="radioLabel">
+								<label for="kraszweski">Kraszweski's Law</label>
+							</div>
+							<div>
+								<input type="radio" value="bottcher" name="law">
+							</div>
+							<div class="radioLabel">
+								<label for="bottcher">Bottcher's Law</label>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Temperature -->
+					<!-- <div class="simulation_cases_label">
+					<label for="temperature">Temperature (in °C)</label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.01" max="50" name="temperature"  placeholder="<?php# echo isset($_POST['temperature']) ? htmlspecialchars($_POST['temperature'], ENT_QUOTES) : htmlspecialchars("ex: 25 °C..."); ?>"
+					value="<?php# echo isset($_POST['temperature']) ? $_POST['temperature'] : ''; ?>" required><br>
+					</div> -->
+
+					<!-- Salinity -->
+					<!-- <div class="simulation_cases_label">
+					<label for="salinity">Salinity (in g/L)</label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.001" max="30" name="salinity"  placeholder=""
+					value="" required><br>
+					</div> -->
+
+					<!-- V1 -->
+					<!-- <div class="simulation_cases_label">
+					<label for="volume1">Volume V1 (between 0 and 1)</label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.01" max="1" name="volume1"  placeholder=""
+					value="" required ><br>
+					</div> -->
+
+					<!-- Volume of the mixture -->
+					<div class="simulation_cases_label">
+					<label for="">Volume of the mixture (in mL) <redstar>*</redstar></label><br>
+					</div>
+					<div class="simulation_cases">
+					<input class="case" type="number" min="0" step="0.01" max="50000" name="volumebecher" placeholder="40" value="40" required=""><br>
+					</div>
+
+					<!-- Grey line -->
+					<div id="result_line"></div>
+
+					<!-- Output selection -->
+
+					<!-- <div class="output_display">
+						<label class="Results">Cole-Cole model table of result
+						  <input type="checkbox" >
+						  <span class="checkmark"></span>
+						</label>
+						<label class="Results">Results for the mixture
+						  <input type="checkbox" checked="checked">
+						  <span class="checkmark"></span>
+						</label>
+					</div> -->
+
+					<div class="simulation_cases_label">
+						<p>Please select parameters to display : </p>
+					</div>
+					<div class="output_display">
+						<div class="checkbox">
+							<div>
+								<input type="checkbox" value="mixture_results" name="mixtureResults" checked="checked">
+							</div>
+							<div class="checkboxLabel">
+								<label for="mixture_results">Recipe for the mixture</label>
+							</div>
+							<div>
+								<input type="checkbox" value="cole_cole_results" name="colecoleResults" checked="checked">
+							</div>
+							<div class="checkboxLabel">
+								<label for="cole_cole_results">Table of the dialectric properties</label>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Submit button -->
+					<div class="submit_button">
+					<input id="bouttton" type="submit" value="Display results" name="boutonColeCole">
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+			
+	
+	<div id="phrase_mixture">
+			For a mixture of <redstar> 40  mL</redstar>, please use:
+				<br><br>NaCl mass: <redstar>0.2 g</redstar><br>
+				TritonX100 mass: <redstar>7.2 g</redstar><br>
+				Water mass: <redstar>33.1 g</redstar><br><br>
+				Quadratic error: <redstar>0.19 %</redstar><br>
+
+	</div>
+	<br>
+	<div class="paragraph_exp">
+		<h4>Experimental Protocol</h4>
+		<ul>
+			<li>Tar the balance with an empty beaker.</li>
+			<li>Add successively the masses of NaCl and water and tare the balance between each step.</li>
+			<li>Stir the solution with a magnetic bar - when the salt is dissolved, tare the balance.</li>
+			<li>Add the salted water to the beaker of TritonX-100. Note that, the
+ TritonX- 100 is very viscous at room temperature, then it must be 
+heated first separately, in a 45 ° C water bath.</li>
+			<li>Place the beaker in a water bath at 45° C and stir the solution 
+with a magnetic bar. The bath water must cover all the mixture. Note 
+that the 40-60% solutions of TritonX-100 are gelled at room temperature,
+ it is therefore necessary to increase the temperature to 45 ° C to 
+obtain homogeneous mixtures in all cases.</li>
+			<li>Once the solution is homogeneous, pour it into an airtight container and keep the sample safe from light.</li>
+		</ul>
+	</div>
+	<br>
+	
+
+		<div id="resultsTables">
+
+		<div class="tables">
+			<h3>Reference Table</h3>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Frequence (GHz)</th>
+							<th>ε'</th>
+							<th>σ (S/m)</th>
+						</tr>
+					</thead>
+					<tbody>
+																																																<tr>
+									<td>1.00</td>
+									<td>56.52</td>
+									<td>1.17</td>
+																									</tr>
+														<tr>
+									<td>3.11</td>
+									<td>55.61</td>
+									<td>2.26</td>
+																									</tr>
+														<tr>
+									<td>5.22</td>
+									<td>53.87</td>
+									<td>4.36</td>
+																									</tr>
+														<tr>
+									<td>7.33</td>
+									<td>51.46</td>
+									<td>7.25</td>
+																									</tr>
+														<tr>
+									<td>9.44</td>
+									<td>48.60</td>
+									<td>10.69</td>
+																									</tr>
+														<tr>
+									<td>11.56</td>
+									<td>45.49</td>
+									<td>14.42</td>
+																									</tr>
+														<tr>
+									<td>13.67</td>
+									<td>42.32</td>
+									<td>18.23</td>
+																									</tr>
+														<tr>
+									<td>15.78</td>
+									<td>39.21</td>
+									<td>21.97</td>
+																									</tr>
+														<tr>
+									<td>17.89</td>
+									<td>36.26</td>
+									<td>25.51</td>
+																									</tr>
+														<tr>
+									<td>20.00</td>
+									<td>33.51</td>
+									<td>28.81</td>
+																														</tr></tbody>
+				</table>
+		</div>
+
+		<div class="tables">
+			<h3>Mixture Table</h3>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Frequence (GHz)</th>
+						<th>ε'</th>
+						<th>σ (S/m)</th>
+					</tr>
+				</thead>
+				<tbody>
+																																									<tr>
+								<td>1.00</td>
+								<td>58.48</td>
+								<td>1.06</td>
+																						</tr>
+												<tr>
+								<td>3.11</td>
+								<td>56.88</td>
+								<td>2.39</td>
+																						</tr>
+												<tr>
+								<td>5.22</td>
+								<td>54.37</td>
+								<td>4.81</td>
+																						</tr>
+												<tr>
+								<td>7.33</td>
+								<td>51.28</td>
+								<td>8.00</td>
+																						</tr>
+												<tr>
+								<td>9.44</td>
+								<td>47.83</td>
+								<td>11.70</td>
+																						</tr>
+												<tr>
+								<td>11.56</td>
+								<td>44.23</td>
+								<td>15.60</td>
+																						</tr>
+												<tr>
+								<td>13.67</td>
+								<td>40.67</td>
+								<td>19.50</td>
+																						</tr>
+												<tr>
+								<td>15.78</td>
+								<td>37.28</td>
+								<td>23.24</td>
+																						</tr>
+												<tr>
+								<td>17.89</td>
+								<td>34.14</td>
+								<td>26.73</td>
+																						</tr>
+												<tr>
+								<td>20.00</td>
+								<td>31.27</td>
+								<td>29.91</td>
+																										</tr></tbody>
+			</table>
+			</div>
+		</div>
+
+	<div id="graphs">
+		<div>
+			<img src="Simulation_fichiers/graph1.png">		</div>
+		<div>
+			<img src="Simulation_fichiers/graph2.png">		</div>
+	</div>
+	
+
+
+<footer>
+	<footer class="footer">
+	  <div class="footer__addr">
+	  <!-- <a href="index.php"><img id="logo" src="image/image_geeps-removebg-preview.png"  width="250" height="100" alt="logo du geeps"></a> -->
+		<a href="http://localhost:8888/index.php"><img id="logo" src="Simulation_fichiers/LOGO_3_nobg.png" alt="Image_website" width="auto" height="135"></a>
+
+	    <h2>Contact</h2>
+	      <a class="footer__btn" href="http://localhost:8888/contact.php">Email Us</a>
+	  </div>
+
+	  <ul class="footer__nav">
+	    <li class="nav__item">
+	      <h2 class="nav__title"></h2>
+
+	      <ul class="nav__ul">
+	        <li>
+	          <a href="https://www.cnrs.fr/" target="_blank"><img src="Simulation_fichiers/cnrs.svg" alt="logo du cnrs" width="80" height="80"></a>
+	        </li>
+
+					<li>
+					 <a href="https://www.centralesupelec.fr/" target="_blank"><img src="Simulation_fichiers/centralesupelec_nobk.png" alt="logo de centralesupelec" width="125" height="70"></a>
+				 </li>
+
+	        <li>
+	          <a href="http://www.msca-emerald.eu/" target="_blank"><img src="Simulation_fichiers/logo_small_EMERALD.png" alt="logo de emerald" width="125" height="80"></a>
+	        </li>
+	      </ul>
+	    </li>
+
+	    <li class="nav__item nav__item--extra">
+	      <h2 class="nav__title"></h2>
+
+	      <ul class="nav__ul nav__ul--extra">
+	        <li>
+	          <a href="https://www.sorbonne-universite.fr/" target="_blank"><img src="Simulation_fichiers/sorbonne-universite.svg" alt="logo sorbonne-université" width="125" height="80"></a>
+	        </li>
+					<li> <a href="https://www.geeps.centralesupelec.fr/" target="_blank"><img src="Simulation_fichiers/image_geeps-removebg-preview.png" alt="logo du geeps" width="auto" height="60"></a><br><br>
+					</li>
+	        <li>
+	          <a href="https://iut.univ-paris-diderot.fr/" target="_blank"><img src="Simulation_fichiers/Universite_Paris_logo_horizontal-removebg-preview.png" alt="logo universite paris" width="125" height="auto"></a>
+	        </li>
+	      </ul>
+	    </li>
+			<br><br><br>
+
+	    <li class="nav__item">
+	      <h2 class="nav__title">Legal</h2>
+
+	      <ul class="nav__ul">
+	        <li>
+	          <a href="http://localhost:8888/privacy.php">Privacy Policy</a>
+	        </li>
+
+	        <li>
+	          <a href="http://localhost:8888/terms.php">Terms of Use</a>
+	        </li>
+
+	      </ul>
+	    </li>
+	  </ul>
+
+
+
+    <div class="trait"></div>
+
+	  <div class="legal">
+	    <p>© Copyright Geeps 2021</p>
+	  </div>
+
+</footer>
+</footer>
+
+
+
+
+</body></html>

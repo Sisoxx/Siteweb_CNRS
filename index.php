@@ -59,19 +59,16 @@
 		is an attractive approach in several aspects, namely its non–ionizing nature, low cost, and compactness of the equipment associated with its hardware system.
 		This is the reason why, at the present time, there are multiple research teams around the world working on bio-medical applications of microwave imaging.
 		This is evidenced by the emergence of several COST and particularly, MiMed. The latter gave rise to several projects; among them, the European
-<<<<<<< Updated upstream
-		project <a href="http://www.msca-emerald.eu/" target="_blank">EMERALD</a> (ElectroMagnetic Imaging for a novel genERation of medicAL Devices) has started. EMERALD is a multidisciplinary project involving 27 partners
-=======
 		project <a href="http://www.msca-emerald.eu/" target="_blank">EMERALD</a> (ElectroMagnetic imaging for a novel genERation of medicAL Devices) has started. EMERALD is a multidisciplinary project involving 27 partners
->>>>>>> Stashed changes
 		across the Europe. It offers a unique opportunity for interactions between clinicians, researchers and instrumentation
 		developers.
-		Newly designed devices require multiple tests under a controlled environment before moving to human clinical test. <br>
+		Newly designed devices require multiple tests under a controlled environment before moving to human clinical test. <br><br>
+
 		SUPELEC RECIPES (Standard Uwb Phantom ELECtroMagnetic RECIPES) is mainly concerned with the development and realization of the biological phantoms dedicated to test the microwave imaging devices and particularly is well suited to a remote developement.
 		To be more specific, the website allows to produce liquid mixtures mimicking any type of biological tissue <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a> referenced
 		in the  <a href="http://niremf.ifac.cnr.it/tissprop/htmlclie/htmlclie.php/" target="_blank">Gabriel</a>  <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>, at least over a range of frequencies [1 to 5 GHz]. The database has been extended thanks to data from
-		literature <a href="publications.php" target="_blank">[<?php $num++; $colon = $num; echo $num; ?>]</a><a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a><a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>. Moreover, from this website you can download .stl files corresponding
-		to the printed head phantoms and to their numerical version which can be used for electromagnetic simulations<br>
+		literature <a href="publications.php" target="_blank">[<?php $num++; $colon = $num; echo $num; ?>]</a><a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a><a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>. Moreover, from this website, stl files corresponding
+		to the printed head phantoms can be downloaded and used for electromagnetic simulations.<br>
 
 	</p>
 	<h4>TRITON X-100 AND SALTED WATER SOLUTIONS</h4>
@@ -82,7 +79,7 @@
 		 of 3D printed cavities filled up with liquid binary mixtures of Triton X-100 (TX-100, a non-ionic surfactant) and salted water. Those liquid
 		 mixtures are adjustable in time therefore their use in the manufacturing process, provide stable phantoms over time. Moreover, the TritonX's and
 		 salt's concentrations are given by a Gauss-Newton algorithm <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a> based on a binary law (Bottcher <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>
-		 or Krasczewski <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>). The algorithm used as reference values provided from the database. </p>
+		 or Krasczewski <a href="publications.php" target="_blank">[<?php $num++; echo $num; ?>]</a>). The algorithm uses as reference values provided from the database. </p>
 	</div>
 </section>
 
