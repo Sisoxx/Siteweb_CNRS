@@ -16,6 +16,7 @@
       <h1>Download files</h1>
       <p>Here you will find some .stl files to download, they represent different phantoms that we developped.</p><br>
       <a href="phantom/Tete/bas_tete.stl" download="bas_tete.stl">bas_tete.stl</a>
+      <!-- Cette commande permet de mettre à disposition des fichiers à télécharger pour l'utilisateur. -->
     </div>
 
   <footer>

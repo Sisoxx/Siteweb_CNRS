@@ -53,12 +53,15 @@
 						<option value="Cervix" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cervix') ? 'selected' : ''; ?>>Cervix</option>
 						<option value="Colon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Colon') ? 'selected' : ''; ?>>Colon</option>
 						<option value="Cornea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cornea') ? 'selected' : ''; ?>>Cornea</option>
+						<option value="Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cortex') ? 'selected' : ''; ?>>Cortex</option>
 						<option value="Dura" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Dura') ? 'selected' : ''; ?>>Dura</option>
 						<option value="Eye_Tissues_Sclera" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Eye_Tissues_Sclera') ? 'selected' : ''; ?>>Eye Tissues</option>
 						<option value="Fat_Average_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Average_Infiltrated') ? 'selected' : ''; ?>> Fat Infiltrated</option>
+						<option value="Fat_Breast" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Breast') ? 'selected' : ''; ?>>Fat Breast [3]</option>
 						<option value="Fat_Not_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Not_Infiltrated') ? 'selected' : ''; ?>>Fat Not Infiltrated</option>
 						<option value="Gall_Bladder" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder') ? 'selected' : ''; ?>>Gall Blader</option>
 						<option value="Gall_Bladder_Bile" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Gall_Bladder_Bile') ? 'selected' : ''; ?>>Gall Bladder Bile</option>
+						<option value="Glandular_Breast" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Glandular_Breast') ? 'selected' : ''; ?>>Glandular Breast</option>
 						<option value="Healthy_mucosa" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Healthy_mucosa') ? 'selected' : ''; ?>>Healthy mucosa [3]</option>
 						<option value="Heart" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heart') ? 'selected' : ''; ?>>Heart</option>
 						<option value="Artial_Appendage_Int" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Artial_Appendage_Int') ? 'selected' : ''; ?>>Heart - Artial Appendage (Interior)</option>
@@ -67,13 +70,15 @@
 						<option value="Epicardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Epicardium') ? 'selected' : ''; ?>>Heart - Epicardium</option>
 						<option value="Myocardium" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Myocardium') ? 'selected' : ''; ?>>Heart - Myocardium</option>
 						<option value="Great_Vessel" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Great_Vessel') ? 'selected' : ''; ?>>Heart - Great Vessel (Luminal Vessel)</option>
-						<option value="Hyperplastic" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Hyperplastic') ? 'selected' : ''; ?>>Hyperplastic [3]</option>
+						<option value="Heterogeneous_Breast" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Heterogeneous_Breast') ? 'selected' : ''; ?>>Heterogeneous Breast</option>
+						<option value="Hyperplasic" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Hyperplasic') ? 'selected' : ''; ?>>Hyperplasic [3]</option>
 						<option value="Kidney" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Kidney') ? 'selected' : ''; ?>>Kidney</option>
 						<option value="Lens_Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Cortex') ? 'selected' : ''; ?>>Lens Cortex</option>
 						<option value="Lens_Nucleus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lens_Nucleus') ? 'selected' : ''; ?>>Lens Nucleus</option>
 						<option value="Liver" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Liver') ? 'selected' : ''; ?>>Liver</option>
 						<option value="Lung_Deflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Deflated') ? 'selected' : ''; ?>>Lung Deflated</option>
 						<option value="Lung_Inflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Inflated') ? 'selected' : ''; ?>>Lung Inflated</option>
+						<option value="Medulla" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Medulla') ? 'selected' : ''; ?>>Medulla</option>
 						<option value="Muscle" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Muscle') ? 'selected' : ''; ?>>Muscle</option>
 						<option value="Nerve" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Nerve') ? 'selected' : ''; ?>>Nerve</option>
 						<option value="Ovary" <?php echo (isset($_POST['choice']) && $_POST['selchoiceect'] === 'Ovary') ? 'selected' : ''; ?>>Ovary</option>
@@ -87,6 +92,7 @@
 						<option value="Thyroid" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Thyroid') ? 'selected' : ''; ?>>Thyroid</option>
 						<option value="Tongue" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tongue') ? 'selected' : ''; ?>>Tongue</option>
 						<option value="Trachea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Trachea') ? 'selected' : ''; ?>>Trachea</option>
+						<option value="Tumor_Breast" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Tumor_Breast') ? 'selected' : ''; ?>>Tumor Breast</option>
 						<option value="Uterus" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Uterus') ? 'selected' : ''; ?>>Uterus</option>
 						<option value="Vitreous_Humor" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Vitreous_Humor') ? 'selected' : ''; ?>>Vitres Humor</option>
 					</select><br>

@@ -5,13 +5,13 @@ $recipe_output = exec("cd python; python appel_masse.py  $input_temperature $inp
 
 
 $recipe_output = str_replace("(", "", $recipe_output);
-$recipe_output = str_replace(")", "", $recipe_output);
+$recipe_output = str_replace(")", "", $recipe_output);//Ces commandes permettent d'enlever les parenthèses.
 #var_dump($recipe_output);
 
 $number_of_comas_recipe = substr_count($recipe_output,",");
 #var_dump($number_of_comas_recipe);
 
-$recipe_array = (array) null;
+$recipe_array = (array) null; //On crée une liste vide qui servira plus tard.
 
 
 for ($i = 1; $i <= $number_of_comas_recipe ; $i++)
@@ -25,7 +25,7 @@ for ($i = 1; $i <= $number_of_comas_recipe ; $i++)
 }
 
 array_push($recipe_array, $recipe_output);
-// 
+//
 // foreach ($recipe_array as  &$value) {
 //   $value = number_format($value, 4, ".", " "); # formatage des valeur à 4 decimales
 // }

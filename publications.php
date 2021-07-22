@@ -28,7 +28,7 @@
       <li> Savazzi, M.; Abedi, S.; Ištuk, N.; Joachimowicz, N.; Roussel, H.; Porter, E.; O’Halloran, M.; Costa, J.R.; Fernandes, C.A.; Felício,
 J.M.; et al. <a href="https://www.mdpi.com/1424-8220/20/17/4968" target="_blank">“Development of an Anthropomorphic Phantom of the Axillary Region for Micro-wave Imaging Assessment"</a>. Sensors 2020, 20, 4968.</li><br><br>
       <li> Walter, E. <a href="https://link.springer.com/book/10.1007%2F978-3-319-07671-3" target="_blank">“Numerical Methods and Optimization: A Consumer Guide"</a>; Springer: Cham, Switzerland, 2014; ISBN: 978-3-319-07670-6.</li><br><br>
-</ol>
+    </ol>
     </div>
 
   <footer>

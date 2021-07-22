@@ -18,12 +18,11 @@ $fin_frequence = floatval($fin_frequence);
 $number_points = (array_key_exists('numberPoints', $_POST)) ? $_POST['numberPoints'] : "";
 $number_points = intval($number_points);
 $number_points = floatval($number_points);
-
-$fin_frequence1 = $fin_frequence+1;
+//Ces commandes permettent de récupérer les "inputs" des utilisateurs.
 
 $step = ($fin_frequence - $debut_frequence)/($number_points-1);
 
-$frequence_array = range($debut_frequence,$fin_frequence, $step);  #We could add the step
+$frequence_array = range($debut_frequence,$fin_frequence, $step); //La variable prend une liste qui commence à $début_fréquence, qui fini à $fin_frequence, avec le pas $step. Les valeurs sont générés grâce à la fonction range.
 #var_dump($frequence_array);
 $py_output = exec("cd python; python appel_colecole.py $input_choice $debut_frequence $fin_frequence $step");
 #var_dump($py_output);
