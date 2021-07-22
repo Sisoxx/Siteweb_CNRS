@@ -53,6 +53,7 @@
 						<option value="Cervix" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cervix') ? 'selected' : ''; ?>>Cervix</option>
 						<option value="Colon" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Colon') ? 'selected' : ''; ?>>Colon</option>
 						<option value="Cornea" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cornea') ? 'selected' : ''; ?>>Cornea</option>
+						<option value="Cortex" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Cortex') ? 'selected' : ''; ?>>Cortex</option>
 						<option value="Dura" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Dura') ? 'selected' : ''; ?>>Dura</option>
 						<option value="Eye_Tissues_Sclera" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Eye_Tissues_Sclera') ? 'selected' : ''; ?>>Eye Tissues</option>
 						<option value="Fat_Average_Infiltrated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Fat_Average_Infiltrated') ? 'selected' : ''; ?>> Fat Infiltrated</option>
@@ -77,6 +78,7 @@
 						<option value="Liver" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Liver') ? 'selected' : ''; ?>>Liver</option>
 						<option value="Lung_Deflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Deflated') ? 'selected' : ''; ?>>Lung Deflated</option>
 						<option value="Lung_Inflated" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Lung_Inflated') ? 'selected' : ''; ?>>Lung Inflated</option>
+						<option value="Medulla" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Medulla') ? 'selected' : ''; ?>>Medulla</option>
 						<option value="Muscle" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Muscle') ? 'selected' : ''; ?>>Muscle</option>
 						<option value="Nerve" <?php echo (isset($_POST['choice']) && $_POST['choice'] === 'Nerve') ? 'selected' : ''; ?>>Nerve</option>
 						<option value="Ovary" <?php echo (isset($_POST['choice']) && $_POST['selchoiceect'] === 'Ovary') ? 'selected' : ''; ?>>Ovary</option>
