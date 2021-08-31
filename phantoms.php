@@ -2,14 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Titre de l'onglet -->
     <title>Download</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
 
-  <header>
+    <!-- Commande PHP qui inclut le code du fichier header -->
     <?php include("layout/header.html"); ?>
-  </header>
 
   <body>
     <div id="contact">
@@ -19,8 +19,7 @@
       <!-- Cette commande permet de mettre à disposition des fichiers à télécharger pour l'utilisateur. -->
     </div>
 
-  <footer>
+    <!-- Commande PHP qui inclut le code du fichier footer -->
     <?php include("layout/footer.html"); ?>
-  </footer>
   </body>
 </html>

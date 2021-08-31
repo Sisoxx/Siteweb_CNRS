@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
 
-  <header>
+  <!-- Commande PHP qui inclut le code du fichier header -->
     <?php include("layout/header.html"); ?>
-  </header>
 
   <body>
     <section id="contact">
@@ -23,8 +22,9 @@
       </form>
     </div>
     </section>
-  <footer>
+
+    <!-- Commande PHP qui inclut le code du fichier footer -->
     <?php include("layout/footer.html"); ?>
-  </footer>
+    
   </body>
 </html>

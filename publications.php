@@ -2,20 +2,23 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- Titre de l'onglet -->
     <title>Publications</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   </head>
 
-  <header>
+    <!-- Commande PHP qui inclut le code du fichier header -->
     <?php include("layout/header.html"); ?>
-  </header>
 
   <body>
     <div id="publications">
     <h1>Publications</h1>
+
+    <!-- Index des références des publications -->
     <?php $num = 0 ?>
 
+    <!-- Liste des publications -->
     <ol>
       <li> N. Joachimowicz, S. Abedi, O. Meyer1 , D. Picard1 and H. Roussel <a href="https://ieeexplore.ieee.org/abstract/document/8740151" target="_blank">"Phantoms for a novel generation of medical microwave imaging devices"</a>. </li> <br><br>
       <li> Gabriel, S.; Lau, R.; Gabriel, C. <a href="https://iopscience.iop.org/article/10.1088/0031-9155/41/11/003/meta" target="_blank">“Compilation of the Dielectric Properties of Body Tissues at RF and Microwave Frequencies"</a> Phys. Med. Biol. 1996, 41, 2271–2293, DOI: 10.1088/0031-9155/41/11/003. </li><br><br>
@@ -31,9 +34,8 @@ J.M.; et al. <a href="https://www.mdpi.com/1424-8220/20/17/4968" target="_blank"
     </ol>
     </div>
 
-  <footer>
+    <!-- Commande PHP qui inclut le code du fichier footer -->
     <?php include("layout/footer.html"); ?>
-  </footer>
 </body>
 
 </html>

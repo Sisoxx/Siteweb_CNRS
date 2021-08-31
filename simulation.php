@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	<!-- Titre de l'onglet -->
 	<title>Simulation</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="style/style3.css">
@@ -10,9 +11,8 @@
 
 <body>
 
-<header>
+	<!-- Commande PHP qui inclut le code du fichier header -->
 	<?php include("layout/header.html"); ?>
-</header>
 
 		<div id="calculateur">
 			<div class="page_title">
@@ -26,7 +26,7 @@
 					<note>All fields marked with * are mandatory.</note>
 				</div>
 
-					<!-- Tissu  -->
+					<!-- Séléction du tissu -->
 					<div class="simulation_cases_label">
 							<label for="choice">Tissue to mimic <redStar>*</redStar></label>
 					</div>
@@ -215,12 +215,19 @@
 
 
 <?php if(isset($_POST["boutonColeCole"])): ?>
+	<!-- Si on appui sur le boutton "Display results", cette partie apparaît -->
+
+	<!-- Inclusion de la partie qui calcul la référence -->
 	<?php include("manager/calculcolecole.php"); ?>
+	<!-- Inclusion de la partie qui calcul l'optimisation -->
 	<?php include("manager/optimInput.php"); ?>
+	<!-- Inclusion de la partie qui calcul la recette -->
 	<?php include("manager/masse.php"); ?>
 
 	<?php if(isset($_POST["mixtureResults"])): ?>
+		<!-- Si la case "Recipe for the mixture" est cochée, cette partie apparaît -->
 
+		<!-- Partie recette -->
 	<div id="phrase_mixture">
 		<?php if ($input_volumebecher>1000): ?>
 			<?php  $input_volumebecher=$input_volumebecher/1000;?>
@@ -258,6 +265,8 @@
 
 	</div>
 	<br>
+
+	<!-- Protocole experimental -->
 	<div class="paragraph_exp">
 		<h4>Experimental Protocol</h4>
 		<ul>
@@ -275,12 +284,15 @@
 
 	<?php if(isset($_POST["colecoleResults"])): ?>
 	<div id="resultsTables">
+		<!-- Affichage des tableaux -->
 
+		<!-- Tableau de référence -->
 		<div class="tables" >
 			<h3>Reference Table</h3>
 				<table class="table">
 					<thead>
 						<tr>
+							<!-- Titre des colones -->
 							<th>Frequence (GHz)</th>
 							<th>&#949;'</th>
 							<th>&#963; (S/m)</th>
@@ -307,9 +319,11 @@
 		</div>
 
 		<div class="tables">
+			<!-- Tableau de l'optimisation -->
 			<h3>Mixture Table</h3>
 			<table class="table">
 				<thead>
+					<!-- Titre des colones -->
 					<tr>
 						<th>Frequence (GHz)</th>
 						<th>&#949;'</th>
@@ -337,6 +351,7 @@
 			</div>
 		</div>
 
+		<!-- Affichage des graphiques -->
 	<div id="graphs">
 		<div>
 			<?php echo "<img src='image/temp/graph1.png' />"; ?>
@@ -349,10 +364,8 @@
 
 <?php endif ?>
 
-
-<footer>
+	<!-- Commande PHP qui inclut le code du fichier footer -->
 	<?php include("layout/footer.html"); ?>
-</footer>
 
 
 </body>

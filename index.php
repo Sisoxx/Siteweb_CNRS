@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	<!-- Titre de l'onglet -->
 	<title>TMM GeePs Website</title>
 	<link rel="stylesheet" href="style/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -9,12 +10,13 @@
 	<link href='http://fonts.googleapis.com/css?family=Amaranth:700' rel='stylesheet' type='text/css'>
 </head>
 
-
+<!-- Commande PHP qui inclut le code du fichier header -->
 	<?php include("layout/header.html");?>
 
 
 <body>
 
+<!-- Slider de la page de présentation -->
 	<span id="sl_play" class="sl_command">&nbsp;</span>
 	<span id="sl_pause" class="sl_command">&nbsp;</span>
 	<span id="sl_i1" class="sl_command sl_i">&nbsp;</span>
@@ -53,6 +55,7 @@
 	<div id="txtexplication">
 	<h1>Topic presentation</h1> <br>
 	<h4>INTRODUCTION</h4>
+	<!-- $num correspond aux indices des références -->
 	<?php $num = 0 ?>
 	<p>During the last decades, microwave imaging has attracted remarkable attention for biomedical applications mainly due to the significant contrast between
 		the dielectric properties of normal and abnormal tissues. Compared to the other conventional imaging modalities, such as X–ray mammography, microwave imaging
@@ -86,9 +89,8 @@
 
 
 
-<footer>
+	<!-- Commande PHP qui inclut le code du fichier footer -->
 	<?php include("layout/footer.html"); ?>
-</footer>
 
 </body>
 </html>
